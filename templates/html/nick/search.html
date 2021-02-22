@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+            EDGermanFlex
+        </title>
+        <link rel="stylesheet" href={% static 'css/nick/search.css' %}>
+		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+    </head>
+    <!--Hardcore starts from here-->
+    <body>
+        <a>Don't use the Search it's not Ready</a>
+        {% if result == null%}
+            <a>use the search option at Home</a>
+        {% else %}
+            <a>{{ result }} </a>
+        {% endif %}
+    </body>
+</html>

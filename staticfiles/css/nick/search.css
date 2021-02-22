@@ -1,0 +1,45 @@
+body{
+    background-image: url("../../img/nick/patternwhite.jpg");
+    background-size: 100px;
+    background-repeat: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+span{
+    display: block;
+    word-wrap: break-word;
+    font-size: 16px;
+    padding: 10px;
+}
+
+a{
+    color: rgb(23, 140, 148);
+}
+
+.main{
+
+}
+
+.post{
+    border-radius: .7em .7em .7em .7em;
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+    height: 150px;
+    border: 5px solid rgb(23, 140, 148);
+}
+
+.buttonTop{
+    padding: 1%;
+    width: 150px;
+    background-color:rgb(22, 140, 148);
+    border:0px;
+    color: white;
+    font-size: 20px;
+}
+
+.buttonTop:hover{
+    background-color: rgb(50, 191, 201);
+}

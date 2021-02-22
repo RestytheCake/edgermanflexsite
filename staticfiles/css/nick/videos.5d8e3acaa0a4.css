@@ -1,0 +1,306 @@
+body{
+    background-image: url("../../img/nick/patternwhite.e6590ef07d8a.jpg");
+    background-size: 100px;
+    background-repeat: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+span{
+    display: block;
+    word-wrap: break-word;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#container{
+    margin-top: 10%;
+    background-color:#faebd7;
+    border: 50px solid transparent;
+    border-image: url("../../img/nick/border.236e4e08d8e5.png") 20% round;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+}
+
+#search{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchBar{
+    border:rgb(23, 140, 148) solid;
+    border-width: .2em;
+    border-radius: .7em 0 0 .7em;
+    padding: .2em .2em .2em .5em;
+    width: 600px;
+    height: 50px;
+
+}
+
+#searchButton{
+    border:rgb(23, 140, 148) solid;
+    border-width: .2em;
+    border-radius: 0 .7em .7em 0;
+    background-color: rgb(23, 140, 148);
+    color:white;
+    font-weight:bold;
+    padding-bottom: .2em;
+    width: 50px;
+
+}
+
+#searchButton:hover{
+    background-color:  rgb(5, 191, 201);
+}
+
+.main{
+
+}
+
+.post{
+    background-color:#faebd7;
+    border: 50px solid transparent;
+    border-image: url("../../img/nick/lightborder.a83474912594.png") 20% round;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 90%;
+    height: 280px;
+}
+
+.video-scroll{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.buttonTop{
+    padding: 1%;
+    width: 150px;
+    background-color:rgb(22, 140, 148);
+    border:0px;
+    color: white;
+    font-size: 20px;
+}
+
+.buttonTop:hover{
+    background-color: rgb(50, 191, 201);
+}
+
+#switchLang{
+    font-size: 16px; float:right;
+    margin-right: 20px;
+}
+
+#scroll{
+    text-align: center;
+    background-color: rgb(23, 140, 148);
+}
+
+#topBanner{
+    float: left;
+    color: rgb(24, 100, 105);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 48px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    float: left;
+    padding-left: 10px;
+}
+
+.video{
+    width: 300px ;
+    height: 200px;
+    display: inline;
+    padding: 3px 10px 0px 10px;
+}
+
+@media(max-width: 500px) {
+    .logo{
+        width: 60px;
+        height: 60px;
+        float: left;
+        padding-left: 10px;
+    }
+    .welcome{
+        font-size: 20px;
+     }
+
+    .buttonTop{
+        width: 50px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .post{
+        margin-left: 1%;
+        width: 95%;
+        height: 170px;
+    }
+
+    #topBanner{
+        font-size: 18px;
+    }
+
+    #search{
+        margin-top: 7px;
+    }
+
+    .video{
+    padding: 3px 2px 2px 2px;
+    width: 150px ;
+    height: 100px;
+    position: relative;
+    display: inline;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url("../../img/nick/patterndark.c0e31beb96d1.png");
+        background-size: 2000px;
+        background-repeat: inherit;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #search {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #searchBar {
+        border: rgb(121, 39, 18) solid;
+        border-width: .2em;
+        border-radius: .7em 0 0 .7em;
+        padding: .2em .2em .2em .5em;
+        width: 600px;
+        height: 50px;
+
+    }
+
+    #searchButton {
+        border: rgb(121, 39, 18) solid;
+        border-width: .2em;
+        border-radius: 0 .7em .7em 0;
+        background-color: rgb(121, 39, 18);
+        color: white;
+        font-weight: bold;
+        padding-bottom: .2em;
+        width: 50px;
+
+    }
+
+    #searchButton:hover {
+        background-color: rgb(235, 97, 33);
+    }
+
+    .post{
+    background-color:#faebd7;
+    border: 50px solid transparent;
+    border-image: url("../../img/nick/border.236e4e08d8e5.png") 20% round;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 80%;
+    height: 260px;
+}
+
+    .buttonTop {
+        padding: 1%;
+        width: 150px;
+        background-color: rgb(121, 39, 18);
+        border: 0px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .buttonTop:hover {
+        background-color: rgb(235, 97, 33);
+    }
+
+    #scroll {
+        text-align: center;
+        background-color: rgb(121, 39, 18);
+    }
+
+    #topBanner {
+        float: left;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: rgb(39, 39, 39);
+        font-size: 48px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 120px;
+        float: left;
+        padding-left: 10px;
+    }
+
+    .video{
+    padding: 3px 2px 2px 2px;
+    width: 150px ;
+    height: 100px;
+    position: relative;
+    display: inline;
+    }
+
+    @media (max-width: 500px) {
+        .logo {
+            width: 60px;
+            height: 60px;
+            float: left;
+            padding-left: 10px;
+        }
+
+        .welcome {
+            font-size: 20px;
+        }
+
+        .buttonTop {
+            width: 50px;
+            height: 40px;
+            font-size: 12px;
+        }
+
+        .post{
+        margin-left: 1%;
+        width: 95%;
+        height: 170px;
+    }
+
+        .thx {
+            font-size: 16px;
+        }
+
+        #topBanner {
+            font-size: 18px;
+        }
+
+        #search {
+            margin-top: 7px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+    }
+
+}

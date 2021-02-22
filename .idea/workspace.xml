@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1okyuR2Ot6BWh10vwBb93dupE4Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/html/nick" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DevCake\Codes\Python\Django\templates\html\nick" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Django" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Django" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Django.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="" />
+      <created>1613845104674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613845104674</updated>
+      <workItem from="1613845108404" duration="2087000" />
+      <workItem from="1613847232729" duration="404000" />
+      <workItem from="1613856141673" duration="368000" />
+      <workItem from="1613857930866" duration="3097000" />
+      <workItem from="1613902765934" duration="13895000" />
+      <workItem from="1614015819541" duration="1922000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613911520503">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1613911520503" />
+    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613845642693">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1613845642693" />
+    <state x="932" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613845742238">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="932" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1613845742238" />
+    <state width="754" height="162" key="GridCell.Tab.0.bottom" timestamp="1614020584150">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="162" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1614020584150" />
+    <state width="754" height="162" key="GridCell.Tab.0.center" timestamp="1614020584150">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="162" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1614020584150" />
+    <state width="754" height="162" key="GridCell.Tab.0.left" timestamp="1614020584149">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="162" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1614020584149" />
+    <state width="754" height="162" key="GridCell.Tab.0.right" timestamp="1614020584150">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="162" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1614020584150" />
+    <state width="754" height="272" key="GridCell.Tab.1.bottom" timestamp="1614019334643">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="272" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1614019334643" />
+    <state width="754" height="272" key="GridCell.Tab.1.center" timestamp="1614019334643">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="272" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1614019334643" />
+    <state width="754" height="272" key="GridCell.Tab.1.left" timestamp="1614019334642">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="272" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1614019334642" />
+    <state width="754" height="272" key="GridCell.Tab.1.right" timestamp="1614019334643">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="754" height="272" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1614019334643" />
+    <state x="1009" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614020291163">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="1009" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1614020291163" />
+  </component>
+</project>

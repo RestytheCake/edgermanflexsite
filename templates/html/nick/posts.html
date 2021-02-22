@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+            EDGermanFlex
+        </title>
+        <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
+		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+    </head>
+    <!--Hardcore starts from here-->
+    <body>
+        <div id="containor">
+            <div id="topBanner">
+                <div>
+                    <label>Welcome to the official EDGermanflex site!</label>
+                    <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
+                </div>
+            </div>
+            <div id="scroll">
+                <button class="buttonTop" onClick="window.location='.';">Home</button>
+                <button class="buttonTop" onClick="window.location='videos';">Videos</button>
+                <button class="buttonTop" onClick="window.location='forum';">Forum</button>
+                <button class="buttonTop" onClick="window.location='posts';">Post</button>
+                <button class="buttonTop" onClick="window.location='contact';">Contact</button>
+            </div>
+            <div class="main">
+                <div id="search">
+                    <input type="search" id="searchBar" placeholder="Quick Search">
+                    <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;" onClick="window.location='search';"></button>
+                </div>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b></b></label><br>
+                        <span>
+                            Text
+                        </span>
+                    <div style="padding-right: 20px;"><a href="/schoolPage.html"></a></div>
+                </div>
+            </div>
+        </div>
+    </body>

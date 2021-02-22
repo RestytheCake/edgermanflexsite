@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href={% static 'css/nick/register.css' %}>
+    <link rel="icon" href={% static 'img/nick/logo.png' %}>
+    <title>EDGermanFlex / Register</title>
+</head>
+<body>
+    <center>
+    <div id="container">
+        <form method="POST" action=" ">
+            {% csrf_token %}
+            <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>Registration</b></label><br><br><br>
+            <label style="float: left; ">Username:</label>
+            <label for="regUser"></label><input style="float: right;" type="text" name="username" placeholder="username" id="regUser"><br><br>
+            <label style="float: left;">Password:</label>
+            <label for="regPassword"></label><input style="float: right;" type="password" name="password1" placeholder="password" id="regPassword" minlength="8"><br><br>
+            <label style="float: left; padding-right: 20px;">Confirm password:</label>
+            <label for="regConfPassword"></label><input style="float: right;" type="password" name="password2" placeholder="password" id="regConfPassword" minlength="8"><br><br><br>
+            <button type="submit" class="registerSubmit">Submit</button>
+            <label style="float: left; font-size: 12px;">Already have account?</label><a href="./login" style="float: left; padding-left: 10px; font-size: 12px;">Login</a>
+        </form>
+    </div>
+</center>
+<script>
+    var form_fields = document.getElementsByTagName('Input')
+    form_fields[1].placeholder='Username'
+    form_fields[2].placeholder='Enter Password'
+    form_fields[3].placeholder='Re-enter Password'
+
+    for (var field in form_fields){
+        form_fields[field].className += ' form-control'
+    }
+</script>
+</body>
+</html>

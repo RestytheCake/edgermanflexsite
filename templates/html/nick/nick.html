@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <title>
+            EDGermanFlex
+        </title>
+        <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
+		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <!--Hardcore starts from here-->
+    <body>
+        <div id="containor">
+            <div id="topBanner">
+
+                <div>
+                    <img class="logo" src={% static 'img/nick/logo.png' %} >
+                    <label class="welcome" >Welcome to the official EDGermanflex site!</label>
+                </div>
+            </div>
+            <div id="scroll">
+                <button class="buttonTop" onClick="window.location='';">Home</button>
+                <button class="buttonTop" onClick="window.location='videos';">Videos</button>
+                <button class="buttonTop" onClick="window.location='forum';">Forum</button>
+                <button class="buttonTop" onClick="window.location='posts';">Post</button>
+                <button class="buttonTop" onClick="window.location='contact';">Contact</button>
+            </div>
+            <div class="main">
+                <form action="result" method="get">
+                    <div id="search">
+                        <input type="search" name="search" id="searchBar" placeholder="Quick Search">
+                        <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
+                    </div>
+                </form>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>About Developers</b></label><br>
+                    <span class="thx" >Huge thanks goes to <li>Altyn - for making site and keeping me company always</li>
+                    <li>Resty - for helping with site and coding cool stuff</li>
+                    <li>Myself - for being best and first client of Altyn and motivating her</li></span>
+                </div>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>General topics</b></label><br>
+                    <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
+                </div>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Videos timetable</b></label><br>
+                    <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

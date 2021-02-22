@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>
+            EDGermanFlex
+             <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
+        <link rel="icon" href={% static 'img/nick/logo.png' %} />
+        </title>
+    </head>
+    <!--Hardcore starts from here-->
+    <body>
+        <div id="containor">
+            <div id="topBanner">
+                <div id="switchLang">
+                    <label>Switch language</label>
+                    <label>EN</label>
+                </div>
+                <div>
+                    <label>Welcome to official EDGermanflex site!</label>
+                    <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
+                </div>
+            </div>
+            <div id="scroll">
+                <button class="buttonTop" onClick="window.location='https://kuchen-dev.herokuapp.com/team/nick';">Main page</button>
+                <button class="buttonTop" onClick="window.location='https://kuchen-dev.herokuapp.com/team/nick/videos';">Videos</button>
+                <button class="buttonTop" onClick="window.location='https://kuchen-dev.herokuapp.com/team/nick/forums';">Forums</button>
+                <button class="buttonTop" onClick="window.location='https://kuchen-dev.herokuapp.com/team/nick/posts';">Posts</button>
+                <button class="buttonTop" onClick="window.location='https://kuchen-dev.herokuapp.com/team/nick/contacts';">Contacts</button>
+            </div>
+            <div class="main">
+                <div id="search">
+                    <input type="search" id="searchBar" placeholder="Quick Search">
+                    <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;" onClick="window.location='https://kuchen-dev.herokuapp.com/team/nick/search';"></button>
+                </div>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>Back ??</b></label><br>
+                    <span>
+                        Click on the Buttons
+                    </span>
+                    <div style="padding-right: 20px;"><a href="/schoolPage.html"></a></div>
+                </div>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b></b></label><br>
+                    <span>
+                        You shouldn't be here
+                    </span>
+                    <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
+                </div>
+                <div class="post">
+                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b></b></label><br>
+                    <span>
+                        Why are you reading this
+                    </span>
+                    <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
