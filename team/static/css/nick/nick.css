@@ -51,7 +51,7 @@ span{
 .post{
     background-color:#faebd7;
     border: 50px solid transparent;
-    border-image: url('../../img/nick/lightborder.png') 20% round;
+    border-image: url('../../img/nick/lightthiccborder.png') 20% round;
     margin-left: 8%;
     margin-top: 10px;
     width: 80%;
@@ -168,7 +168,7 @@ input[type = submit]{
 }
 
 input[type = text]{
-    border-image: url('../../img/nick/thiccborder2.png');
+    border-image: url('../../img/nick/darkthiccborder.png');
     border-color: rgb(121, 39, 18);
 }
 
@@ -226,7 +226,7 @@ a:hover{
 .post{
     background-color:#faebd7;
     border: 20px solid transparent;
-    border-image: url('../../img/nick/thiccborder2.png') 20% round;
+    border-image: url('../../img/nick/darkthiccborder.png') 90 round;
     margin-left: 8%;
     margin-top: 10px;
     width: 80%;
@@ -237,7 +237,7 @@ a:hover{
     padding: 1%;
     width: 150px;
     background-color:rgb(121, 39, 18);
-    border:0px;
+    border:0;
     color: white;
     font-size: 20px;
 }

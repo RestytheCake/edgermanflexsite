@@ -1,5 +1,5 @@
 body{
-    background-image: url("../../img/nick/patternwhite.jpg");
+    background-image: url("../../img/nick/patternwhite.e6590ef07d8a.jpg");
     background-size: 100px;
     background-repeat: inherit;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -51,7 +51,7 @@ span{
 .post{
     background-color:#faebd7;
     border: 50px solid transparent;
-    border-image: url('../../img/nick/lightthiccborder.png') 20% round;
+    border-image: url("../../img/nick/lightthiccborder.ca65a9d85f5d.png") 20% round;
     margin-left: 8%;
     margin-top: 10px;
     width: 80%;
@@ -145,7 +145,7 @@ span{
 @media (prefers-color-scheme: dark) {
 
     body{
-    background-image: url("../../img/nick/patterndark.png");
+    background-image: url("../../img/nick/patterndark.c0e31beb96d1.png");
     background-size: 2000px;
     background-repeat: inherit;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -168,7 +168,7 @@ input[type = submit]{
 }
 
 input[type = text]{
-    border-image: url('../../img/nick/darkthiccborder.png');
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png");
     border-color: rgb(121, 39, 18);
 }
 
@@ -226,7 +226,7 @@ a:hover{
 .post{
     background-color:#faebd7;
     border: 20px solid transparent;
-    border-image: url('../../img/nick/darkthiccborder.png') 90 round;
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png") 90 round;
     margin-left: 8%;
     margin-top: 10px;
     width: 80%;
