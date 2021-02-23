@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/videos.css" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/videos.css" afterDir="false" />
-    </list>
+    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +83,7 @@
       <workItem from="1613857930866" duration="3097000" />
       <workItem from="1613902765934" duration="13895000" />
       <workItem from="1614015819541" duration="2765000" />
-      <workItem from="1614075890231" duration="3990000" />
+      <workItem from="1614075890231" duration="4296000" />
     </task>
     <servers />
   </component>

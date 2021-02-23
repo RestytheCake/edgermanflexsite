@@ -49,7 +49,7 @@ span{
 }
 
 .post{
-    background-color:#faebd7;
+    background-color:white;
     border: 20px solid transparent;
     border-image: url('../../img/nick/lightthiccborder.png') 90 round;
     margin-left: 8%;
