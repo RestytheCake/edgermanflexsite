@@ -50,8 +50,8 @@ span{
 
 .post{
     background-color:#faebd7;
-    border: 50px solid transparent;
-    border-image: url('../../img/nick/lightthiccborder.png') 20% round;
+    border: 20px solid transparent;
+    border-image: url('../../img/nick/lightthiccborder.png') 90 round;
     margin-left: 8%;
     margin-top: 10px;
     width: 80%;
