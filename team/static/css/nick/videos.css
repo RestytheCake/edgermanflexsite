@@ -122,6 +122,33 @@ span{
     padding: 3px 10px 0px 10px;
 }
 
+#dropdown{
+    font-size: 20px;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown:active{
+    color: gray;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    min-width: 60px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#dropdown-content a:hover {background-color: #ddd;}
+
 @media(max-width: 500px) {
     .logo{
         width: 60px;
@@ -256,6 +283,33 @@ span{
     position: relative;
     display: inline;
     }
+
+#dropdown{
+    font-size: 20px;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown:active{
+    color: gray;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    min-width: 60px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#dropdown-content a:hover {background-color: #ddd;}
 
     @media (max-width: 500px) {
         .logo {

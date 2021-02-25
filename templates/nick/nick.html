@@ -8,15 +8,43 @@
         <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
         <meta name="viewport" content="width=device-width">
+        <script>
+        let clicked = false;
+        function ddMenu(){
+            let ddcont = document.getElementById('dropdown-content');
+            if(clicked === false){
+                ddcont.style.display = 'block'
+                clicked = true
+            }else{
+                ddcont.style.display = 'none'
+                clicked = false}}
+    </script>
     </head>
     <!--Hardcore starts from here-->
     <body>
         <div id="containor">
             <div id="topBanner">
-
                 <div>
                     <img class="logo" src={% static 'img/nick/logo.png' %} >
                     <label class="welcome" >Welcome to the official EDGermanflex site!</label>
+                    {% if request.user.is_authenticated %}
+                    <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                        <label onclick="ddMenu()">{{ request.user.username }}</label>
+                            <div  id="dropdown-content">
+                                <a href="./myaccount" style="float: left;">Profile</a>
+                                <a href="./logout" style="float: left;">Logout</a>
+                            </div>
+                    </div>
+                    {% else %}
+                        <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                        <label onclick="ddMenu()">New ?</label>
+                            <div  id="dropdown-content">
+                                <a href="./myaccount" style="float: left;">Profile</a>
+                                <a href="./register" style="float: left;">Register</a>
+                                <a href="./login" style="float: left;">Login</a>
+                            </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
             <div id="scroll">

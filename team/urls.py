@@ -12,4 +12,7 @@ urlpatterns = [
     path('nick/register', views.register, name='register'),
     path('nick/result', views.search, name='search'),
     path('nick/logout', views.logout_view, name='logout'),
+    path('nick/myaccount', views.myaccount, name='myacount'),
+    path('nick/sale', views.sale, name='sale')
+
 ]

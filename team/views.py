@@ -2,21 +2,21 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.utils import timezone
 from django.contrib.auth import login, authenticate, logout
-
+from .forms import UploadFileForm
 
 # Create your views here.
 
 
 def nick(request):
-    return render(request, 'html/nick/nick.html')
+    return render(request, 'nick/nick.html')
 
 
 def home(request):
-    return render(request, 'html/nick/nick.html')
+    return render(request, 'nick/nick.html')
 
 
 def videos(request):
-    return render(request, 'html/nick/videos.html')
+    return render(request, 'nick/videos.html')
 
 
 def forums(request):
@@ -26,20 +26,20 @@ def forums(request):
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-    return render(request, 'html/nick/forums.html')
+    return render(request, 'nick/forums.html')
 
 
 def posts(request):
-    return render(request, 'html/nick/posts.html')
+    return render(request, 'nick/posts.html')
 
 
 def contacts(request):
-    return render(request, 'html/nick/contacts.html')
+    return render(request, 'nick/contacts.html')
 
 
 def search(request):
     search_text = str(request.GET.get('search'))
-    return render(request, 'html/nick/search.html', {'result': search_text})
+    return render(request, 'nick/search.html', {'result': search_text})
 
 
 def register(request):
@@ -54,7 +54,7 @@ def register(request):
             if user:
                 login(request, user)
                 return redirect('.')
-    return render(request, 'html/nick/register.html', {'form': form})
+    return render(request, 'nick/register.html', {'form': form})
 
 
 def login_view(request):
@@ -68,9 +68,9 @@ def login_view(request):
             login(request, user)
             return redirect('.')
         else:
-            return render(request, 'html/nick/login.html')
+            return render(request, 'nick/login.html')
     else:
-        return render(request, 'html/nick/login.html')
+        return render(request, 'nick/login.html')
 
 
 def logout_view(request):
@@ -79,3 +79,17 @@ def logout_view(request):
     else:
         pass
     return redirect('https://kuchen-dev.herokuapp.com/team/nick/login')
+
+
+def myaccount(request):
+    if request.method == 'POST':
+        uf = UploadFileForm(request.POST, request.FILES)
+        if uf.is_valid():
+            uf.save()
+    else:
+        uf = UploadFileForm
+    return render(request, 'nick/myaccount.html', {'uf': uf})
+
+
+def sale(request):
+    return render(request, 'nick/main_page.html')

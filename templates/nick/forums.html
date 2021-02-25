@@ -7,6 +7,17 @@
         </title>
         <link rel="stylesheet" href={% static 'css/nick/forums.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <script>
+        let clicked = false;
+        function ddMenu(){
+            let ddcont = document.getElementById('dropdown-content');
+            if(clicked === false){
+                ddcont.style.display = 'block'
+                clicked = true
+            }else{
+                ddcont.style.display = 'none'
+                clicked = false}}
+    </script>
     </head>
     <!--Hardcore starts from here-->
     <body>
@@ -15,6 +26,24 @@
                 <div>
                     <label>Welcome to the official EDGermanflex site!</label>
                     <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
+                    {% if request.user.is_authenticated %}
+                    <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                        <label onclick="ddMenu()">{{ request.user.username }}</label>
+                            <div  id="dropdown-content">
+                                <a href="./myaccount" style="float: left;">Profile</a>
+                                <a href="./logout" style="float: left;">Logout</a>
+                            </div>
+                    </div>
+                    {% else %}
+                        <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                        <label onclick="ddMenu()">New ?</label>
+                            <div  id="dropdown-content">
+                                <a href="./myaccount" style="float: left;">Profile</a>
+                                <a href="./register" style="float: left;">Register</a>
+                                <a href="./login" style="float: left;">Login</a>
+                            </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
             <div id="scroll">
