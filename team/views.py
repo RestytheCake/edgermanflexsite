@@ -1,10 +1,12 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.utils import timezone
 from django.contrib.auth import login, authenticate, logout
-from .forms import UploadFileForm
+from .forms import UploadFileForm, NickUserForm
 
 # Create your views here.
+from .models import NickUser
 
 
 def nick(request):
@@ -43,9 +45,9 @@ def search(request):
 
 
 def register(request):
-    form = UserCreationForm()
+    form = NickUserForm()
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = NickUserForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']
@@ -60,13 +62,16 @@ def register(request):
 def login_view(request):
     if request.user.is_authenticated:
         return redirect('.')
-    elif request.method == 'POST':
+    elif request.POST.get('username'):
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(request, username=username, password=password)
         if user:
             login(request, user)
-            return redirect('.')
+            if request.GET.get('next'):
+                return redirect(request.GET.get('next'))
+            else:
+                return redirect('.')
         else:
             return render(request, 'nick/login.html')
     else:
@@ -93,3 +98,12 @@ def myaccount(request):
 
 def sale(request):
     return render(request, 'nick/main_page.html')
+
+
+@login_required(login_url='./login')
+def supporter(request):
+    return render(request, 'nick/supporter.html')
+
+
+def rickroll(request):
+    return redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
