@@ -22,12 +22,19 @@
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0002_fileupload_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0003_nickuser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0004_nickuser_confirm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0005_forum_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0006_auto_20210301_2022.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0007_nickuser_discord_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/migrations/0008_auto_20210305_1544.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/team/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +158,9 @@
       <workItem from="1614543621794" duration="219000" />
       <workItem from="1614625981053" duration="3824000" />
       <workItem from="1614869255124" duration="330000" />
-      <workItem from="1614940359550" duration="10920000" />
+      <workItem from="1614940359550" duration="11717000" />
+      <workItem from="1614964406950" duration="539000" />
+      <workItem from="1614964974398" duration="1705000" />
     </task>
     <servers />
   </component>
@@ -179,10 +188,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1614542868025" />
-    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1613845642693">
+    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614965029999">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1613845642693" />
+    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1614965029999" />
     <state x="932" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613845742238">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -191,22 +200,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="980" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1614542866971" />
-    <state width="941" height="224" key="GridCell.Tab.0.bottom" timestamp="1614960607394">
+    <state width="1557" height="227" key="GridCell.Tab.0.bottom" timestamp="1614966687436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="941" height="224" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1614960607394" />
-    <state width="941" height="224" key="GridCell.Tab.0.center" timestamp="1614960607394">
+    <state width="1557" height="227" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1614966687436" />
+    <state width="1557" height="227" key="GridCell.Tab.0.center" timestamp="1614966687436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="941" height="224" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1614960607394" />
-    <state width="941" height="224" key="GridCell.Tab.0.left" timestamp="1614960607394">
+    <state width="1557" height="227" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1614966687436" />
+    <state width="1557" height="227" key="GridCell.Tab.0.left" timestamp="1614966687436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="941" height="224" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1614960607394" />
-    <state width="941" height="224" key="GridCell.Tab.0.right" timestamp="1614960607394">
+    <state width="1557" height="227" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1614966687436" />
+    <state width="1557" height="227" key="GridCell.Tab.0.right" timestamp="1614966687436">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="941" height="224" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1614960607394" />
+    <state width="1557" height="227" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1614966687436" />
     <state width="754" height="272" key="GridCell.Tab.1.bottom" timestamp="1614022298517">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

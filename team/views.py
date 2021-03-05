@@ -45,9 +45,9 @@ def search(request):
 
 
 def register(request):
-    form = UserAdminCreationForm()
+    form = UserCreationForm()
     if request.method == "POST":
-        form = UserAdminCreationForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']

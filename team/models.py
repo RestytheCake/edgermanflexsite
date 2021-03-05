@@ -6,7 +6,7 @@ from django.db import models
 
 
 class FileUpload(models.Model):
-    user = models.CharField(max_length=255, blank=True)
+    user = models.CharField(max_length=255, blank=True, default='')
     file = models.FileField()
 
     def __str__(self):
