@@ -6,7 +6,7 @@ from django.db import models
 
 
 class FileUpload(models.Model):
-    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    user = models.CharField(max_length=255, blank=True)
     file = models.FileField()
 
     def __str__(self):
@@ -15,15 +15,30 @@ class FileUpload(models.Model):
 
 class NickUserManager(BaseUserManager):
 
-    def create_user(self, username, password=None):
+    def create_user(self, username, password, is_staff=False, is_admin=False):
         if not username:
             raise ValueError('User need a username')
         if not password:
             raise ValueError('User need a password')
-        user_obj = self.model(username=self.name(username))
+        user_obj = self.model(username=username)
         user_obj.set_password(password)
+        user_obj.staff = is_staff
+        user_obj.admin = is_admin
         user_obj.save(using=self._db)
         return user_obj
+
+    def create_superuser(self, username, password):
+        if not username:
+            raise ValueError('User need a username')
+        if not password:
+            raise ValueError('User need a password')
+        user = self.create_user(
+            username=username,
+            password=password,
+            is_staff=True,
+            is_admin=True
+        )
+        return user
 
 
 class NickUser(AbstractBaseUser):
@@ -32,6 +47,7 @@ class NickUser(AbstractBaseUser):
     staff = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     discord_member = models.BooleanField(default=False)
+    discord_name = models.CharField(max_length=255, unique=False, blank=True)
     supporter = models.BooleanField(default=False)
     special = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -44,6 +60,12 @@ class NickUser(AbstractBaseUser):
     def __str__(self):
         return self.username
 
+    def has_perm(self, perm, obj=None):
+        return True
+
+    def has_module_perms(self, app_label):
+        return True
+
     @property
     def is_admin(self):
         return self.admin
@@ -55,6 +77,10 @@ class NickUser(AbstractBaseUser):
     @property
     def is_discord_member(self):
         return self.discord_member
+
+    @property
+    def is_discord_name(self):
+        return self.discord_name
 
     @property
     def is_supporter(self):

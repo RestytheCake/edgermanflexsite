@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.utils import timezone
 from django.contrib.auth import login, authenticate, logout
-from .forms import UploadFileForm, NickUserForm
+from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
 from .models import NickUser
@@ -45,9 +45,9 @@ def search(request):
 
 
 def register(request):
-    form = NickUserForm()
+    form = UserAdminCreationForm()
     if request.method == "POST":
-        form = NickUserForm(request.POST)
+        form = UserAdminCreationForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data['username']
