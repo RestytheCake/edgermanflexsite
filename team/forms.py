@@ -1,5 +1,6 @@
 from django import forms
-from .models import FileUpload, NickUser
+
+from .models import FileUpload, NickUser, forum
 from django.contrib.auth.forms import UserCreationForm, ReadOnlyPasswordHashField
 
 
@@ -7,6 +8,17 @@ class UploadFileForm(forms.ModelForm):
     class Meta:
         model = FileUpload
         fields = ['file']
+
+
+class addforum(forms.ModelForm):
+    class Meta:
+        model = forum
+        fields = ['title', 'message', 'tags']
+        widgets = {
+            'title': forms.TextInput(attrs={'id': 'createTopic'}),
+            'message': forms.Textarea(attrs={'id': 'createDesc'}),
+            'tags': forms.TextInput(attrs={'id': 'keywords'})
+        }
 
 
 class UserAdminCreationForm(forms.ModelForm):

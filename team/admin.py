@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import FileUpload, NickUser, forum_test
-from .forms import UserAdminChangeForm, UserAdminCreationForm
+from .models import FileUpload, NickUser, forum
+from .forms import UserAdminChangeForm, UserAdminCreationForm, addforum
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
@@ -9,7 +9,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 
 admin.site.register(FileUpload)
-admin.site.register(forum_test)
+admin.site.register(forum)
 
 
 class NickAdmin(BaseUserAdmin):
@@ -23,8 +23,9 @@ class NickAdmin(BaseUserAdmin):
     list_filter = ('admin', 'discord_member', 'discord_name', 'supporter', 'special', 'admin')
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        ('Personal info', {'fields': ('last_login',)}),
-        ('Permissions', {'fields': ('active', 'discord_member', 'discord_name',  'supporter', 'special', 'confirm', 'staff', 'admin',)}),
+        ('Dates', {'fields': ('last_login',)}),
+        ('Role\'s', {'fields': ('discord_member', 'discord_name', 'supporter', 'special')}),
+        ('Permissions', {'fields': ('active', 'confirm', 'staff', 'admin',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.

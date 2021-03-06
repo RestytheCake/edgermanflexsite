@@ -6,7 +6,8 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
-from .models import NickUser
+from .models import NickUser, forum
+from .forms import addforum
 
 
 def nick(request):
@@ -21,14 +22,18 @@ def videos(request):
     return render(request, 'nick/videos.html')
 
 
-def forums(request):
+def forum_view(request):
+    data = forum.objects.all()
+
     if request.method == 'POST':
-        username = request.POST.get('tag')
-        password = f'Kuchen/{username}'
-        user = authenticate(request, username=username, password=password)
-        if user:
-            login(request, user)
-    return render(request, 'nick/forums.html')
+        form = addforum(request.POST)
+        print(form)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.user = request.user
+            instance.save()
+    form = addforum()
+    return render(request, 'nick/forum.html', {'message': data, 'form': form})
 
 
 def posts(request):

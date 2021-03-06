@@ -1,12 +1,13 @@
 from django.contrib.auth.models import User
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager)
 from django.db import models
-
+from django.conf import settings
 # Create your models here.
 
 
 class FileUpload(models.Model):
-    user = models.CharField(max_length=255, blank=True, default='')
+
+    user = models.CharField(max_length=255, blank=True, default=',')
     file = models.FileField()
 
     def __str__(self):
@@ -95,10 +96,13 @@ class NickUser(AbstractBaseUser):
         return self.active
 
 
-class forum_test(models.Model):
-    user = models.CharField(max_length=32, unique=False)
+class forum(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True, default=1, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100, unique=False, blank=False, default='')
     message = models.CharField(max_length=255)
+    tags = models.CharField(max_length=255)
 
     def __str__(self):
-        return str(f'{self.user} -> {self.message}')
+        return str(f'{self.user} -> {self.title} : {self.message}')
+
 

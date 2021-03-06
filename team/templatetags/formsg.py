@@ -1,14 +1,14 @@
 from django import template
 from django.contrib.auth.models import User
 
-from ..models import forum_test
+from ..models import forum
 
 register = template.Library()
 
 
 @register.simple_tag()
 def msg():
-    return str(forum_test)
+    return str(forum)
 
 @register.simple_tag()
 def get_user(username):

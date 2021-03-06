@@ -1,0 +1,207 @@
+/*new components to copy paste*/
+#createPost{
+    display: block;
+    background-color: #ead5c1;
+    border: 30px solid transparent;
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png") 20% round;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    width: auto;
+    height: max-content;
+    display: none;
+}
+
+#keywords{
+    border: none;
+    padding: 5px;
+    width: 50%;
+}
+
+#createTopic{
+    border: none;
+    padding: 5px;
+    width: 50%;
+}
+
+#createDesc{
+    border: none;
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+#buttonNewPost{
+    background-color: rgb(121, 39, 18);
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 10%;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/*u already have this*/
+
+body{
+    background-image: url("../../img/nick/patterndark.c0e31beb96d1.png");
+    background-size: 2000px;
+    background-repeat: inherit;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+span{
+    display: block;
+    word-wrap: break-word;
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+#container{
+    margin-top: 10%;
+    background-color:#faebd7;
+    border: 30px solid transparent;
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png") 20% round;
+    padding: 10px;
+    width: max-content;
+    height: max-content;
+}
+
+
+button[type = submit]{
+    background-color: rgb(121, 39, 18);
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+button[type = text]{
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png");
+    border-color: rgb(121, 39, 18);
+}
+
+
+button[type = submit]:hover{
+    background-color: rgb(235, 97, 33);
+}
+
+a{
+    float: right;
+    color: rgb(121, 39, 18);
+}
+a:hover{
+    color:rgb(235, 97, 33);
+}
+
+
+
+#dropdown{
+    font-size: 20px;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown:active{
+    color: gray;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: black;
+    min-width: 60px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+#dropdown-content a:hover {background-color: #ddd;}
+
+
+#search{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#searchBar{
+    border:rgb(121, 39, 18) solid;
+        border-width: .2em;
+        border-radius: .7em 0 0 .7em;
+        padding: .2em .2em .2em .5em;
+        width: 600px;
+        height: 50px;
+        
+}
+
+#searchButton{
+    border:rgb(121, 39, 18) solid;
+        border-width: .2em;
+        border-radius: 0 .7em .7em 0;
+        background-color: rgb(121, 39, 18);
+        color:white;
+        font-weight:bold;
+        padding-bottom: .2em;
+        width: 50px;
+
+}
+
+#searchButton:hover{
+    background-color:  rgb(235, 97, 33);
+}
+
+.main{
+    
+}
+
+.post{
+    background-color:#faebd7;
+    border: 30px solid transparent;
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png") 20% round;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    width: auto;
+    height: max-content;
+}
+
+.buttonTop{
+    padding: 1%;
+    width: 150px;
+    background-color:rgb(121, 39, 18);
+    border:0px;
+    color: white;
+    font-size: 20px;
+}
+
+.buttonTop:hover{
+    background-color: rgb(235, 97, 33);
+}
+
+
+#scroll{
+    text-align: center;
+    background-color: rgb(121, 39, 18);
+}
+
+#topBanner{
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: rgb(39, 39, 39);
+    font-size: 48px;
+}

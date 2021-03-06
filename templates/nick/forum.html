@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            EDgermanflex
+        </title>
+        <link rel="stylesheet" href={% static 'css/nick/forum.css' %}>
+		<link rel="icon" href={% static 'img/nick/logo.png' %}>
+    </head>
+    <!--Hardcore starts from here-->
+
+    <script>
+        //alooooooo to create new post
+        let createNewButtonPressed = false; //long variable ):
+
+        function newPostUsers(){
+            let newPost = document.getElementById('createPost')
+
+            if(createNewButtonPressed == false){
+                newPost.style.display = 'block'
+                createNewButtonPressed = true
+            }else{
+                newPost.style.display = 'none'
+                createNewButtonPressed = false
+            }
+        }
+
+        
+
+        //change clicked to profileClicked, more understandable
+        let profileClicked = false;
+
+        function ddMenu(){
+            let ddcont = document.getElementById('dropdown-content');
+            
+            if(profileClicked == false){
+                ddcont.style.display = 'block'
+                profileClicked = true
+            }else{
+                ddcont.style.display = 'none'
+                profileClicked = false
+            }
+        }
+
+    </script>
+    <body>
+        <div id="containor">
+            <div id="topBanner">
+
+                <!--u have this-->
+			{% if request.user.is_authenticated %}
+            <div id="dropdown"  style="float: right; margin-right: 50px;">
+                <label onclick="ddMenu()">{{ request.user.username }}</label>
+                <div  id="dropdown-content">
+                    <a href="./myaccount" style="float: left;">Profile</a>
+                    <a href="./logout" style="float: left;">Logout</a>
+                </div>
+            </div>
+			{% else %}
+			<div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                <label onclick="ddMenu()">New ?</label>
+                <div  id="dropdown-content">
+                    <a href="./myaccount" style="float: left;">Profile</a>
+                    <a href="./register" style="float: left;">Register</a>
+                    <a href="./login" style="float: left;">Login</a>
+                </div>
+            </div>
+			{% endif %}
+                <div>
+                    <label>Welcome to official EDGermanflex site!</label>
+                    <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
+                </div>
+            </div>
+
+            
+
+            <div id="scroll">
+                <button class="buttonTop" onClick="window.location='.';">Home</button>
+                <button class="buttonTop" onClick="window.location='videos';">Videos</button>
+                <button class="buttonTop" onClick="window.location='forum';">Forum</button>
+                <button class="buttonTop" onClick="window.location='posts';">Post</button>
+                <button class="buttonTop" onClick="window.location='contact';">Contact</button>
+            </div>
+            <div id="search">
+                    <input type="search" id="searchBar" placeholder="Quick Search">
+                    <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;" onClick="window.location='nick/search';"></button>
+                </div>
+
+
+            <!--here new stuff going on-->
+           
+            <!--create post for forum-->
+            {% if request.user.is_authenticated %}
+            <button id='buttonNewPost' onclick="newPostUsers()">Create new post</button>
+            <div id="createPost">
+            <form method="POST" action="">
+                {% csrf_token %}
+                <label style="padding-right: 10px;">Topic: </label><br>
+                <label id="createTopic">{{ form.title }}</label><br><br>
+                <label>Keywords:</label><br>
+                <label id='keywords'>{{ form.tags }}</label><br><br>
+                <label style="padding-right: 10px;">Description: </label><br>
+                <label id='createDesc'>{{ form.message }}</label><br><br>
+                <button type="submit" style="float: right;">Submit</button><br>
+                {{ form.errors }}
+            </form>
+            </div>
+            {% else %}
+                <button id='buttonNewPost' onclick="newPostUsers()">Create new post</button>
+            <div id="createPost">
+            <center>
+                    <label style="font-size: 18px">You need to be Logged in to Write in Forum
+                    <a style="margin-left: 20px" href="./register">Register</a>
+                    <a style="margin-left: 20px" href="./login">Login</a>
+                    </label>
+            </center>
+            </div>
+            {% endif %}
+			
+			{% for data in message %}
+                <div class="post">
+                <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
+                <a href='/authorprofile' style="float: none; padding: 10px;">{{ data.user }}</a>
+                <span>{{ data.message }}</span>
+                <div style="padding-right: 20px; padding: 10px;"><a>Show more</a></div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </body>
+</html>
