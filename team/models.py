@@ -101,6 +101,7 @@ class forum(models.Model):
     title = models.CharField(max_length=100, unique=False, blank=False, default='')
     message = models.CharField(max_length=255)
     tags = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return str(f'{self.user} -> {self.title} : {self.message}')

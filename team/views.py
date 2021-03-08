@@ -23,7 +23,7 @@ def videos(request):
 
 
 def forum_view(request):
-    data = forum.objects.all()
+    data = forum.objects.all().order_by('-created_at')
     form = addforum()
     if request.method == 'POST':
         form = addforum(request.POST)

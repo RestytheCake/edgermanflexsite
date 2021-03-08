@@ -25,8 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2+j0!)rhskxqmg$xjb&cnjp6bz5l&748c*jfku2wt!i!xwx)xg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ['kuchen-dev.herokuapp.com', '127.0.0.1']
 
 
