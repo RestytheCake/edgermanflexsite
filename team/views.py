@@ -24,16 +24,26 @@ def videos(request):
 
 def forum_view(request):
     data = forum.objects.all()
-
+    form = addforum()
     if request.method == 'POST':
         form = addforum(request.POST)
-        print(form)
         if form.is_valid():
             instance = form.save(commit=False)
-            instance.user = request.user
+            instance.user = request.user.username
             instance.save()
-    form = addforum()
+
     return render(request, 'nick/forum.html', {'message': data, 'form': form})
+
+
+def forum_create(request):
+    return render(request, 'nick/forum_create.html')
+
+
+def profile(request):
+    user_get = str(request.GET.get('User'))
+    data = forum.objects.filter(user=user_get)
+    print(data)
+    return render(request, 'nick/profile.html', {'User': user_get, 'message': data})
 
 
 def posts(request):

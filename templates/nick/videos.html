@@ -55,10 +55,12 @@
                 <button class="buttonTop" onClick="window.location='contact';">Contact</button>
             </div>
             <div class="main">
+                <form action="/team/nick/forum/profile" method="get">
                 <div id="search">
-                    <input type="search" id="searchBar" placeholder="Quick Search">
-                    <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;" "onClick="window.location='search';"></button>
+                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
+                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
                 </div>
+            </form>
                 <div class="post">
                     <label style="font-size: 24px; padding: 3px; color:rgb(23, 140, 148);"><b>Most  Viewed  Video</b></label><br>
                     <span>

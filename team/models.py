@@ -97,7 +97,7 @@ class NickUser(AbstractBaseUser):
 
 
 class forum(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True, default=1, on_delete=models.CASCADE)
+    user = models.CharField(max_length=255, default=' ')
     title = models.CharField(max_length=100, unique=False, blank=False, default='')
     message = models.CharField(max_length=255)
     tags = models.CharField(max_length=255)

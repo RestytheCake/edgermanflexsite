@@ -55,12 +55,12 @@
                 <button class="buttonTop" onClick="window.location='contact';">Contact</button>
             </div>
             <div class="main">
-                <form action="result" method="get">
-                    <div id="search">
-                        <input type="search" name="search" id="searchBar" placeholder="Quick Search">
-                        <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
-                    </div>
-                </form>
+                <form action="/team/nick/forum/profile" method="get">
+                <div id="search">
+                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
+                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
+                </div>
+            </form>>
                 <div class="post">
                     <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>smth</b></label><br>
                     <span class="thx" >You need to be Logged in</span>
