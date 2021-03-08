@@ -48,12 +48,12 @@
             </div>
             <div id="scroll">
                 <button class="buttonTop" onClick="window.location='';">Home</button>
-                <button class="buttonTop" onClick="window.location='videos';">Videos</button>
-                <button class="buttonTop" onClick="window.location='forum';">Forum</button>
-                <button class="buttonTop" onClick="window.location='posts';">Post</button>
-                <button class="buttonTop" onClick="window.location='contact';">Contact</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
             </div>
-            <form action="/team/nick/forum/profile" method="get">
+            <form action="/team/nick/forum/search" method="get">
                 <div id="search">
                     <input type="search" name="User" id="searchBar" placeholder="Quick Search">
                     <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>

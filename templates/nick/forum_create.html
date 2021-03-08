@@ -1,40 +1,38 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href={% static 'css/nick/forum.css' %}>
-    <link rel="icon" href={% static 'img/nick/logo.png' %}>
-    <meta name="viewport" content="width=device-width">
-    <title>EDGermanFlex / Login</title>
-</head>
-<body>
-<div id="container">
-<center>
-    {% if request.user.is_authenticated %}
-        <div id="createPost">
-            <form method="POST" action="">
-                {% csrf_token %}
-                <label style="padding-right: 10px;">Topic: </label><br>
-                <label id="createTopic">{{ form.title }}</label><br><br>
-                <label>Keywords:</label><br>
-                <label id='keywords'>{{ form.tags }}</label><br><br>
-                <label style="padding-right: 10px;">Description: </label><br>
-                <label id='createDesc'>{{ form.message }}</label><br><br>
-                <button type="submit" style="float: right;">Submit</button><br>
-                {{ form.errors }}
-            </form>
-            </div>
-            {% else %}
-            <div id="createPost">
-            <center>
-                    <label style="font-size: 18px">You need to be Logged in to Write in Forum
-                    <a style="margin-left: 20px" href="./register">Register</a>
-                    <a style="margin-left: 20px" href="./login">Login</a>
-                    </label>
-            </center>
-            </div>
-            {% endif %}
-</center>
-</div>
-</body>
+<html>
+    <head>
+        <title>
+            EDGermanFlex
+        </title>
+        <link rel="stylesheet" href={% static 'css/nick/forum_create.css' %}>
+        <link rel="icon" href={% static 'img/nick/logo.png' %}>
+    </head>
+    <!--Hardcore starts from here-->
+
+    <body>
+        <center>
+         <!--create post for forum-->
+        <form action="/team/nick/forum/create" method="post">
+         {% if request.user.is_authenticated %}
+             {% csrf_token %}
+         <div id="createPost">
+            <label style="padding-right: 10px; float: left;">Topic: </label><br>
+            {{ form.title }}<br><br>
+            <label style=" float: left;">Keywords:</label><br>
+            {{ form.tags }}<br><br>
+            <label style="padding-right: 10px; float: left;">Description: </label><br>
+            {{ form.message }}<br><br>
+             <button type="submit" style="float: right;">Submit</button><br>
+        </div>
+        </form>
+        {% else %}
+             <div id="createPost">
+                <label>
+                    You need to be logged in &nbsp; &nbsp; <a href="/team/nick/register">Register</a> or <a href="/team/nick/login">Login</a>
+                </label>
+             </div>
+        {% endif %}
+        </center>
+    </body>
 </html>

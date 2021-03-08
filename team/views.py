@@ -36,10 +36,18 @@ def forum_view(request):
 
 
 def forum_create(request):
-    return render(request, 'nick/forum_create.html')
+    form = addforum()
+    if request.method == 'POST':
+        form = addforum(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.user = request.user.username
+            instance.save()
+            return redirect('/team/nick/forum')
+    return render(request, 'nick/forum_create.html', {'form': form})
 
 
-def profile(request):
+def search_post(request):
     user_get = str(request.GET.get('User'))
     data = forum.objects.filter(user=user_get)
     print(data)

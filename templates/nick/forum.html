@@ -76,13 +76,13 @@
             
 
             <div id="scroll">
-                <button class="buttonTop" onClick="window.location='.';">Home</button>
-                <button class="buttonTop" onClick="window.location='videos';">Videos</button>
-                <button class="buttonTop" onClick="window.location='forum';">Forum</button>
-                <button class="buttonTop" onClick="window.location='posts';">Post</button>
-                <button class="buttonTop" onClick="window.location='contact';">Contact</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
+                <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
             </div>
-            <form action="/team/nick/forum/profile" method="get">
+            <form action="/team/nick/forum/search" method="get">
                 <div id="search">
                     <input type="search" name="User" id="searchBar" placeholder="Quick Search">
                     <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
@@ -92,33 +92,8 @@
             <!--here new stuff going on-->
            
             <!--create post for forum-->
-            {% if request.user.is_authenticated %}
-            <button id='buttonNewPost' onclick="newPostUsers()">Create new post</button>
-            <div id="createPost">
-            <form method="POST" action="">
-                {% csrf_token %}
-                <label style="padding-right: 10px;">Topic: </label><br>
-                <label id="createTopic">{{ form.title }}</label><br><br>
-                <label>Keywords:</label><br>
-                <label id='keywords'>{{ form.tags }}</label><br><br>
-                <label style="padding-right: 10px;">Description: </label><br>
-                <label id='createDesc'>{{ form.message }}</label><br><br>
-                <button type="submit" style="float: right;">Submit</button><br>
-                {{ form.errors }}
-            </form>
-            </div>
-            {% else %}
-                <button id='buttonNewPost' onclick="newPostUsers()">Create new post</button>
-            <div id="createPost">
-            <center>
-                    <label style="font-size: 18px">You need to be Logged in to Write in Forum
-                    <a style="margin-left: 20px" href="./register">Register</a>
-                    <a style="margin-left: 20px" href="./login">Login</a>
-                    </label>
-            </center>
-            </div>
-            {% endif %}
-			
+            <button onclick="location.href='/team/nick/forum/create';" id='buttonNewPost'>Create new post</button>
+
 			{% for data in message %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
