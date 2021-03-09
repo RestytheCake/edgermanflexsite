@@ -27,7 +27,7 @@
                 <div>
                     <img class="logo" src={% static 'img/nick/logo.png' %} >
                     <label class="welcome" >Welcome to the official EDGermanflex site!</label>
-                    {% if request.user.is_authenticated %}
+                    {% if request.user.authenticated %}
                     <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                         <label onclick="ddMenu()">{{ request.user.username }}</label>
                             <div  id="dropdown-content">
