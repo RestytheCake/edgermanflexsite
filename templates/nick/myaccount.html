@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <title>EDGermanFlex / {{ request.user.username }}</title>
     <link rel="stylesheet" href={% static 'css/nick/dropdowmmenu.css' %}>
+    <script src=”https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js”></script>
 </head>
-<body>
+<body onload="cartoon">
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ uf.errors }} <br>
@@ -27,5 +28,17 @@
     </div>
   </div>
 </div>
+<script>
+    let animations = anime({
+                targets: "div",
+                translateX: 150,
+                height: "80px",
+                width: "80px",
+                duration: 2000,
+                easing: "linear",
+                direction: "alternate",
+                loop: true,
+            });
+</script>
 </body>
 </html>

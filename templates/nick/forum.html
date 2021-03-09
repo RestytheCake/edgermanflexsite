@@ -5,14 +5,30 @@
         <title>
             EDgermanflex
         </title>
-        <link rel="stylesheet" href={% static 'css/nick/forum.css' %}>
-		<link rel="icon" href={% static 'img/nick/logo.png' %}>
+        <link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
+        <link rel="icon" href={% static 'img/nick/logo.png' %}>
     </head>
     <!--Hardcore starts from here-->
 
     <script>
         //alooooooo to create new post
-        let createNewButtonPressed = false; //long variable ):
+        let filterClicked = false;
+
+        function filterSearch(){
+            let filterList = document.getElementById('selectList')
+
+            if(filterClicked == false){
+                filterList.style.display = 'block'
+                filterClicked = true
+            }else{
+                filterList.style.display = 'none'
+                filterClicked = false
+            }
+
+        }
+
+        //u have them
+        let createNewButtonPressed = false;
 
         function newPostUsers(){
             let newPost = document.getElementById('createPost')
@@ -27,8 +43,6 @@
         }
 
         
-
-        //change clicked to profileClicked, more understandable
         let profileClicked = false;
 
         function ddMenu(){
@@ -48,25 +62,17 @@
         <div id="containor">
             <div id="topBanner">
 
+               
+
                 <!--u have this-->
-			{% if request.user.is_authenticated %}
             <div id="dropdown"  style="float: right; margin-right: 50px;">
                 <label onclick="ddMenu()">{{ request.user.username }}</label>
                 <div  id="dropdown-content">
-                    <a href="./myaccount" style="float: left;">Profile</a>
-                    <a href="./logout" style="float: left;">Logout</a>
+                    <a href="" style="float: left;">Profile</a>
+                    <a href="" style="float: left;">Logout</a>
                 </div>
             </div>
-			{% else %}
-			<div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
-                <label onclick="ddMenu()">New ?</label>
-                <div  id="dropdown-content">
-                    <a href="./myaccount" style="float: left;">Profile</a>
-                    <a href="./register" style="float: left;">Register</a>
-                    <a href="./login" style="float: left;">Login</a>
-                </div>
-            </div>
-			{% endif %}
+
                 <div>
                     <label>Welcome to official EDGermanflex site!</label>
                     <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
@@ -78,23 +84,44 @@
             <div id="scroll">
                 <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
                 <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
+                <button class="buttonTop" style="background-color:  rgb(235, 97, 33);" onClick="window.location='/team/nick/forum';">Forum</button>
                 <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
                 <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
             </div>
-            <form action="/team/nick/forum/search" method="get">
-                <div id="search">
-                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
-                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
-                </div>
-            </form>
-
-            <!--here new stuff going on-->
            
-            <!--create post for forum-->
-            <button onclick="location.href='/team/nick/forum/create';" id='buttonNewPost'>Create new post</button>
+           
+           
+           <!--here new stuff going on-->
+            <form action="/team/nick/forum/search" method="get">
+            <div id="search">
+                <input type="search" name="searching" id="searchBar" placeholder="Quick Search">
+                <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"> </button>
+                <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 25px; height: 25px;"></div>
+                <div id="filterList">
+                    <select name="Search by" id="selectList">
+                        <option value="user">Username</option>
+                        <option value="title">Topic</option>
+                        <option value="tags">Keyword</option>
+                    </select>
+                </div>
+            </div>
+            </form>
+            
 
-			{% for data in message %}
+            <!--end of new things-->
+
+            <button id='buttonNewPost' onclick="newPostUsers()">Create new post</button>
+            <div id="createPost">
+                <label style="padding-right: 10px;">Topic: </label><br>
+                <input id='createTopic' type="text"><br><br>
+                <label>Keywords:</label><br>
+                <input id='keywords' type="text"><br><br>
+                <label style="padding-right: 10px;">Description: </label><br>
+                <textarea id='createDesc'></textarea><br><br>
+                <input type="submit" style="float: right;"><br>
+            </div>
+
+            {% for data in message %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
                 <a href='/authorprofile' style="float: none; padding: 10px;">{{ data.user }}</a>

@@ -5,8 +5,24 @@
         <title>
             EDgermanflex / {{ User }}
         </title>
-        <link rel="stylesheet" href={% static 'css/nick/forum.css' %}>
+        <link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %}>
+        <script>
+            let filterClicked = false;
+
+        function filterSearch(){
+            let filterList = document.getElementById('selectList')
+
+            if(filterClicked == false){
+                filterList.style.display = 'block'
+                filterClicked = true
+            }else{
+                filterList.style.display = 'none'
+                filterClicked = false
+            }
+
+        }
+        </script>
     </head>
     <!--Hardcore starts from here-->
 
@@ -36,17 +52,17 @@
             <div id="dropdown"  style="float: right; margin-right: 50px;">
                 <label onclick="ddMenu()">{{ request.user.username }}</label>
                 <div  id="dropdown-content">
-                    <a href="./myaccount" style="float: left;">Profile</a>
-                    <a href="./logout" style="float: left;">Logout</a>
+                    <a href="/team/nick//myaccount" style="float: left;">Profile</a>
+                    <a href="/team/nick//logout" style="float: left;">Logout</a>
                 </div>
             </div>
 			{% else %}
 			<div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                 <label onclick="ddMenu()">New ?</label>
                 <div  id="dropdown-content">
-                    <a href="./myaccount" style="float: left;">Profile</a>
-                    <a href="./register" style="float: left;">Register</a>
-                    <a href="./login" style="float: left;">Login</a>
+                    <a href="/team/nick//myaccount" style="float: left;">Profile</a>
+                    <a href="/team/nick/register" style="float: left;">Register</a>
+                    <a href="/team/nick/login" style="float: left;">Login</a>
                 </div>
             </div>
 			{% endif %}
@@ -66,11 +82,20 @@
                 <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
             </div>
             <form action="/team/nick/forum/search" method="get">
-                <div id="search">
-                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
-                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
+            <div id="search">
+                <input type="search" name="searching" id="searchBar" placeholder="Quick Search">
+                <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"> </button>
+                <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 25px; height: 25px;"></div>
+                <div id="filterList">
+                    <select name="Search by" id="selectList">
+                        <option value="user">Username</option>
+                        <option value="title">Topic</option>
+                        <option value="tags">Keyword</option>
+                    </select>
                 </div>
+            </div>
             </form>
+
 
 			{% for data in message %}
                 <div class="post">

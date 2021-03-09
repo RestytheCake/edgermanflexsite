@@ -48,8 +48,17 @@ def forum_create(request):
 
 
 def search_post(request):
-    user_get = str(request.GET.get('User'))
+    user_get = str(request.GET.get('searching'))
     data = forum.objects.filter(user=user_get)
+    if request.GET.get('Search by') == 'user':
+        user_get = str(request.GET.get('searching'))
+        data = forum.objects.filter(user=user_get)
+    if request.GET.get('Search by') == 'title':
+        user_get = str(request.GET.get('searching'))
+        data = forum.objects.filter(title=user_get)
+    if request.GET.get('Search by') == 'tags':
+        user_get = str(request.GET.get('searching'))
+        data = forum.objects.filter(tags=user_get)
     print(data)
     return render(request, 'nick/profile.html', {'User': user_get, 'message': data})
 
