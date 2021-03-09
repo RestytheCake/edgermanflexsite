@@ -110,16 +110,7 @@
 
             <!--end of new things-->
 
-            <button id='buttonNewPost' onclick="newPostUsers()">Create new post</button>
-            <div id="createPost">
-                <label style="padding-right: 10px;">Topic: </label><br>
-                <input id='createTopic' type="text"><br><br>
-                <label>Keywords:</label><br>
-                <input id='keywords' type="text"><br><br>
-                <label style="padding-right: 10px;">Description: </label><br>
-                <textarea id='createDesc'></textarea><br><br>
-                <input type="submit" style="float: right;"><br>
-            </div>
+            <button onclick="location.href='/team/nick/forum/create';" id='buttonNewPost'>Create new post</button>
 
             {% for data in message %}
                 <div class="post">
