@@ -12,12 +12,15 @@
 
         function filterSearch(){
             let filterList = document.getElementById('selectList')
+            let sortlist = document.getElementById('sortList')
 
             if(filterClicked == false){
                 filterList.style.display = 'block'
+                sortList.style.display = 'block'
                 filterClicked = true
             }else{
                 filterList.style.display = 'none'
+                sortList.style.display = 'none'
                 filterClicked = false
             }
 
@@ -85,7 +88,7 @@
             <div id="search">
                 <input type="search" name="searching" id="searchBar" placeholder="Quick Search">
                 <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"> </button>
-                <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 25px; height: 25px;"></div>
+                <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 40px; height: 40px;"></div>
                 <div id="filterList">
                     <select name="Search by" id="selectList">
                         <option value="user">Username</option>
@@ -93,18 +96,33 @@
                         <option value="tags">Keyword</option>
                     </select>
                 </div>
+                <div id="filterNewOld">
+                    <select name="Sort by" id='sortList'>
+                        <option value="new">New</option>
+                        <option value="old">Old</option>
+                    </select>
+                </div>
             </div>
             </form>
 
-
+            {% if message%}
 			{% for data in message %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
                 <a href='/authorprofile' style="float: none; padding: 10px;">{{ data.user }}</a>
                 <span>{{ data.message }}</span>
-                <div style="padding-right: 20px; padding: 10px;"><a>Show more</a></div>
+                <span id="tags">Keywords : {{ data.tags }}</span>
+                <a>Show more</a>
                 </div>
             {% endfor %}
+            {% else %}
+                <div class="post">
+                <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>ERROR 404</b></label><br><br>
+                <a href='/authorprofile' style="float: none; padding: 10px;">-System-</a>
+                <span>We searched and searched but we couldn't find for what you where looking.<br>Search for anything else or go Back</span>
+                <div style="padding-right: 20px; padding: 10px;"><a>Show more</a></div>
+                </div>
+            {% endif %}
 
         </div>
     </body>

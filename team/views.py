@@ -49,17 +49,25 @@ def forum_create(request):
 
 def search_post(request):
     user_get = str(request.GET.get('searching'))
-    data = forum.objects.filter(user=user_get)
     if request.GET.get('Search by') == 'user':
         user_get = str(request.GET.get('searching'))
-        data = forum.objects.filter(user=user_get)
+        data = forum.objects.filter(user=user_get).order_by('-created_at')
     if request.GET.get('Search by') == 'title':
         user_get = str(request.GET.get('searching'))
-        data = forum.objects.filter(title=user_get)
+        data = forum.objects.filter(title__contains=user_get).order_by('-created_at')
     if request.GET.get('Search by') == 'tags':
         user_get = str(request.GET.get('searching'))
-        data = forum.objects.filter(tags=user_get)
-    print(data)
+        data = forum.objects.filter(tags__contains=user_get).order_by('-created_at')
+    if request.GET.get('Sort by') == 'old':
+        if request.GET.get('Search by') == 'user':
+            user_get = str(request.GET.get('searching'))
+            data = forum.objects.filter(user=user_get).order_by('created_at')
+        if request.GET.get('Search by') == 'title':
+            user_get = str(request.GET.get('searching'))
+            data = forum.objects.filter(title__contains=user_get).order_by('created_at')
+        if request.GET.get('Search by') == 'tags':
+            user_get = str(request.GET.get('searching'))
+            data = forum.objects.filter(tags__contains=user_get).order_by('created_at')
     return render(request, 'nick/profile.html', {'User': user_get, 'message': data})
 
 
