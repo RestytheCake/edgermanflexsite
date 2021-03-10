@@ -1,129 +1,47 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            EDgermanflex / {{ User }}
-        </title>
-        <link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
-		<link rel="icon" href={% static 'img/nick/logo.png' %}>
-        <script>
-            let filterClicked = false;
-
-        function filterSearch(){
-            let filterList = document.getElementById('selectList')
-            let sortlist = document.getElementById('sortList')
-
-            if(filterClicked == false){
-                filterList.style.display = 'block'
-                sortList.style.display = 'block'
-                filterClicked = true
-            }else{
-                filterList.style.display = 'none'
-                sortList.style.display = 'none'
-                filterClicked = false
-            }
-
-        }
-        </script>
-    </head>
-    <!--Hardcore starts from here-->
-
-    <script>
-        //change clicked to profileClicked, more understandable
-        let profileClicked = false;
-
-        function ddMenu(){
-            let ddcont = document.getElementById('dropdown-content');
-            
-            if(profileClicked == false){
-                ddcont.style.display = 'block'
-                profileClicked = true
-            }else{
-                ddcont.style.display = 'none'
-                profileClicked = false
-            }
-        }
-
-    </script>
+    <title>
+        EDGermanFlex
+    </title>
+    <link rel="stylesheet" href={% static 'css/nick/profile.css' %}>
+    <link rel="icon" href={% static 'img/nick/logo.png' %}>
     <body>
-        <div id="containor">
-            <div id="topBanner">
-
-                <!--u have this-->
-			{% if request.user.is_authenticated %}
-            <div id="dropdown"  style="float: right; margin-right: 50px;">
-                <label onclick="ddMenu()">{{ request.user.username }}</label>
-                <div  id="dropdown-content">
-                    <a href="/team/nick//myaccount" style="float: left;">Profile</a>
-                    <a href="/team/nick//logout" style="float: left;">Logout</a>
-                </div>
-            </div>
-			{% else %}
-			<div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
-                <label onclick="ddMenu()">New ?</label>
-                <div  id="dropdown-content">
-                    <a href="/team/nick//myaccount" style="float: left;">Profile</a>
-                    <a href="/team/nick/register" style="float: left;">Register</a>
-                    <a href="/team/nick/login" style="float: left;">Login</a>
-                </div>
-            </div>
-			{% endif %}
-                <div>
-                    <label>Welcome to the official EDGermanflex site!</label>
-                    <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
-                </div>
-            </div>
-
+        <center>
+        <div id="profile">
+        {% for profil in profile %}
+            <label style="font-size: 20px;"><b>{{ profil.username }}</b></label><br><br>
             
-
-            <div id="scroll">
-                <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
-            </div>
-            <form action="/team/nick/forum/search" method="get">
-            <div id="search">
-                <input type="search" name="searching" id="searchBar" placeholder="Quick Search">
-                <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"> </button>
-                <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 40px; height: 40px;"></div>
-                <div id="filterList">
-                    <select name="Search by" id="selectList">
-                        <option value="user">Username</option>
-                        <option value="title">Topic</option>
-                        <option value="tags">Keyword</option>
-                    </select>
-                </div>
-                <div id="filterNewOld">
-                    <select name="Sort by" id='sortList'>
-                        <option value="new">New</option>
-                        <option value="old">Old</option>
-                    </select>
-                </div>
-            </div>
-            </form>
-
-            {% if message%}
-			{% for data in message %}
-                <div class="post">
-                <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
-                <a href='/authorprofile' style="float: none; padding: 10px;">{{ data.user }}</a>
-                <span>{{ data.message }}</span>
-                <span id="tags">Keywords : {{ data.tags }}</span>
-                <a>Show more</a>
-                </div>
-            {% endfor %}
+            <div style="font-size: 13px;">
+            {% if profil.discord_member %}
+                <label id='discordTag' >{{ profil.discord_name }} &nbsp;&nbsp;|</label>
             {% else %}
-                <div class="post">
-                <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>ERROR 404</b></label><br><br>
-                <a href='/authorprofile' style="float: none; padding: 10px;">-System-</a>
-                <span>We searched and searched but we couldn't find for what you where looking.<br>Search for anything else or go Back</span>
-                <div style="padding-right: 20px; padding: 10px;"><a>Show more</a></div>
-                </div>
+                <label id='discordTag'>No Discord Member &nbsp;&nbsp;|</label>
             {% endif %}
+            {% if profil.muffin_family %}
+             <label id='muffinRole' style="padding-left: 10px;">{{ profil.muffin_role}} &nbsp;&nbsp; |</label>
+            {% endif %}
+            {% if profil.special %}
+                <label id='specialRole' style="padding-left: 10px;">{{ profil.special_roles}}</label>
+            {% else %}
+              <label id='specialRole' style="padding-left: 10px;">Elemental Dungeon Player </label>
+            {% endif %}
+            </div>
+            <hr>
+            Messages posted : {{ msg_counter }}
 
+        {% for msg in data %}
+        <hr><div  id="userMessage">
+            <label id='userTopic' style="font-size: large;"><b>{{ msg.title }}</b></label><br><br>
+            <label id='userDescription'> {{ msg.message}}</label><br><br>
+            <label id='userKeyword' style="font-size: 13px;">{{ msg.tags }}</label>
         </div>
+        {% endfor %}
+        {% endfor %}
+        </div>
+        </center>
     </body>
 </html>
+
+<!--<textarea id='createDesc' style="height: 50px;" maxlength="255"></textarea><br><br>     <label style="padding-right: 10px; float: left;">Status:</label><br>-->
+<!--            <input type="submit" style="float: right;"><br>-->

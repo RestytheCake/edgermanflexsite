@@ -6,7 +6,7 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
-from .models import NickUser, forum
+from .models import NickUser, forum, profile
 from .forms import addforum
 
 
@@ -68,7 +68,18 @@ def search_post(request):
         if request.GET.get('Search by') == 'tags':
             user_get = str(request.GET.get('searching'))
             data = forum.objects.filter(tags__contains=user_get).order_by('created_at')
-    return render(request, 'nick/profile.html', {'User': user_get, 'message': data})
+    return render(request, 'nick/message_search.html', {'User': user_get, 'message': data})
+
+
+def profile_view(request):
+    if request.GET.get('user'):
+        usernameget = request.GET.get('user')
+        profile_data = profile.objects.filter(username__username=usernameget)
+        forum_data = forum.objects.filter(user=usernameget).order_by('-created_at')
+        msg_counter = 0
+        for x in forum_data:
+            msg_counter = msg_counter + 1
+    return render(request, 'nick/profile.html', {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter})
 
 
 def posts(request):

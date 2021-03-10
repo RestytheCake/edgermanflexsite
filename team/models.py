@@ -107,3 +107,32 @@ class forum(models.Model):
         return str(f'{self.user} -> {self.title} : {self.message}')
 
 
+class profile(models.Model):
+    username = models.OneToOneField(User, on_delete=models.CASCADE)
+    discord_member = models.BooleanField(default=False)
+    discord_name = models.CharField(max_length=255, blank=True)
+    special = models.BooleanField(default=False)
+    special_roles = models.CharField(max_length=255, blank=True)
+    long_supporter = models.BooleanField(default=False)
+    muffin_family = models.BooleanField(default=False)
+    muffin_role = models.CharField(max_length=255, blank=True)
+
+    def __str__(self):
+        if self.discord_member:
+            if self.muffin_family:
+                if self.special_roles:
+                    return str(f'{self.username} -> {self.discord_name} -> {self.muffin_role} -> {self.special_roles}')
+                else:
+                    return str(f'{self.username} -> {self.discord_name} -> {self.muffin_role}')
+            else:
+                if self.special_roles:
+                    return str(f'{self.username} -> {self.discord_name} -> {self.special_roles}')
+                else:
+                    return str(f'{self.username} -> {self.discord_name}')
+        else:
+            if self.special:
+                return str(f'{self.username} -> {self.special_roles}')
+            else:
+                return str(f'{self.username}')
+
+
