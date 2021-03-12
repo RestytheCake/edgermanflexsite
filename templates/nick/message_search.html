@@ -1,3 +1,4 @@
+{% load hashtag %}
 {% load static %}
 <!DOCTYPE html>
 <html>
@@ -111,7 +112,7 @@
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
                 <a href='/team/nick/forum/profile?user={{ data.user }}' style="float: none; padding: 10px;">{{ data.user }}</a>
                 <span>{{ data.message }}</span>
-                <span id="tags">Keywords : {{ data.tags }}</span>
+                <span id="tags">Keywords : {% check data.tags %}</span>
                 <a>Show more</a>
                 </div>
             {% endfor %}

@@ -6,8 +6,8 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
-from .models import NickUser, forum, profile
-from .forms import addforum
+from .models import NickUser, forum, profile, comment
+from .forms import addforum, commentform
 
 
 def nick(request):
@@ -80,6 +80,28 @@ def profile_view(request):
         for x in forum_data:
             msg_counter = msg_counter + 1
     return render(request, 'nick/profile.html', {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter})
+
+
+def comment_view(request):
+    userget = request.GET.get('user')
+    titleget = request.GET.get('title')
+    form = commentform()
+    if request.method == 'POST':
+        if commentform(request.POST) != form:
+            form = commentform(request.POST)
+            if form.is_valid():
+                instance = form.save(commit=False)
+                instance.User = request.user.username
+                instance.main_post_user = userget
+                instance.main_post_title = titleget
+                instance.save()
+                return redirect(f'/team/nick/forum/message/?user={userget}&title={titleget}')
+        else:
+            pass
+    if request.GET.get('user'):
+        main_post_data = forum.objects.filter(user=userget, title=titleget)
+        comment_data = comment.objects.filter(main_post_user=userget, main_post_title=titleget)
+    return render(request, 'nick/comment.html', {'msg': main_post_data, 'comments': comment_data, 'form': form})
 
 
 def posts(request):

@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            EDgermanflex
+        </title>
+        <link rel="stylesheet" href={%  static 'css/nick/comment.css' %}>
+
+        <body>
+            {% for data in msg %}
+            <div class="post">
+                <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label>
+                <label id='date' style="color: rgb(179, 163, 149);">{{ data.created_at.day }}.{{ data.created_at.month }}.{{ data.created_at.year }}</label>
+                <label style="font-size: 10px;color: rgb(179, 163, 149); padding-left: 5px;">UTC:</label>
+                <label id='time' style="color: rgb(179, 163, 149);">{{ data.created_at.hour}}:{{ data.created_at.minute }}</label><br><br>
+                <a href='authorprofile' style="float: none; padding: 10px;">{{  data.user }}</a>
+                <span>{{ data.message }}</span><br>
+                <hr>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                <div id='enterComment'>
+                    <label>Enter your comment:</label><br>
+                    {{ form.comments }}<br>
+                    <button type="submit" style="float: right;">Submit</button><br>
+                </div>
+                </form>
+            </div>
+            {% endfor %}
+
+                            
+            <div id='filter'>
+
+                    <select name="sort" id='sortList'>
+                        <option value="new">New</option>
+                        <option value="old">Old</option>
+                        
+                    </select>
+                    <label style="float: right; margin-right: 10px;">Sort by:</label>
+            </div>
+            {% for comment in comments %}
+            <div id='comment'>
+                <a href='/team/nick/forum/profile?user={{ comment.User }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
+                <span>{{ comment.comments }}</span>
+            </div>
+            {% endfor %}
+            <button id='loadMore'>Load more comments</button>
+
+        </body>
+
+    </head>
+</html>

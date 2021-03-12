@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import FileUpload, NickUser, forum
+from .models import FileUpload, NickUser, forum, comment
 from django.contrib.auth.forms import UserCreationForm, ReadOnlyPasswordHashField
 
 
@@ -18,6 +18,15 @@ class addforum(forms.ModelForm):
             'title': forms.TextInput(attrs={'id': 'createTopic'}),
             'message': forms.Textarea(attrs={'id': 'createDesc'}),
             'tags': forms.TextInput(attrs={'id': 'keywords'})
+        }
+
+
+class commentform(forms.ModelForm):
+    class Meta:
+        model = comment
+        fields = ['comments']
+        widgets = {
+            'comments': forms.Textarea(attrs={'id': 'commentInput'})
         }
 
 

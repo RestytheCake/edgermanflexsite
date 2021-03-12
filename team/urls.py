@@ -9,6 +9,7 @@ urlpatterns = [
     path('nick/forum/create', views.forum_create, name='create'),
     path('nick/forum/search/', views.search_post, name='message_search'),
     path('nick/forum/profile/', views.profile_view, name='profile'),
+    path('nick/forum/message/', views.comment_view, name='comment'),
     path('nick/posts/', views.posts, name='posts'),
     path('nick/contact/', views.contacts, name='contacts'),
     path('nick/login/', views.login_view, name='login_view'),
