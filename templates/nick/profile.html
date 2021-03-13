@@ -32,7 +32,7 @@
             Messages posted : {{ msg_counter }}
 
         {% for msg in data %}
-        <hr><div  id="userMessage">
+        <hr><div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ msg.user }}&title={{ msg.title }}';">
             <label id='userTopic' style="font-size: large;"><b>{{ msg.title }}</b></label><br><br>
             <label id='userDescription'> {{ msg.message}}</label><br><br>
             <label id='userKeyword' style="font-size: 13px;">{% check msg.tags %}</label>

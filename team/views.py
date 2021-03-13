@@ -134,7 +134,7 @@ def register(request):
 
 def login_view(request):
     if request.user.is_authenticated:
-        return redirect('.')
+        return redirect('/team/nick')
     elif request.POST.get('username'):
         username = request.POST.get('username')
         password = request.POST.get('password')
@@ -156,7 +156,7 @@ def logout_view(request):
         logout(request)
     else:
         pass
-    return redirect('https://kuchen-dev.herokuapp.com/team/nick/login')
+    return redirect('/team/nick/login')
 
 
 def myaccount(request):
