@@ -21,16 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/videos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/comment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +66,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -207,7 +200,8 @@
       <workItem from="1615564597264" duration="4638000" />
       <workItem from="1615655758540" duration="1510000" />
       <workItem from="1615727621574" duration="2789000" />
-      <workItem from="1615800621706" duration="1387000" />
+      <workItem from="1615800621706" duration="2544000" />
+      <workItem from="1615819412993" duration="7293000" />
     </task>
     <servers />
   </component>
@@ -247,26 +241,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="980" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1615288202637" />
-    <state width="1557" height="229" key="GridCell.Tab.0.bottom" timestamp="1615801724013">
+    <state width="1557" height="229" key="GridCell.Tab.0.bottom" timestamp="1615826823049">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="754" height="189" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1615379440474" />
-    <state width="1557" height="229" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1615801724013" />
-    <state width="1557" height="229" key="GridCell.Tab.0.center" timestamp="1615801724013">
+    <state width="1557" height="229" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1615826823049" />
+    <state width="1557" height="229" key="GridCell.Tab.0.center" timestamp="1615826823049">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="754" height="189" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1615379440474" />
-    <state width="1557" height="229" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1615801724013" />
-    <state width="1557" height="229" key="GridCell.Tab.0.left" timestamp="1615801724013">
+    <state width="1557" height="229" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1615826823049" />
+    <state width="1557" height="229" key="GridCell.Tab.0.left" timestamp="1615826823049">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="754" height="189" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1615379440474" />
-    <state width="1557" height="229" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1615801724013" />
-    <state width="1557" height="229" key="GridCell.Tab.0.right" timestamp="1615801724013">
+    <state width="1557" height="229" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1615826823049" />
+    <state width="1557" height="229" key="GridCell.Tab.0.right" timestamp="1615826823049">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="754" height="189" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1615379440474" />
-    <state width="1557" height="229" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1615801724013" />
+    <state width="1557" height="229" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1615826823049" />
     <state width="754" height="272" key="GridCell.Tab.1.bottom" timestamp="1614022298517">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
