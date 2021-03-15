@@ -56,7 +56,7 @@
             <div class='oldCom'>
             {% for comment in comments_old %}
             <div id='comment'>
-                <a href='/team/nick/forum/profile?user={{ comment.User }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
+                <a href='/team/nick/forum/profile?user={{ comment.Username }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
                 <span>{{ comment.comments }}</span>
             </div>
             {% endfor %}
@@ -64,7 +64,7 @@
             <div class='newCom'>
             {% for comment in comments_new %}
             <div id='comment'>
-                <a href='/team/nick/forum/profile?user={{ comment.User }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
+                <a href='/team/nick/forum/profile?user={{ comment.Username }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
                 <span>{{ comment.comments }}</span>
             </div>
             {% endfor %}

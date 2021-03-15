@@ -137,12 +137,12 @@ class profile(models.Model):
 
 
 class comment(models.Model):
-    User = models.CharField(max_length=255, blank=True, unique=False)
+    Username = models.CharField(max_length=255, blank=True, unique=False)
     main_post_user = models.CharField(max_length=255, blank=True, unique=False)
     main_post_title = models.CharField(max_length=255, blank=True, unique=False)
     comments = models.CharField(max_length=255, blank=False, unique=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return str(f'{self.User} -> {self.main_post_user} -> {self.main_post_title} -> {self.comments}')
+        return str(f'{self.Username} -> {self.main_post_user} -> {self.main_post_title} -> {self.comments}')
 
