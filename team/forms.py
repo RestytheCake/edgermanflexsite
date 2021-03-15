@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import FileUpload, NickUser, forum, comment
+from .models import FileUpload, NickUser, forum, comment, profile
 from django.contrib.auth.forms import UserCreationForm, ReadOnlyPasswordHashField
 
 
@@ -28,6 +28,12 @@ class commentform(forms.ModelForm):
         widgets = {
             'comments': forms.Textarea(attrs={'id': 'commentInput'})
         }
+
+
+class profileform(forms.ModelForm):
+    class Meta:
+        model = profile
+        fields = ['special']
 
 
 class UserAdminCreationForm(forms.ModelForm):

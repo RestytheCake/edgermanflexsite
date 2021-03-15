@@ -7,7 +7,7 @@ from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
 from .models import NickUser, forum, profile, comment
-from .forms import addforum, commentform
+from .forms import addforum, commentform, profileform
 
 
 def nick(request):
@@ -74,7 +74,7 @@ def search_post(request):
 def profile_view(request):
     if request.GET.get('user'):
         usernameget = request.GET.get('user')
-        profile_data = profile.objects.filter(username__username=usernameget)
+        profile_data = profile.objects.filter(username=usernameget)
         forum_data = forum.objects.filter(user=usernameget).order_by('-created_at')
         msg_counter = 0
         for x in forum_data:
@@ -120,16 +120,20 @@ def search(request):
 
 def register(request):
     form = UserCreationForm()
+    pform = profileform()
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
+            instance = pform.save(commit=False)
+            instance.username = request.POST.get('username')
+            instance.save()
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
-                return redirect('.')
+                return redirect('/team/nick/')
     return render(request, 'nick/register.html', {'form': form})
 
 

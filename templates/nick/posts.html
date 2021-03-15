@@ -30,7 +30,7 @@
                     <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                         <label onclick="ddMenu()">{{ request.user.username }}</label>
                             <div  id="dropdown-content">
-                                <a href="/team/nick/myaccount" style="float: left;">Profile</a>
+                                <a href='/team/nick/forum/profile?user={{ request.user.username }}' style="float: left;">Profile</a>
                                 <a href="/team/nick/logout" style="float: left;">Logout</a>
                             </div>
                     </div>
@@ -38,7 +38,6 @@
                         <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                         <label onclick="ddMenu()">New ?</label>
                             <div  id="dropdown-content">
-                                <a href="/team/nick/myaccount" style="float: left;">Profile</a>
                                 <a href="/team/nick/register" style="float: left;">Register</a>
                                 <a href="/team/nick/login" style="float: left;">Login</a>
                             </div>

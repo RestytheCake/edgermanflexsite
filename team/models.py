@@ -108,7 +108,7 @@ class forum(models.Model):
 
 
 class profile(models.Model):
-    username = models.OneToOneField(User, on_delete=models.CASCADE)
+    username = models.CharField(max_length=255, blank=True, unique=True)
     discord_member = models.BooleanField(default=False)
     discord_name = models.CharField(max_length=255, blank=True)
     special = models.BooleanField(default=False)
