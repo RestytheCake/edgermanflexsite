@@ -6,7 +6,24 @@
             EDgermanflex
         </title>
         <link rel="stylesheet" href={%  static 'css/nick/comment.css' %}>
+        <link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
 
+        $(document).ready(function(){
+            $('.newCom').hide();
+        $('select').on('change', function() {
+            if (this.value==='new'){
+                $('.oldCom').hide();
+                $('.newCom').show();
+            }else if (this.value==='old'){
+                $('.oldCom').show();
+                $('.newCom').hide();
+            }
+        });
+        });
+    </script>
+    </head>
         <body>
             {% for data in msg %}
             <div class="post">
@@ -30,23 +47,28 @@
 
                             
             <div id='filter'>
-
-                    <select name="sort" id='sortList'>
-                        <option value="new">New</option>
-                        <option value="old">Old</option>
-                        
-                    </select>
+                <select id='sortList'>
+                    <option id='old' value="old">Old</option>
+                    <option id= 'new' value="new">New</option>
+                </select>
                     <label style="float: right; margin-right: 10px;">Sort by:</label>
             </div>
-            {% for comment in comments %}
+            <div class='oldCom'>
+            {% for comment in comments_old %}
             <div id='comment'>
                 <a href='/team/nick/forum/profile?user={{ comment.User }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
                 <span>{{ comment.comments }}</span>
             </div>
             {% endfor %}
+            </div>
+            <div class='newCom'>
+            {% for comment in comments_new %}
+            <div id='comment'>
+                <a href='/team/nick/forum/profile?user={{ comment.User }}' style=" float: left;margin-left:10px;">{{ comment.User }}</a><br>
+                <span>{{ comment.comments }}</span>
+            </div>
+            {% endfor %}
+            </div>
             <button id='loadMore'>Load more comments</button>
-
         </body>
-
-    </head>
 </html>

@@ -100,8 +100,9 @@ def comment_view(request):
             pass
     if request.GET.get('user'):
         main_post_data = forum.objects.filter(user=userget, title=titleget)
-        comment_data = comment.objects.filter(main_post_user=userget, main_post_title=titleget)
-    return render(request, 'nick/comment.html', {'msg': main_post_data, 'comments': comment_data, 'form': form})
+        comment_data_old = comment.objects.filter(main_post_user=userget, main_post_title=titleget)
+        comment_data_new = comment.objects.filter(main_post_user=userget, main_post_title=titleget).order_by('-created_at')
+    return render(request, 'nick/comment.html', {'msg': main_post_data, 'comments_old': comment_data_old,'comments_new': comment_data_new , 'form': form})
 
 
 def posts(request):
