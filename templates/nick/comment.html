@@ -33,16 +33,30 @@
                 <label id='time' style="color: rgb(179, 163, 149);">{{ data.created_at.hour}}:{{ data.created_at.minute }}</label><br><br>
                 <a href='authorprofile' style="float: none; padding: 10px;">{{  data.user }}</a>
                 <span>{{ data.message }}</span><br>
-                 <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">51</label>
+                 <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">{{ data.dislike.all.count }}</label>
+                {% if request.user in data.dislike.all %}
+                    <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                    {% csrf_token %}
+                    <button id="lb" name="undislike" value="undislike"><img class="icon" id='dislike' alt="dislike" type="submit" src={% static 'img/nick/dislike.png' %}  ></button>
+                    </form>
+                {% else %}
+                    <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                    {% csrf_token %}
+                    <button id="lb" name="dislike" value="dislike"><img class="icon" id='dislike' alt="dislike" type="submit" src={% static 'img/nick/dislike.png' %}  ></button>
+                    </form>
+                {% endif %}
+                <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">{{ data.like.all.count }}</label>
+                {% if request.user in data.dislike.all %}
                 <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
                 {% csrf_token %}
-                <button name="like"><img class="icon" id='dislike' alt="dislike" type="submit" src={% static 'img/nick/dislike.png' %}  ></button>
+                <button id="lb" name="unlike" value="unlike"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
                 </form>
-                <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">863</label>
-                <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                {% else %}
+                    <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
                 {% csrf_token %}
-                <button name="dislike"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
+                <button id="lb" name="like" value="like"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
                 </form>
+                {% endif %}
                 <br><br>
                 <hr>
                 <form method="POST" action="">

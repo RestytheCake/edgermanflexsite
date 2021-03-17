@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect, HttpResponseRedirect
+from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
 from django.utils import timezone
 from django.contrib.auth import login, authenticate, logout
 from .forms import UploadFileForm, UserAdminCreationForm
@@ -86,7 +86,7 @@ def comment_view(request):
     userget = request.GET.get('user')
     titleget = request.GET.get('title')
     form = commentform()
-    if request.method == 'POST':
+    if request.POST.get('comments'):
         if commentform(request.POST) != form:
             form = commentform(request.POST)
             if form.is_valid():
@@ -98,10 +98,23 @@ def comment_view(request):
                 return redirect(f'/team/nick/forum/message/?user={userget}&title={titleget}')
         else:
             pass
+    if request.POST.get('like'):
+        obj = get_object_or_404(forum, user=userget, title=titleget)
+        obj.like.add(request.user)
+    if request.POST.get('dislike'):
+        obj = get_object_or_404(forum, user=userget, title=titleget)
+        obj.dislike.add(request.user)
+    if request.POST.get('unlike'):
+        obj = get_object_or_404(forum, user=userget, title=titleget)
+        obj.like.remove(request.user)
+    if request.POST.get('undislike'):
+        obj = get_object_or_404(forum, user=userget, title=titleget)
+        obj.dislike.remove(request.user)
     if request.GET.get('user'):
         main_post_data = forum.objects.filter(user=userget, title=titleget)
         comment_data_old = comment.objects.filter(main_post_user=userget, main_post_title=titleget)
         comment_data_new = comment.objects.filter(main_post_user=userget, main_post_title=titleget).order_by('-created_at')
+
     return render(request, 'nick/comment.html', {'msg': main_post_data, 'comments_old': comment_data_old,'comments_new': comment_data_new , 'form': form})
 
 

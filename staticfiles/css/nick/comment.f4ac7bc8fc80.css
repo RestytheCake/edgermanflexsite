@@ -82,7 +82,7 @@ select#sortList{
 
 
 body{
-    background-image: url("../../img/nick/patterndark.png");
+    background-image: url("../../img/nick/patterndark.c0e31beb96d1.png");
     background-size: 2000px;
     background-repeat: inherit;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -100,7 +100,7 @@ span{
     margin-top: 10%;
     background-color:#e6d7c5;
     border: 30px solid transparent;
-    border-image: url('../../img/nick/darkthiccborder.png') 20% round;
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png") 20% round;
     padding: 10px;
     width: auto;
     height: max-content;
@@ -116,7 +116,7 @@ button[type = submit]{
 }
 
 button[type = text]{
-    border-image: url(../../img/nick/darkthiccborder.png);
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png");
     border-color: rgb(121, 39, 18);
 }
 
@@ -135,7 +135,7 @@ a:hover{
 .post{
     background-color:#faebd7;
     border: 30px solid transparent;
-    border-image: url('../../img/nick/darkthiccborder.png') 20% round;
+    border-image: url("../../img/nick/darkthiccborder.0f04b754808e.png") 20% round;
     margin-left: 2%;
     margin-right: 2%;
     margin-top: 10px;
