@@ -34,9 +34,15 @@
                 <a href='authorprofile' style="float: none; padding: 10px;">{{  data.user }}</a>
                 <span>{{ data.message }}</span><br>
                  <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">51</label>
-                <img class="icon" id='dislike' alt="dislike" src={% static 'img/nick/dislike.png' %}  >
+                <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                {% csrf_token %}
+                <button name="like"><img class="icon" id='dislike' alt="dislike" type="submit" src={% static 'img/nick/dislike.png' %}  ></button>
+                </form>
                 <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">863</label>
-                <button><img class="icon" id='simplike' alt="like" src={% static 'img/nick/simplike.png' %} ></button>
+                <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                {% csrf_token %}
+                <button name="dislike"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
+                </form>
                 <br><br>
                 <hr>
                 <form method="POST" action="">
