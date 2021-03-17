@@ -99,17 +99,29 @@ def comment_view(request):
         else:
             pass
     if request.POST.get('like'):
-        obj = get_object_or_404(forum, user=userget, title=titleget)
-        obj.like.add(request.user)
+        if request.user.is_authenticated:
+            obj = get_object_or_404(forum, user=userget, title=titleget)
+            obj.like.add(request.user)
+        else:
+            return redirect(f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.POST.get('dislike'):
-        obj = get_object_or_404(forum, user=userget, title=titleget)
-        obj.dislike.add(request.user)
+        if request.user.is_authenticated:
+            obj = get_object_or_404(forum, user=userget, title=titleget)
+            obj.dislike.add(request.user)
+        else:
+            return redirect(f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.POST.get('unlike'):
-        obj = get_object_or_404(forum, user=userget, title=titleget)
-        obj.like.remove(request.user)
+        if request.user.is_authenticated:
+            obj = get_object_or_404(forum, user=userget, title=titleget)
+            obj.like.remove(request.user)
+        else:
+            return redirect(f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.POST.get('undislike'):
-        obj = get_object_or_404(forum, user=userget, title=titleget)
-        obj.dislike.remove(request.user)
+        if request.user.is_authenticated:
+            obj = get_object_or_404(forum, user=userget, title=titleget)
+            obj.dislike.remove(request.user)
+        else:
+            return redirect(f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.GET.get('user'):
         main_post_data = forum.objects.filter(user=userget, title=titleget)
         comment_data_old = comment.objects.filter(main_post_user=userget, main_post_title=titleget)
@@ -151,6 +163,25 @@ def register(request):
 
 
 def login_view(request):
+    if request.GET.get('reason') == 'like':
+        reasonlike1 = 'You are not logged in.'
+        reasonlike2 = 'Log in to Like and Dislike Posts'
+        if request.user.is_authenticated:
+            return redirect('/team/nick')
+        elif request.POST.get('username'):
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user:
+                login(request, user)
+                if request.GET.get('next'):
+                    return redirect(request.GET.get('next'))
+                else:
+                    return redirect('.')
+            else:
+                return render(request, 'nick/login.html')
+        else:
+            return render(request, 'nick/login.html', {'reasonError1': reasonlike1, 'reasonError2': reasonlike2})
     if request.user.is_authenticated:
         return redirect('/team/nick')
     elif request.POST.get('username'):
