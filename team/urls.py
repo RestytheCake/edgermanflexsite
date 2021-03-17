@@ -8,6 +8,7 @@ urlpatterns = [
     path('nick/forum/', views.forum_view, name='forums'),
     path('nick/forum/create', views.forum_create, name='create'),
     path('nick/forum/search/', views.search_post, name='message_search'),
+    path('nick/forum/filter', views.advfilter, name='advfilter'),
     path('nick/forum/profile/', views.profile_view, name='profile'),
     path('nick/forum/message/', views.comment_view, name='comment'),
     path('nick/posts/', views.posts, name='posts'),

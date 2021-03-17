@@ -31,7 +31,7 @@
                 <label id='date' style="color: rgb(179, 163, 149);">{{ data.created_at.day }}.{{ data.created_at.month }}.{{ data.created_at.year }}</label>
                 <label style="font-size: 10px;color: rgb(179, 163, 149); padding-left: 5px;">UTC:</label>
                 <label id='time' style="color: rgb(179, 163, 149);">{{ data.created_at.hour}}:{{ data.created_at.minute }}</label><br><br>
-                <a href='authorprofile' style="float: none; padding: 10px;">{{  data.user }}</a>
+                <a href='/team/nick/forum/profile?user={{ data.user }}' style="float: none; padding: 10px;">{{  data.user }}</a>
                 <span>{{ data.message }}</span><br>
                  <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">{{ data.dislike.all.count }}</label>
                 {% if request.user in data.like.all %}

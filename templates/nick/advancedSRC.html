@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDGermanFlex / filter</title>
+    <link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
+    <link rel="icon" href={% static 'img/nick/logo.png' %}>
+</head>
+    <body>
+
+        <center>
+            <div id="container">
+                <form action="/team/nick/forum/search/">
+                <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>Search by</b></label><br><br><br>
+                <label style="float: left; ">Username:</label>
+                <input name="user" style="float: right;" type="text" placeholder="username" id="usernameSRC"><br><br>
+                <label style="float: left; padding-right: 20px;">Title:</label>
+                <input name="title" style="float: right;" type="text" placeholder="title" id="usernameSRC"><br><br>
+                <label style="float: left; padding-right: 20px;">Keywords:</label>
+                <input name="keywords" style="float: right;" type="text" placeholder="keywords" id="keywordSRC"><br><br>
+                <label style="float: left; padding-right: 20px;">Date:</label>
+                <input name="date" style="float: left; margin-left: 33px;" type="date" id="dateSRC" style="width: 100px;"><br><br>
+
+
+                <label style="float: left; padding-right: 20px;">Popularity:</label>
+                <select name="popularity" style="float: left;" id='popularityList'>
+                    <option value="mostlike">Most liked</option>
+                    <option value="lesslike">Least liked</option>
+                </select><br><br>
+
+                <input type="submit" style="float: right;"><br>
+                </form>
+            </div>
+        </center>
+    
+    </body>
+</html>

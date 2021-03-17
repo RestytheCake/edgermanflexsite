@@ -100,7 +100,12 @@
     <!--here new stuff going on-->
     <form action="/team/nick/forum/search" method="get">
         <div id="search">
-            <input type="search" name="searching" id="searchBar" placeholder="Quick Search">
+            <input list="mostlike" type="search" name="searching" id="searchBar" placeholder="Quick Search">
+            <datalist id="mostlike">
+                {% for like in likeobj %}
+                <option value="{{ like.user }} | {{ like.title }}">Likes : {{ like.like.count }}</option>
+                {% endfor %}
+            </datalist>
             <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"> </button>
             <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 40px; height: 40px;"></div>
             <div id="filterNewOld">
@@ -120,7 +125,6 @@
             <!--end of new things-->
 
             <button onclick="location.href='/team/nick/forum/create';" id='buttonNewPost'>Create new post</button>
-
             {% for data in message %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0,0,0);"><b>{{ data.title }}</b></label>
