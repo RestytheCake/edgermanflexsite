@@ -1,4 +1,23 @@
-/*new thing but just drag and drop this whole css to ur project lul*/
+
+.icon{
+    width: 30px;
+    height: 30px;
+    float: right;
+    margin-left: 20px;
+}
+
+.icon:hover{
+    opacity: 0.9;
+}
+
+.icon:active{
+    opacity: 0.3;
+}
+
+button{
+    display: none;
+}
+
 #loadMore{
     float: right;
     background-color:rgb(121, 39, 18);
