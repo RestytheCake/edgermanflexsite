@@ -174,10 +174,8 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
-                if request.GET.get('next'):
-                    return redirect(request.GET.get('next'))
-                else:
-                    return redirect('.')
+                next = f'{request.GET.get("next")}&title={request.GET.get("title")}'
+                return redirect(next)
             else:
                 return render(request, 'nick/login.html')
         else:
