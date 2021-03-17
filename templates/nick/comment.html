@@ -46,16 +46,16 @@
                     </form>
                 {% endif %}
                 <label style="float: right; color: rgb(179, 163, 149); margin-top: 10px;">{{ data.like.all.count }}</label>
-                {% if request.user in data.dislike.all %}
-                <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
-                {% csrf_token %}
-                <button id="lb" name="unlike" value="unlike"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
-                </form>
+                {% if request.user in data.like.all %}
+                    <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                    {% csrf_token %}
+                    <button id="lb" name="unlike" value="unlike"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
+                    </form>
                 {% else %}
                     <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
-                {% csrf_token %}
-                <button id="lb" name="like" value="like"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
-                </form>
+                    {% csrf_token %}
+                    <button id="lb" name="like" value="like"><img class="icon" id='simplike' alt="like" onclick="window.location='/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}';" src={% static 'img/nick/simplike.png' %} ></button>
+                    </form>
                 {% endif %}
                 <br><br>
                 <hr>
