@@ -63,7 +63,7 @@ def search_post(request):
         obj = forum.objects.filter(user__contains=userget)
         if request.GET.get('title'):
             titleget = request.GET.get('title')
-            obj = forum.objects.filter(user__contains=userget, title__contains=titleget).order_by('-created_at')
+            obj = forum.objects.filter(user__contains=userget, ).order_by('-created_at')
             if request.GET.get('keywords'):
                 tagsget = request.GET.get('keywords')
                 obj = forum.objects.filter(user__contains=userget, title__contains=titleget,
@@ -126,11 +126,9 @@ def search_post(request):
                     obj = obj.annotate(like_count=Count('like')).order_by('like_count')
         elif request.GET.get('popularity'):
             if request.GET.get('popularity') == 'mostlike':
-                popularityget = request.GET.get('popularity')
-                obj = forum.objects.annotate(like_count=Count('like')).order_by('-like_count')
+                obj = obj.annotate(like_count=Count('like')).order_by('-like_count')
             else:
-                popularityget = request.GET.get('popularity')
-                obj = forum.objects.annotate(like_count=Count('like')).order_by('like_count')
+                obj = obj.annotate(like_count=Count('like')).order_by('like_count')
     elif request.GET.get('keywords'):
         tagsget = request.GET.get('keywords')
         obj = forum.objects.filter(tags__contains=tagsget)

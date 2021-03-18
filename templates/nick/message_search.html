@@ -97,11 +97,9 @@
                         <option value="old">Old</option>
                     </select>
                 </div>
-
-                <div id="advancedList">
-                    <button id='advButton' onclick="location.href='advancedSRC.html'">Advanced</button>
+               <div id="advancedList">
+                    <a class='advButton' href="/team/nick/forum/filter">Advanced</a>
                 </div>
-            </div>
             </div>
             </form>
 
@@ -109,18 +107,18 @@
 			{% for data in search %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
-                <a href='/team/nick/forum/profile?user={{ data.user }}' style="float: none; padding: 10px;">{{ data.user }}</a>
+                <a id="notwhite" href='/team/nick/forum/profile?user={{ data.user }}' style="float: none; padding: 10px;">{{ data.user }}</a>
                 <span>{{ data.message }}</span>
                 <span id="tags">Keywords : {% check data.tags %}</span>
-                <a href="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}">Comment</a>
+                <a id="notwhite" href="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}">Comment</a>
                 </div>
             {% endfor %}
             {% else %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>ERROR 404</b></label><br><br>
-                <a href='/team/nick/forum/profile/?user=-System-' style="float: none; padding: 10px;">-System-</a>
+                <a id="notwhite" href='/team/nick/forum/profile/?user=-System-' style="float: none; padding: 10px;">-System-</a>
                 <span>We searched and searched but we couldn't find for what you where looking.<br>Search for anything else or go Back</span>
-                <div style="padding-right: 20px; padding: 10px;"><a>Don't try it</a></div>
+                <div style="padding-right: 20px; padding: 10px;"><a id="notwhite" >Don't try it</a></div>
                 </div>
             {% endif %}
 

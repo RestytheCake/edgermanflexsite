@@ -1,4 +1,22 @@
 /*new components to copy paste*/
+a.advButton:link, a:visited {
+  background-color: rgb(121, 39, 18);
+  border: 2px rgb(77, 22, 8) solid;
+  color: white;
+  padding: 14px 0px;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a#notwhite{
+    color:rgb(235, 97, 33);
+}
+
+select#sortList:hover{
+    color:rgb(235, 97, 33);
+}
+
 #advancedList{
     position:sticky ;
     display: none;
