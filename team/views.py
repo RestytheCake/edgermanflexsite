@@ -7,7 +7,7 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
-from .models import NickUser, forum, profile, comment
+from .models import NickUser, forum, profile, comment, friend
 from .forms import addforum, commentform, profileform
 
 
@@ -172,11 +172,10 @@ def profile_view(request):
         usernameget = request.GET.get('user')
         profile_data = profile.objects.filter(username=usernameget)
         forum_data = forum.objects.filter(user=usernameget).order_by('-created_at')
-        msg_counter = 0
-        for x in forum_data:
-            msg_counter = msg_counter + 1
+        friends_data = friend.objects.filter(user__username=usernameget)
+        msg_counter = forum_data.count()
     return render(request, 'nick/profile.html',
-                  {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter})
+                  {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter, 'friend_data': friends_data})
 
 
 def comment_view(request):

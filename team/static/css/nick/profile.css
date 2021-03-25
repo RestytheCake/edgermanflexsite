@@ -1,10 +1,19 @@
 /*new components to copy paste*/
+
 #userMessage{
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 #userMessage:hover{
+    background-color: rgb(216, 202, 181);
+}
+
+div#friends:hover{
+    background-color: rgb(216, 202, 181);
+}
+
+div#counter:hover{
     background-color: rgb(216, 202, 181);
 }
 
@@ -167,7 +176,7 @@ a:hover{
 }
 
 #dropdown:active{
-    color: gray;
+    color: #808080;
 }
 
 #dropdown-content {

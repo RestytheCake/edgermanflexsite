@@ -7,6 +7,25 @@
     </title>
     <link rel="stylesheet" href={% static 'css/nick/profile.css' %}>
     <link rel="icon" href={% static 'img/nick/logo.png' %}>
+    <script>
+        let clicked = false;
+        function messagef(){
+            let friend = document.getElementById('friendlist');
+            let msg = document.getElementById('messages')
+            if(msg.style.display === 'none'){
+                msg.style.display = 'inline'
+                friend.style.display = 'none'
+                }}
+
+        function friendsf() {
+            let friend = document.getElementById('friendlist');
+            let msg = document.getElementById('messages')
+            if(friend.style.display === 'none'){
+                msg.style.display = 'none'
+                friend.style.display = 'inline'
+                }
+        }
+    </script>
     <body>
         <center>
         <div id="profile">
@@ -29,8 +48,8 @@
             {% endif %}
             </div>
             <hr>
-            Messages posted : {{ msg_counter }}
-
+            <div id="counter" style="display: inline" onclick="messagef()"><label> Messages posted : {{ msg_counter }}</label></div><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><div id="friends" style="display: inline" onclick="friendsf()"><label> Friends : {% for friend in friend_data %}{{ friend.friend_list.count }}{% endfor %}</label></div>
+        <div id="messages" >
         {% for msg in data %}
         <hr><div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ msg.user }}&title={{ msg.title }}';">
             <label id='userTopic' style="font-size: large;"><b>{{ msg.title }}</b></label><br><br>
@@ -38,6 +57,18 @@
             <label id='userKeyword' style="font-size: 13px;">{% check msg.tags %}</label>
         </div>
         {% endfor %}
+        </div>
+        <div id="friends_list">
+        </div>
+        {% endfor %}
+        <div id="friendlist" style="display: none">
+            {% for friend in friend_data %}
+                {% for list in friend.friend_list.all %}
+                    <hr><div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                    <label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label><br><br>
+                </div>
+            {% endfor %}
+        </div>
         {% endfor %}
         </div>
         </center>

@@ -148,3 +148,11 @@ class comment(models.Model):
     def __str__(self):
         return str(f'{self.User} -> {self.main_post_user} -> {self.main_post_title} -> {self.comments}')
 
+
+class friend(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    friend_list = models.ManyToManyField(User, blank=True, related_name='friend_list')
+
+    def __str__(self):
+        return str(f'{self.user} :  Friends = {self.friend_list.count()}')
+

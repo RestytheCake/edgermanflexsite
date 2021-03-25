@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import FileUpload, NickUser, forum, profile, comment
+from .models import FileUpload, NickUser, forum, profile, comment, friend
 from .forms import UserAdminChangeForm, UserAdminCreationForm
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
@@ -12,6 +12,7 @@ admin.site.register(FileUpload)
 admin.site.register(forum)
 admin.site.register(profile)
 admin.site.register(comment)
+admin.site.register(friend)
 
 
 class NickAdmin(BaseUserAdmin):
