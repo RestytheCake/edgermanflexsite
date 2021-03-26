@@ -1,4 +1,11 @@
 /*new components to copy paste*/
+label#fcheck:hover{
+    background-color: rgb(216, 202, 181);
+}
+
+div#fr_click:hover{
+    background-color: rgb(216, 202, 181);
+}
 
 #userMessage{
     text-align: left;

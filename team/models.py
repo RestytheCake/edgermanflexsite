@@ -118,6 +118,9 @@ class profile(models.Model):
     long_supporter = models.BooleanField(default=False)
     muffin_family = models.BooleanField(default=False)
     muffin_role = models.CharField(max_length=255, blank=True)
+    friend_list = models.ManyToManyField(User, blank=True, related_name='friend_list')
+    fa_list = models.ManyToManyField(User, blank=True, related_name='fa_list')
+    fa_send = models.ManyToManyField(User, blank=True, related_name='fa_send')
 
     def __str__(self):
         if self.discord_member:
@@ -148,11 +151,4 @@ class comment(models.Model):
     def __str__(self):
         return str(f'{self.User} -> {self.main_post_user} -> {self.main_post_title} -> {self.comments}')
 
-
-class friend(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    friend_list = models.ManyToManyField(User, blank=True, related_name='friend_list')
-
-    def __str__(self):
-        return str(f'{self.user} :  Friends = {self.friend_list.count()}')
 

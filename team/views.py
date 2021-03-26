@@ -1,5 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django.db.models import Count
 from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
 from django.utils import timezone
@@ -7,7 +9,7 @@ from django.contrib.auth import login, authenticate, logout
 from .forms import UploadFileForm, UserAdminCreationForm
 
 # Create your views here.
-from .models import NickUser, forum, profile, comment, friend
+from .models import NickUser, forum, profile, comment
 from .forms import addforum, commentform, profileform
 
 
@@ -172,10 +174,54 @@ def profile_view(request):
         usernameget = request.GET.get('user')
         profile_data = profile.objects.filter(username=usernameget)
         forum_data = forum.objects.filter(user=usernameget).order_by('-created_at')
-        friends_data = friend.objects.filter(user__username=usernameget)
         msg_counter = forum_data.count()
+        friends_data = profile.objects.filter(username=usernameget)
+
     return render(request, 'nick/profile.html',
-                  {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter, 'friend_data': friends_data})
+                  {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter, 'friend_data': friends_data, 'user': usernameget})
+
+
+def fa(request):
+    if request.GET.get('fa') == 'true':
+
+        user = request.GET.get('user')
+        user_request = request.GET.get('user_request')
+
+        userobj = get_object_or_404(profile, username=user)
+        user_requestobj = get_object_or_404(profile, username=user_request)
+        user_id = get_object_or_404(get_user_model(), username=user)
+
+        userobj.fa_list.add(request.user)
+        user_requestobj.fa_send.add(user_id)
+
+        return redirect(f'/team/nick/forum/profile/?user={user}')
+
+    if request.GET.get('fa') == 'decline':
+        user = request.GET.get('user')
+        user_request = request.GET.get('user_request')
+
+        userobj = get_object_or_404(profile, username=user)
+        user_requestobj = get_object_or_404(profile, username=user_request)
+        user_id = get_object_or_404(get_user_model(), username=user)
+
+        userobj.fa_send.remove(request.user)
+        user_requestobj.fa_list.remove(user_id)
+
+    if request.GET.get('fa') == 'accept':
+        user = request.GET.get('user') #Resty
+        user_request = request.GET.get('user_request') #whynot
+
+        userobj = get_object_or_404(profile, username=user)  #Restyobj
+        user_requestobj = get_object_or_404(profile, username=user_request)  #whynotobj
+        user_id = get_object_or_404(get_user_model(), username=user) #Restyid
+
+        userobj.fa_send.remove(request.user)
+        user_requestobj.fa_list.remove(user_id)
+
+        userobj.friend_list.add(request.user)
+        user_requestobj.friend_list.add(user_id)
+
+    return redirect('/team/nick/')
 
 
 def comment_view(request):

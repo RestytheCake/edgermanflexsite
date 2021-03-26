@@ -1,5 +1,6 @@
 {% load static %}
 {% load hashtag %}
+{% load friendscheck %}
 <!DOCTYPE html>
 <html>
     <title>
@@ -8,21 +9,35 @@
     <link rel="stylesheet" href={% static 'css/nick/profile.css' %}>
     <link rel="icon" href={% static 'img/nick/logo.png' %}>
     <script>
-        let clicked = false;
         function messagef(){
             let friend = document.getElementById('friendlist');
-            let msg = document.getElementById('messages')
+            let msg = document.getElementById('messages');
+            let fr = document.getElementById('fr');
             if(msg.style.display === 'none'){
                 msg.style.display = 'inline'
                 friend.style.display = 'none'
+                fr.style.display = 'none'
                 }}
 
         function friendsf() {
             let friend = document.getElementById('friendlist');
-            let msg = document.getElementById('messages')
+            let msg = document.getElementById('messages');
+            let fr = document.getElementById('fr');
             if(friend.style.display === 'none'){
                 msg.style.display = 'none'
                 friend.style.display = 'inline'
+                fr.style.display = 'none'
+                }
+        }
+
+        function fr() {
+            let friend = document.getElementById('friendlist');
+            let msg = document.getElementById('messages');
+            let fr = document.getElementById('fr');
+            if(fr.style.display === 'none' ){
+                msg.style.display = 'none'
+                friend.style.display = 'none'
+                fr.style.display = 'inline'
                 }
         }
     </script>
@@ -48,8 +63,14 @@
             {% endif %}
             </div>
             <hr>
-            <div id="counter" style="display: inline" onclick="messagef()"><label> Messages posted : {{ msg_counter }}</label></div><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><div id="friends" style="display: inline" onclick="friendsf()"><label> Friends : {% for friend in friend_data %}{{ friend.friend_list.count }}{% endfor %}</label></div>
-        <div id="messages" >
+            <div id="counter" style="display: inline" onclick="messagef()"><label> Messages posted : {{ msg_counter }}</label></div>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div id="friends" style="display: inline" onclick="friendsf()"><label> Friends : {% for friend in friend_data %}{{ friend.friend_list.count }}{% endfor %}</label></div>
+            {% if user == request.user.username %}
+                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <div id="fr_click" style="display: inline" onclick="fr()"><label onclick="fr()">Friend Requests : {% for friend in friend_data %}{{ friend.fa_list.count }}{% endfor %}</label></div>
+            {% endif %}
+            <div id="messages" >
         {% for msg in data %}
         <hr><div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ msg.user }}&title={{ msg.title }}';">
             <label id='userTopic' style="font-size: large;"><b>{{ msg.title }}</b></label><br><br>
@@ -62,14 +83,44 @@
         </div>
         {% endfor %}
         <div id="friendlist" style="display: none">
+        {% if user == request.user.username %}
+
+        {% else %}
+            <hr>
+        <label id="fcheck" onclick="window.location='/team/nick/forum/profile/fa/?user={{ user }}&user_request={{ request.user.username }}&fa=true'">{% fcheck user request.user.username %}</label>
+        {% endif %}
             {% for friend in friend_data %}
+                {% if friend.friend_list.count > 0 %}
+
                 {% for list in friend.friend_list.all %}
-                    <hr><div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
-                    <label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label><br><br>
-                </div>
-            {% endfor %}
-        </div>
+                    <hr>
+                    <div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                        <label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label><br><br>
+                    </div>
+                {% endfor %}
+                {% else %}
+                    <hr>
+                    <div  id="userMessage">
+                    <center>
+                        <label id='userTopic' style="font-size: large;"><b>This User don't have any Friends</b></label><br><br>
+                    </center>
+                    </div>
+                {% endif %}
+            </div>
         {% endfor %}
+        <div id="fr" style="display: none">
+        {% for friend in friend_data %}
+            {% for list in friend.fa_list.all %}
+                <hr>
+                    <div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                        <center><label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label></center><br><br>
+                        </div>
+                        <label style="float: left; margin-left: 15px" onclick="window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=decline'">Decline</label>
+                        <label style="float: right; margin-right: 15px" onclick=window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=accept'>Accept</label>
+
+            {% endfor %}
+        {% endfor %}
+        </div>
         </div>
         </center>
     </body>

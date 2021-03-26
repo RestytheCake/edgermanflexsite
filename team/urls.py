@@ -11,6 +11,7 @@ urlpatterns = [
     path('nick/forum/filter', views.advfilter, name='advfilter'),
     path('nick/forum/profile/', views.profile_view, name='profile'),
     path('nick/forum/message/', views.comment_view, name='comment'),
+    path('nick/forum/profile/fa/', views.fa, name='fa'),
     path('nick/posts/', views.posts, name='posts'),
     path('nick/contact/', views.contacts, name='contacts'),
     path('nick/login/', views.login_view, name='login_view'),
