@@ -68,9 +68,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/team/nick'
-
-LOGIN_URL = '/auth/login/google-oauth2/'
-LOGOUT_REDIRECT_URL = '/team/nick/forum/login'
+LOGOUT_REDIRECT_URL = '/team/nick/login'
 
 ROOT_URLCONF = 'Django.urls'
 
