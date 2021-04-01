@@ -6,3 +6,4 @@ psycopg2==2.8.6
 random2~=1.0.1
 psycopg2-binary
 djangorestframework
+django-allauth==0.44.0
