@@ -207,6 +207,8 @@ def fa(request):
         userobj.fa_send.remove(request.user)
         user_requestobj.fa_list.remove(user_id)
 
+        return redirect(f'/team/nick/forum/profile/?user={user}')
+
     if request.GET.get('fa') == 'accept':
         user = request.GET.get('user') #Resty
         user_request = request.GET.get('user_request') #whynot
@@ -220,6 +222,8 @@ def fa(request):
 
         userobj.friend_list.add(request.user)
         user_requestobj.friend_list.add(user_id)
+
+        return redirect(f'/team/nick/forum/profile/?user={user}')
 
     return redirect('/team/nick/')
 
@@ -376,3 +380,7 @@ def supporter(request):
 
 def rickroll(request):
     return redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+
+
+def angulartest(request):
+    return render(request, 'nick/test.html')

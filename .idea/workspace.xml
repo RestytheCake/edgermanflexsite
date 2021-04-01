@@ -20,15 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/team/templatetags/friendscheck.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/nick/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,56 +78,15 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\DevCake\Codes\Python\Django\team" />
+      <recent name="C:\DevCake\Codes\Python\Django\team\static\img\nick" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\DevCake\Codes\Python\Django\templates\html\nick" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\DevCake\Codes\Python\Django\team\static\img\nick" />
-    </key>
   </component>
-  <component name="RunManager" selected="Django Server.Django">
-    <configuration name="Test: templates.nick" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="Django" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="templates.nick" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Spoiler maker" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Django" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\DevCake\Languages\Python 3.6.1\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Spoiler maker.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager">
     <configuration name="Django" type="Python.DjangoServer" factoryName="Django server">
       <module name="Django" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,7 +95,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="Django.settings" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\DevCake\Languages\Python 3.6.1\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -143,23 +104,13 @@
       <option name="port" value="8000" />
       <option name="host" value="" />
       <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
       <option name="runTestServer" value="false" />
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Django Server.Django" />
-      <item itemvalue="Django tests.Test: templates.nick" />
-      <item itemvalue="Python.Spoiler maker" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Django tests.Test: templates.nick" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -217,7 +168,12 @@
       <workItem from="1616691142190" duration="7809000" />
       <workItem from="1616765092771" duration="3080000" />
       <workItem from="1616780515837" duration="90000" />
-      <workItem from="1616783299263" duration="7351000" />
+      <workItem from="1616783299263" duration="8191000" />
+      <workItem from="1616846982041" duration="2464000" />
+      <workItem from="1617005194446" duration="726000" />
+      <workItem from="1617009495562" duration="3712000" />
+      <workItem from="1617266207351" duration="1711000" />
+      <workItem from="1617268811373" duration="2742000" />
     </task>
     <servers />
   </component>
@@ -251,42 +207,44 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="740" y="108" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1615049591873" />
-    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614542868025">
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617266271513">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1617266271513" />
     <state x="254" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1614542868025" />
-    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615894820984">
+    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617011283843">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1615894820984" />
+    <state x="961" y="235" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1617011283843" />
     <state x="932" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613845742238">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="932" y="180" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860@0.0.1600.860" timestamp="1613845742238" />
-    <state x="980" y="185" key="FileChooserDialogImpl" timestamp="1615288202637">
+    <state x="980" y="185" key="FileChooserDialogImpl" timestamp="1617013870770">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="980" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1615288202637" />
-    <state width="1557" height="120" key="GridCell.Tab.0.bottom" timestamp="1616791680577">
+    <state x="980" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1617013870770" />
+    <state x="980" y="185" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1617006922522" />
+    <state width="1557" height="164" key="GridCell.Tab.0.bottom" timestamp="1617271231507">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="120" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1616705501169" />
-    <state width="1557" height="120" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1616791680577" />
-    <state width="1557" height="120" key="GridCell.Tab.0.center" timestamp="1616791680576">
+    <state width="1557" height="164" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1617271231507" />
+    <state width="754" height="164" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1617011322591" />
+    <state width="1557" height="164" key="GridCell.Tab.0.center" timestamp="1617271231506">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="120" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1616705501169" />
-    <state width="1557" height="120" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1616791680576" />
-    <state width="1557" height="120" key="GridCell.Tab.0.left" timestamp="1616791680576">
+    <state width="1557" height="164" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1617271231506" />
+    <state width="754" height="164" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1617011322590" />
+    <state width="1557" height="164" key="GridCell.Tab.0.left" timestamp="1617271231506">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="120" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1616705501169" />
-    <state width="1557" height="120" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1616791680576" />
-    <state width="1557" height="120" key="GridCell.Tab.0.right" timestamp="1616791680577">
+    <state width="1557" height="164" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1617271231506" />
+    <state width="754" height="164" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1617011322590" />
+    <state width="1557" height="164" key="GridCell.Tab.0.right" timestamp="1617271231506">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="120" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1616705501169" />
-    <state width="1557" height="120" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1616791680577" />
+    <state width="1557" height="164" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1280.680@0.0.1600.860" timestamp="1617271231506" />
+    <state width="754" height="164" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1617011322591" />
     <state width="754" height="274" key="GridCell.Tab.1.bottom" timestamp="1615976109429">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

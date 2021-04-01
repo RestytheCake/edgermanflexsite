@@ -1,3 +1,4 @@
+{% load socialaccount %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +26,8 @@
         <label style="float: left; padding-right: 20px;">Password:</label>
             <label for="logPassword"></label><input style="float: right;" type="password" name="password" placeholder="password" id="logPassword" minlength="8"><br><br><br>
         <button type="submit" style="float: right;" class="registerSubmit">Submit</button>
-        <label style="float: left; font-size: 12px;">Don't have account?</label><a href="/team/nick/register/" style="float: left; padding-left: 10px; font-size: 12px;">Register</a>
+        <label style="float: left; font-size: 12px;">Don't have account?</label><a href="/team/nick/register/" style="float: left; padding-left: 10px; font-size: 12px;">Register</a><br>
+        <a style="float: left; font-size: 14px;" href="{% provider_login_url 'google' %}">Login with Google</a>
     </div>
     </form>
 </center>
