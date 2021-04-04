@@ -7,3 +7,4 @@ random2~=1.0.1
 psycopg2-binary
 djangorestframework
 django-allauth==0.44.0
+django-admin-honeypot==1.1.0
