@@ -1,4 +1,12 @@
 /*new components to copy paste*/
+label#Switchf:hover{
+    background-color: rgb(216, 202, 181);
+}
+
+label#Switchm:hover{
+    background-color: rgb(216, 202, 181);
+}
+
 label#fcheck:hover{
     background-color: rgb(216, 202, 181);
 }

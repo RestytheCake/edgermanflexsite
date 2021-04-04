@@ -9,6 +9,24 @@
     <link rel="stylesheet" href={% static 'css/nick/profile.css' %}>
     <link rel="icon" href={% static 'img/nick/logo.png' %}>
     <script>
+        function stf() {
+            let switchfriends = document.getElementById('Switchf');
+            let switchmessage = document.getElementById('Switchm');
+            if(switchmessage.style.display === 'none'){
+                switchfriends.style.display = 'none'
+                switchmessage.style.display = 'inline'
+            }
+        }
+
+        function stm() {
+            let switchfriends = document.getElementById('Switchf');
+            let switchmessage = document.getElementById('Switchm');
+            if(switchfriends.style.display === 'none'){
+                switchfriends.style.display = 'inline'
+                switchmessage.style.display = 'none'
+            }
+        }
+        
         function messagef(){
             let friend = document.getElementById('friendlist');
             let msg = document.getElementById('messages');
@@ -62,6 +80,9 @@
               <label id='specialRole' style="padding-left: 10px;">Elemental Dungeon Player </label>
             {% endif %}
             </div>
+            <hr>
+            <label id="Switchf" onclick="stf()">Switch to Friends</label>
+            <label id="Switchm" style="display: none" onclick="stm()">Switch to Messages</label>
             <hr>
             <div id="counter" style="display: inline" onclick="messagef()"><label> Messages posted : {{ msg_counter }}</label></div>
             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
