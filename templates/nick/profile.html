@@ -12,39 +12,73 @@
         function stf() {
             let switchfriends = document.getElementById('Switchf');
             let switchmessage = document.getElementById('Switchm');
+
+            let fab = document.getElementById('fab');
+            let cc = document.getElementById('cc');
+            let msg = document.getElementById('counter');
+            let friend = document.getElementById('friends');
+            let fr = document.getElementById('fr_click');
+
             if(switchmessage.style.display === 'none'){
                 switchfriends.style.display = 'none'
                 switchmessage.style.display = 'inline'
+
+                friend.style.display = 'inline'
+                fr.style.display = 'inline'
+                fab.style.display = 'inline'
+                msg.style.display = 'none'
+                cc.style.display = 'none'
             }
         }
 
         function stm() {
             let switchfriends = document.getElementById('Switchf');
             let switchmessage = document.getElementById('Switchm');
+
+            let cc = document.getElementById('cc');
+            let msg = document.getElementById('counter');
+            let friend = document.getElementById('friends');
+            let fr = document.getElementById('fr_click');
+            let fab = document.getElementById('fab');
+
             if(switchfriends.style.display === 'none'){
                 switchfriends.style.display = 'inline'
                 switchmessage.style.display = 'none'
+
+                friend.style.display = 'none'
+                fr.style.display = 'none'
+                fab.style.display = 'none'
+                msg.style.display = 'inline'
+                cc.style.display = 'inline'
             }
         }
-        
+
         function messagef(){
             let friend = document.getElementById('friendlist');
             let msg = document.getElementById('messages');
             let fr = document.getElementById('fr');
+            let comments = document.getElementById('comments');
+            let fa = document.getElementById('fs');
             if(msg.style.display === 'none'){
                 msg.style.display = 'inline'
                 friend.style.display = 'none'
+                comments.style.display = 'none'
                 fr.style.display = 'none'
+                fa.style.display = 'none'
                 }}
 
         function friendsf() {
             let friend = document.getElementById('friendlist');
             let msg = document.getElementById('messages');
             let fr = document.getElementById('fr');
+            let comments = document.getElementById('comments');
+            let fa = document.getElementById('fs');
             if(friend.style.display === 'none'){
                 msg.style.display = 'none'
                 friend.style.display = 'inline'
+                comments.style.display = 'none'
                 fr.style.display = 'none'
+                fa.style.display = 'none'
                 }
         }
 
@@ -52,10 +86,44 @@
             let friend = document.getElementById('friendlist');
             let msg = document.getElementById('messages');
             let fr = document.getElementById('fr');
+            let comments = document.getElementById('comments');
+            let fa = document.getElementById('fs');
             if(fr.style.display === 'none' ){
                 msg.style.display = 'none'
                 friend.style.display = 'none'
+                comments.style.display = 'none'
                 fr.style.display = 'inline'
+                fa.style.display = 'none'
+                }
+        }
+
+        function ccf() {
+            let friend = document.getElementById('friendlist');
+            let msg = document.getElementById('messages');
+            let fr = document.getElementById('fr');
+            let comments = document.getElementById('comments');
+            let fa = document.getElementById('fs');
+            if(comments.style.display === 'none' ){
+                msg.style.display = 'none'
+                friend.style.display = 'none'
+                fr.style.display = 'none'
+                comments.style.display = 'inline'
+                fa.style.display = 'none'
+                }
+        }
+
+        function faf() {
+            let friend = document.getElementById('friendlist');
+            let msg = document.getElementById('messages');
+            let fr = document.getElementById('fr');
+            let comments = document.getElementById('comments');
+            let fa = document.getElementById('fs');
+            if(comments.style.display === 'none' ){
+                msg.style.display = 'none'
+                friend.style.display = 'none'
+                fr.style.display = 'none'
+                comments.style.display = 'none'
+                fa.style.display = 'inline'
                 }
         }
     </script>
@@ -80,24 +148,38 @@
               <label id='specialRole' style="padding-left: 10px;">Elemental Dungeon Player </label>
             {% endif %}
             </div>
+            {% if request.user.username == user %}
             <hr>
             <label id="Switchf" onclick="stf()">Switch to Friends</label>
             <label id="Switchm" style="display: none" onclick="stm()">Switch to Messages</label>
+            {% endif %}
             <hr>
             <div id="counter" style="display: inline" onclick="messagef()"><label> Messages posted : {{ msg_counter }}</label></div>
-            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <div id="friends" style="display: inline" onclick="friendsf()"><label> Friends : {% for friend in friend_data %}{{ friend.friend_list.count }}{% endfor %}</label></div>
-            {% if user == request.user.username %}
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <div id="fr_click" style="display: inline" onclick="fr()"><label onclick="fr()">Friend Requests : {% for friend in friend_data %}{{ friend.fa_list.count }}{% endfor %}</label></div>
-            {% endif %}
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label id="cc" onclick="ccf()">Comments Posted : {{ cc_counter }}</label>
+            <div id="friends" style="display: none" onclick="friendsf()"><label> Friends : {% for friend in friend_data %}{{ friend.friend_list.count }}{% endfor %}</label></div>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div id="fr_click" style="display: none" onclick="fr()"><label onclick="fr()">Friend Requests : {% for friend in friend_data %}{{ friend.fa_list.count }}{% endfor %}</label></div>
+           <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <div id="fab" style="display:none;" onclick="faf()">Friend Request : {% for friend in friend_data %}{{ friend.fa_send.count }}{% endfor %}</div>
             <div id="messages" >
         {% for msg in data %}
-        <hr><div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ msg.user }}&title={{ msg.title }}';">
+            <hr>
+            <div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ msg.user }}&title={{ msg.title }}';">
             <label id='userTopic' style="font-size: large;"><b>{{ msg.title }}</b></label><br><br>
             <label id='userDescription'> {{ msg.message}}</label><br><br>
             <label id='userKeyword' style="font-size: 13px;">{% check msg.tags %}</label>
+            </div>
+        {% endfor %}
         </div>
+        <div id="comments" style="display:none;">
+            {% for comment in cc_data %}
+            <hr>
+            <div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ comment.main_post_user }}&title={{ comment.main_post_title }}';">
+            <label id='userTopic' style="font-size: large;"><b>Title : {{ comment.main_post_title }}</b></label><br>
+            <label id='userTopic' style="font-size: large;"><b>User : {{ comment.main_post_user }}</b></label><br><br>
+            <label id='userDescription'>Comment : {{ comment.comments}}</label><br><br>
+            </div>
         {% endfor %}
         </div>
         <div id="friends_list">
@@ -138,6 +220,18 @@
                         </div>
                         <label style="float: left; margin-left: 15px" onclick="window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=decline'">Decline</label>
                         <label style="float: right; margin-right: 15px" onclick=window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=accept'>Accept</label>
+
+            {% endfor %}
+        {% endfor %}
+        </div>
+        <div id="fs" style="display: none">
+            {% for friend in friend_data %}
+            {% for list in friend.fa_send.all %}
+                <hr>
+                    <div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                        <center><label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label></center><br><br>
+                        </div>
+                        <label style="float: right; margin-right: 15px" onclick=window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=accept'>Cancel</label>
 
             {% endfor %}
         {% endfor %}

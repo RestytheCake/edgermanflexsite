@@ -176,9 +176,11 @@ def profile_view(request):
         forum_data = forum.objects.filter(user=usernameget).order_by('-created_at')
         msg_counter = forum_data.count()
         friends_data = profile.objects.filter(username=usernameget)
+        cc_data = comment.objects.filter(User=usernameget)
+        cc_counter = cc_data.count()
 
     return render(request, 'nick/profile.html',
-                  {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter, 'friend_data': friends_data, 'user': usernameget})
+                  {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter,'cc_counter': cc_counter ,'friend_data': friends_data,'cc_data': cc_data, 'user': usernameget})
 
 
 def fa(request):

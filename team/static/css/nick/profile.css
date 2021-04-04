@@ -1,4 +1,8 @@
 /*new components to copy paste*/
+label#fab:hover{
+    background-color: rgb(216, 202, 181);
+}
+
 label#Switchf:hover{
     background-color: rgb(216, 202, 181);
 }
