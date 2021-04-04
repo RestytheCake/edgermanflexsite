@@ -6,11 +6,11 @@ from django.db.models import Count
 from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_or_404
 from django.utils import timezone
 from django.contrib.auth import login, authenticate, logout
-from .forms import UploadFileForm, UserAdminCreationForm
+from allauth.socialaccount.models import SocialAccount
 
 # Create your views here.
 from .models import NickUser, forum, profile, comment
-from .forms import addforum, commentform, profileform
+from .forms import addforum, commentform, profileform, UploadFileForm, UserAdminCreationForm
 
 
 def nick(request):
@@ -225,6 +225,13 @@ def fa(request):
 
         return redirect(f'/team/nick/forum/profile/?user={user}')
 
+    return redirect('/team/nick/')
+
+
+def profile_add(request):
+    if request.user.is_authenticated:
+        userstuff = SocialAccount.uid.all()
+        print(userstuff)
     return redirect('/team/nick/')
 
 

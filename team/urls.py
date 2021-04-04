@@ -14,6 +14,7 @@ urlpatterns = [
     path('team/nick/forum/profile/', views.profile_view, name='profile'),
     path('team/nick/forum/message/', views.comment_view, name='comment'),
     path('team/nick/forum/profile/fa/', views.fa, name='fa'),
+    path('team/nick/forum/profileadd', views.profile_add, name='profile_add'),
     path('team/nick/posts/', views.posts, name='posts'),
     path('team/nick/contact/', views.contacts, name='contacts'),
     path('team/nick/login/', views.login_view, name='login_view'),
