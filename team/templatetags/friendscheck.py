@@ -7,7 +7,7 @@ register = template.Library()
 
 @register.simple_tag()
 def fcheck(user, request_user):
-    friends_data = profile.objects.filter(username=user)
+    friends_data = profile.objects.filter(username__username=user)
     friendtest = 'nothing'
     for friends in friends_data:
         for list in friends.friend_list.all():
