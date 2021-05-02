@@ -7,22 +7,12 @@
         </title>
         <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
-        <script>
-        let clicked = false;
-        function ddMenu(){
-            let ddcont = document.getElementById('dropdown-content');
-            if(clicked === false){
-                ddcont.style.display = 'block'
-                clicked = true
-            }else{
-                ddcont.style.display = 'none'
-                clicked = false}}
-    </script>
+
+        <script src={% static 'js/ddMenu.js' %}></script>
     </head>
     <!--Hardcore starts from here-->
     <body>
-        <div id="containor">
-            {% include 'nick/top-banner.html' %}
+    {% include 'nick/top-banner.html' %}
             <div class="main">
                 <form action="/team/nick/forum/search" method="get">
                 <div id="search">
@@ -35,8 +25,6 @@
                         <span>
                             Nothing was posted here
                         </span>
-                    <div style="padding-right: 20px;"><a href="/schoolPage.html"></a></div>
                 </div>
             </div>
-        </div>
     </body>

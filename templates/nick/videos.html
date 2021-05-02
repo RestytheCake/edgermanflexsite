@@ -8,88 +8,77 @@
         <link rel="stylesheet" href={% static 'css/nick/videos.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
         <meta name="viewport" content="width=device-width">
-        <script>
-        let clicked = false;
-        function ddMenu(){
-            let ddcont = document.getElementById('dropdown-content');
-            if(clicked === false){
-                ddcont.style.display = 'block'
-                clicked = true
-            }else{
-                ddcont.style.display = 'none'
-                clicked = false}}
-    </script>
+
+        <script src={%  static 'js/ddMenu.js' %}></script>
     </head>
     <!--Hardcore starts from here-->
     <body>
-        <div id="containor">
-            {% include 'nick/top-banner.html' %}
-            <div class="main">
-                <form action="/team/nick/forum/search" method="get">
-                <div id="search">
-                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
-                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
-                </div>
-            </form>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 3px; color:rgb(23, 140, 148);"><b>Most  Viewed  Video</b></label><br>
-                    <span>
-                        <hr>
-                        <div class="video-scroll">
-                        <iframe class='video' src="https://www.youtube.com/embed/W2MXIjjDJxA" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/RAL-EUMcDU8" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </span>
-                    <div style="padding-right: 20px;"><a href="/schoolPage.html"></a></div>
-                </div>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>Character</b></label><br>
-                    <span>
-                        <hr>
-                        <div class="video-scroll">
-                        <iframe class="video" src="https://www.youtube.com/embed/W2MXIjjDJxA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/UiCoMNXEwkQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/RAL-EUMcDU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </span>
-                    <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
-                </div>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Boss Guide</b></label><br>
-                    <span>
-                        <hr>
-                        <div class="video-scroll">
-                        <iframe class="video" src="https://www.youtube.com/embed/qw7USpop87I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/HWLhcvj7eb4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/DWyRLVjNxBY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/JUvmfMyLGxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </span>
-                    <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
-                </div>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Tip and Tricks</b></label><br>
-                    <span>
-                        <hr>
-                        <div class="video-scroll">
-                        <iframe class="video" src="https://www.youtube.com/embed/AY8zYMIRJQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/ExZk8XE2734" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe class="video" src="https://www.youtube.com/embed/7Wn7kUqPld0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </span>
-                </div>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Damage.mp4</b></label><br>
-                    <span>
-                        <hr>
-                        <div class="video-scroll">
-                            <iframe class="video" src="https://www.youtube.com/embed/xTQ1VygFLtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe class="video" src="https://www.youtube.com/embed/_-IMRDcDf4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            <iframe class="video" src="https://www.youtube.com/embed/7c-GOcR3bAk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </span>
-                </div>
+    {% include 'nick/top-banner.html' %}
+    <div class="main">
+        <form action="/team/nick/forum/search" method="get">
+            <div id="search">
+                <input type="search" name="User" id="searchBar" placeholder="Quick Search">
+                <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
             </div>
+        </form>
+        <div class="post">
+            <label style="font-size: 24px; padding: 3px; color:rgb(23, 140, 148);"><b>Most  Viewed  Video</b></label><br>
+            <span>
+                <hr>
+                <div class="video-scroll">
+                    <iframe class='video' src="https://www.youtube.com/embed/W2MXIjjDJxA" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/RAL-EUMcDU8" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </span>
+            <div style="padding-right: 20px;"><a href="/schoolPage.html"></a></div>
         </div>
+        <div class="post">
+            <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>Character</b></label><br>
+            <span>
+                <hr>
+                <div class="video-scroll">
+                    <iframe class="video" src="https://www.youtube.com/embed/W2MXIjjDJxA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/UiCoMNXEwkQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/RAL-EUMcDU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </span>
+            <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
+        </div>
+        <div class="post">
+            <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Boss Guide</b></label><br>
+            <span>
+                <hr>
+                <div class="video-scroll">
+                    <iframe class="video" src="https://www.youtube.com/embed/qw7USpop87I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/HWLhcvj7eb4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/DWyRLVjNxBY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/JUvmfMyLGxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </span>
+            <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
+        </div>
+        <div class="post">
+            <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Tip and Tricks</b></label><br>
+            <span>
+                <hr>
+                <div class="video-scroll">
+                    <iframe class="video" src="https://www.youtube.com/embed/AY8zYMIRJQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/ExZk8XE2734" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/7Wn7kUqPld0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </span>
+        </div>
+        <div class="post">
+            <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Damage.mp4</b></label><br>
+            <span>
+                <hr>
+                <div class="video-scroll">
+                    <iframe class="video" src="https://www.youtube.com/embed/xTQ1VygFLtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/_-IMRDcDf4k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="video" src="https://www.youtube.com/embed/7c-GOcR3bAk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </span>
+        </div>
+    </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 body{
-    background-image: url("../../img/nick/patternwhite.jpg");
+    background-image: url("../../img/nick/patternwhite.e6590ef07d8a.jpg");
     background-size: 100px;
     background-repeat: inherit;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -176,7 +176,7 @@ a:hover{
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-image: url("../../img/nick/patterndark.png");
+        background-image: url("../../img/nick/patterndark.c0e31beb96d1.png");
         background-size: 2000px;
         background-repeat: inherit;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
