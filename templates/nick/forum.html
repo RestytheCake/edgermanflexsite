@@ -1,7 +1,8 @@
 {% load static %}
 {% load hashtag %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>
             EDgermanflex
@@ -13,7 +14,6 @@
     <!--Hardcore starts from here-->
 
     <script>
-        //alooooooo to create new post
         let filterClicked = false;
 
         function filterSearch(){
@@ -38,7 +38,7 @@
         function newPostUsers(){
             let newPost = document.getElementById('createPost')
 
-            if(createNewButtonPressed == false){
+            if(createNewButtonPressed === false){
                 newPost.style.display = 'block'
                 createNewButtonPressed = true
             }else{
@@ -53,7 +53,7 @@
         function ddMenu(){
             let ddcont = document.getElementById('dropdown-content');
             
-            if(profileClicked == false){
+            if(profileClicked === false){
                 ddcont.style.display = 'block'
                 profileClicked = true
             }else{
@@ -64,48 +64,13 @@
 
     </script>
     <body>
-    <div id="topBanner">
-        <div>
-            <label>Welcome to the official EDGermanflex site!</label>
-            <img src={% static 'img/nick/logo.png' %} style="width: 120px; height: 120px; float: left; padding-left: 10px;">
-            {% if request.user.is_authenticated %}
-                <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
-                    <label onclick="ddMenu()">{{ request.user.username }}</label>
-                    <div  id="dropdown-content">
-                        <a href='/team/nick/forum/profile?user={{ request.user.username }}' style="float: left;">Profile</a>
-                        <a href="/team/nick/logout" style="float: left;">Logout</a>
-                    </div>
-                </div>
-            {% else %}
-                <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
-                    <label onclick="ddMenu()">New ?</label>
-                    <div  id="dropdown-content">
-                        <a href="/team/nick/register" style="float: left;">Register</a>
-                        <a href="/team/nick/login" style="float: left;">Login</a>
-                    </div>
-                </div>
-            {% endif %}
-        </div>
-    </div>
-    <div id="scroll">
-        <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
-        <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
-        <button class="buttonTop" style="background-color:  rgb(235, 97, 33);" onClick="window.location='/team/nick/forum';">Forum</button>
-        <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
-        <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
-    </div>
-
-
+    {% include 'nick/top-banner.html' %}
 
     <!--here new stuff going on-->
-    <form action="/team/nick/forum/search" method="get">
+    <form action="/team/nick/forum/searchworker/" method="get">
         <div id="search">
-            <input list="mostlike" type="search" name="searching" id="searchBar" placeholder="Quick Search">
-            <datalist id="mostlike">
-                {% for like in likeobj %}
-                <option value="{{ like.user }} | {{ like.title }}">Likes : {{ like.like.count }}</option>
-                {% endfor %}
-            </datalist>
+            <input  type="search" name="user" id="searchBar" placeholder="Username">
+            <input type="search" name="title" id="searchBar" placeholder="Title">
             <button id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"> </button>
             <div id='filter' onclick='filterSearch()'><img src={% static 'img/nick/3dots.png' %} style="width: 40px; height: 40px;"></div>
             <div id="filterNewOld">
@@ -126,7 +91,7 @@
 
             <button onclick="location.href='/team/nick/forum/create';" id='buttonNewPost'>Create new post</button>
             {% for data in message %}
-                <div class="post">
+                <div class="post" id="{{ data.user }}={{ data.title }}">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0,0,0);"><b>{{ data.title }}</b></label>
                 <label id='date' style="color: rgb(179, 163, 149);">{{ data.created_at.day }}.{{ data.created_at.month }}.{{ data.created_at.year }}</label>
                 <label style="font-size: 10px;color: rgb(179, 163, 149); padding-left: 5px;">UTC:</label>

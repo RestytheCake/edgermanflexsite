@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            EDGermanFlex / problems
+        </title>
+        <link rel="stylesheet" href={% static 'css/nick/forum_create.css' %}>
+        <link rel="icon" href={% static 'img/nick/logo.png' %}>
+    </head>
+    <!--Hardcore starts from here-->
+
+    <body>
+        <center>
+         <!--create post for forum-->
+        <form action="/team/nick/forum/create" method="post">
+         {% if request.user.is_authenticated %}
+             {% csrf_token %}
+         <div id="createPost">
+            <label style="padding-right: 10px; float: left;">Topic: </label>
+            <label style="float: right; padding: 5px 10px">Logged in as : {{ request.user.username }}</label><br><br>
+            <input type="text" style="float: left"><br><br>
+            <label style=" float: left;">Keywords:</label><br>
+            <input type="text" style="float: left"><br><br>
+            <label style="padding-right: 10px; float: left;">Description: </label><br>
+             <textarea type="text" style="float: left"></textarea><br><br>
+             <button type="submit" style="float: right;">Submit</button><br>
+        </div>
+        </form>
+        {% else %}
+             <div id="createPost">
+                <label>
+                    You need to be logged in &nbsp; &nbsp; <a href="/team/nick/register">Register</a> or <a href="/team/nick/login">Login</a>
+                </label>
+             </div>
+        {% endif %}
+        </center>
+    </body>
+</html>

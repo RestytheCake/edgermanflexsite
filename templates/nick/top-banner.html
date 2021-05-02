@@ -1,0 +1,32 @@
+{% load static %}
+<div id="topBanner">
+        <div>
+            <label>Welcome to the official EDGermanflex site!</label>
+            <img style="width: 120px; height: 120px; float: left; padding-left: 10px;" src={% static 'img/nick/logo.png' %} >
+            {% if request.user.is_authenticated %}
+                <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                    <label onclick="ddMenu()">{{ request.user.username }}</label>
+                    <div  id="dropdown-content">
+                        <a href='/team/nick/forum/profile?user={{ request.user.username }}' style="float: left;">Profile</a>
+                        <a href="/team/nick/forum/notification" style="float: left;">Notification</a>
+                        <a href="/team/nick/logout" style="float: left;">Logout</a>
+                    </div>
+                </div>
+            {% else %}
+                <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
+                    <label onclick="ddMenu()">New ?</label>
+                    <div  id="dropdown-content">
+                        <a href="/team/nick/register" style="float: left;">Register</a>
+                        <a href="/team/nick/login" style="float: left;">Login</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div id="scroll">
+        <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
+        <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
+        <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
+        <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
+        <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
+    </div>

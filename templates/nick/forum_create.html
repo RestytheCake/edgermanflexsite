@@ -17,7 +17,8 @@
          {% if request.user.is_authenticated %}
              {% csrf_token %}
          <div id="createPost">
-            <label style="padding-right: 10px; float: left;">Topic: </label><br>
+            <label style="padding-right: 10px; float: left;">Topic: </label>
+             <label style="float: right; padding: 5px 10px">Logged in as : {{ request.user.username }}</label><br>
             {{ form.title }}<br><br>
             <label style=" float: left;">Keywords:</label><br>
             {{ form.tags }}<br><br>

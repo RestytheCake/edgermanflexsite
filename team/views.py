@@ -9,8 +9,8 @@ from django.contrib.auth import login, authenticate, logout
 from allauth.socialaccount.models import SocialAccount
 
 # Create your views here.
-from .models import NickUser, forum, profile, comment
-from .forms import addforum, commentform, profileform, UploadFileForm, UserAdminCreationForm
+from .models import NickUser, forum, notification, profile, comment
+from .forms import addforum, commentform, notify, profileform, UploadFileForm, UserAdminCreationForm
 
 
 def nick(request):
@@ -44,9 +44,24 @@ def forum_create(request):
     if request.method == 'POST':
         form = addforum(request.POST)
         if form.is_valid():
-            instance = form.save(commit=False)
-            instance.user = request.user.username
-            instance.save()
+            title = request.POST.get('title')
+            user = request.user.username
+            post = forum.objects.filter(title=title, user=user)
+            if post:
+                noti = notify()
+                instance = noti.save(commit=False)
+                instance.User = request.user.username
+                instance.Warning = 'Double Post'
+                instance.Post_title = request.POST.get('title')
+                instance.Post_message = request.POST.get('message')
+                instance.Post_Tags = request.POST.get('tags')
+                instance.Description = 'You have submitted a Post with a Title you already used'
+                instance.Sender = 'System'
+                instance.save()
+            else:
+                instance = form.save(commit=False)
+                instance.user = request.user.username
+                instance.save()
             return redirect('/team/nick/forum')
     return render(request, 'nick/forum_create.html', {'form': form})
 
@@ -169,19 +184,31 @@ def search_post(request):
     return render(request, 'nick/message_search.html', {'search': obj})
 
 
+def searchworker_view(request):
+    user = request.GET.get('user')
+    title = request.GET.get('title')
+    url = f'/team/nick/forum/#{user}={title}'
+    return redirect(url)
+
+
+
 def profile_view(request):
     if request.GET.get('user'):
         usernameget = request.GET.get('user')
-        profile_data = profile.objects.filter(username=usernameget)
+        profile_data = profile.objects.filter(username__username=usernameget)
         forum_data = forum.objects.filter(user=usernameget).order_by('-created_at')
         msg_counter = forum_data.count()
-        friends_data = profile.objects.filter(username=usernameget)
+        friends_data = profile.objects.filter(username__username=usernameget)
         cc_data = comment.objects.filter(User=usernameget)
         cc_counter = cc_data.count()
 
     return render(request, 'nick/profile.html',
                   {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter,'cc_counter': cc_counter ,'friend_data': friends_data,'cc_data': cc_data, 'user': usernameget})
 
+
+def notification_view(request):
+    notification_data = notification.objects.filter(User=request.user.username).order_by('-created_at')
+    return render(request, 'nick/notification.html', {'notify': notification_data})
 
 def fa(request):
     if request.GET.get('fa') == 'true':
@@ -311,15 +338,15 @@ def register(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            instance = pform.save(commit=False)
-            instance.username = request.POST.get('username')
-            instance.save()
-            form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
+            form.save()
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
+                instance = pform.save(commit=False)
+                instance.username = request.user
+                instance.save()
                 return redirect('/team/nick/')
     return render(request, 'nick/register.html', {'form': form})
 
@@ -376,6 +403,10 @@ def myaccount(request):
     else:
         uf = UploadFileForm
     return render(request, 'nick/myaccount.html', {'uf': uf})
+
+
+def problems(request):
+    return render(request, 'nick/problems.html')
 
 
 def sale(request):

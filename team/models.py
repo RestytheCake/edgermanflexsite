@@ -110,7 +110,7 @@ class forum(models.Model):
 
 
 class profile(models.Model):
-    username = models.CharField(max_length=255, blank=True, unique=True)
+    username = models.ForeignKey(User, on_delete=models.CASCADE)
     discord_member = models.BooleanField(default=False)
     discord_name = models.CharField(max_length=255, blank=True)
     special = models.BooleanField(default=False)
@@ -121,6 +121,8 @@ class profile(models.Model):
     friend_list = models.ManyToManyField(User, blank=True, related_name='friend_list')
     fa_list = models.ManyToManyField(User, blank=True, related_name='fa_list')
     fa_send = models.ManyToManyField(User, blank=True, related_name='fa_send')
+
+    USERNAME_FIELD = 'username'
 
     def __str__(self):
         if self.discord_member:
@@ -151,4 +153,17 @@ class comment(models.Model):
     def __str__(self):
         return str(f'{self.User} -> {self.main_post_user} -> {self.main_post_title} -> {self.comments}')
 
+
+class notification(models.Model):
+    User = models.CharField(max_length=255, blank=True, unique=False)
+    Post_title = models.CharField(max_length=255, blank=True, unique=False)
+    Post_message = models.CharField(max_length=255, blank=True, unique=False)
+    Post_Tags = models.CharField(max_length=255, blank=True, unique=False)
+    Warning = models.CharField(max_length=255, blank=True, unique=False)
+    Description = models.CharField(max_length=255, blank=True, unique=False)
+    Sender = models.CharField(max_length=255, blank=True, unique=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.User} -> {self.Warning} | {self.Post_title} -> {self.Post_message} -> {self.Post_Tags}'
 

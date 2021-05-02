@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import FileUpload, NickUser, forum, comment, profile
+from .models import FileUpload, NickUser, forum, comment, notification, profile
 from django.contrib.auth.forms import UserCreationForm, ReadOnlyPasswordHashField
 
 
@@ -77,3 +77,12 @@ class UserAdminChangeForm(forms.ModelForm):
         # This is done here, rather than on the field, because the
         # field does not have access to the initial value
         return self.initial["password"]
+
+
+class notify(forms.ModelForm):
+    class Meta:
+        model = notification
+        fields = ['User',
+                  'Description',
+                  'Warning',
+                  'Sender']

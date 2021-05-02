@@ -145,8 +145,9 @@
             {% if profil.special %}
                 <label id='specialRole' style="padding-left: 10px;">{{ profil.special_roles}}</label>
             {% else %}
-              <label id='specialRole' style="padding-left: 10px;">Elemental Dungeon Player </label>
+              <label id='specialRole'  style="padding-left: 10px;">Elemental Dungeon Player </label>
             {% endif %}
+
             </div>
             {% if request.user.username == user %}
             <hr>
@@ -158,10 +159,8 @@
             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <label id="cc" onclick="ccf()">Comments Posted : {{ cc_counter }}</label>
             <div id="friends" style="display: none" onclick="friendsf()"><label> Friends : {% for friend in friend_data %}{{ friend.friend_list.count }}{% endfor %}</label></div>
-            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <div id="fr_click" style="display: none" onclick="fr()"><label onclick="fr()">Friend Requests : {% for friend in friend_data %}{{ friend.fa_list.count }}{% endfor %}</label></div>
-           <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <div id="fab" style="display:none;" onclick="faf()">Friend Request : {% for friend in friend_data %}{{ friend.fa_send.count }}{% endfor %}</div>
+            <div id="fr_click" style="display: none" onclick="fr()"><label onclick="fr()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friend Requests : {% for friend in friend_data %}{{ friend.fa_list.count }}{% endfor %}</label></div>
+            <div id="fab" style="display:none;" onclick="faf()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friend Request : {% for friend in friend_data %}{{ friend.fa_send.count }}{% endfor %}</div>
             <div id="messages" >
         {% for msg in data %}
             <hr>
