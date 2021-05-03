@@ -2,7 +2,7 @@
 
 <div id="topBanner">
     <div>
-        <label>Welcome to the official EDGermanflex site!</label>
+        <label id="wlc">Welcome to the official EDGermanflex site!</label>
         <img id="icon" style="width: 120px; height: 120px; float: left; padding-left: 10px;" src={% static 'img/nick/logo.png' %} >
         {% if request.user.is_authenticated %}
             <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">

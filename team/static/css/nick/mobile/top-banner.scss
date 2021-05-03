@@ -1,4 +1,9 @@
 @media(max-width: 800px){
+
+    #wlc{
+       align-content: center;
+    }
+
     #icon {
         display: none;
     }
@@ -7,13 +12,7 @@
         width: 100%;
         padding-bottom: 10px;
         padding-top: 10px;
-        font-size: 6vw;
-    }
-
-    .buttonTop {
-        padding: 1%;
-        width: 150px;
-        font-size: 20px;
+        font-size: 7vw;
     }
 
     #dropdown{
@@ -31,7 +30,7 @@
     }
 
     .buttonTop {
-        width: 80px;
-        font-size: 16px;
+        width: 60px;
+        font-size: 18px;
     }
 }
