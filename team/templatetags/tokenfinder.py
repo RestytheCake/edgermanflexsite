@@ -9,8 +9,8 @@ register = template.Library()
 def find(user):
     try:
         token = Token.objects.get(user=user)
-        print('try')
         return token
     except:
         token = Token.objects.create(user=user)
         print(token.key)
+        return token.key

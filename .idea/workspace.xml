@@ -20,30 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/team/templatetags/tokenfinder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/mobile/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/mobile/top-banner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/advancedSRC.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/advancedSRC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/forum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/forum_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/message_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/message_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/myaccount.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/top-banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/top-banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/templatetags/tokenfinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/templatetags/tokenfinder.py" afterDir="false" />
     </list>
-    <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/nick/Account/settings.html" afterDir="false" />
-    </list>
+    <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -272,7 +253,7 @@
       <workItem from="1619962374638" duration="7200000" />
       <workItem from="1620030222599" duration="768000" />
       <workItem from="1620031042765" duration="3515000" />
-      <workItem from="1620035233348" duration="16991000" />
+      <workItem from="1620035233348" duration="17405000" />
     </task>
     <servers />
   </component>
