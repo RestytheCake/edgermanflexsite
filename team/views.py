@@ -36,7 +36,7 @@ def forum_view(request):
             instance.user = request.user.username
             instance.save()
 
-    return render(request, 'nick/forum.html', {'message': data, 'form': form, 'likeobj': likeobj})
+    return render(request, 'nick/forum/forum.html', {'message': data, 'form': form, 'likeobj': likeobj})
 
 
 def forum_create(request):
@@ -63,11 +63,11 @@ def forum_create(request):
                 instance.user = request.user.username
                 instance.save()
             return redirect('/team/nick/forum')
-    return render(request, 'nick/forum_create.html', {'form': form})
+    return render(request, 'nick/forum/forum_create.html', {'form': form})
 
 
 def advfilter(request):
-    return render(request, 'nick/advancedSRC.html')
+    return render(request, 'nick/forum/advancedSRC.html')
 
 
 def search_post(request):
@@ -181,7 +181,7 @@ def search_post(request):
             obj = forum.objects.annotate(like_count=Count('like')).order_by('-like_count')
         else:
             obj = forum.objects.annotate(like_count=Count('like')).order_by('like_count')
-    return render(request, 'nick/message_search.html', {'search': obj})
+    return render(request, 'nick/forum/message_search.html', {'search': obj})
 
 
 def searchworker_view(request):
@@ -202,13 +202,18 @@ def profile_view(request):
         cc_data = comment.objects.filter(User=usernameget)
         cc_counter = cc_data.count()
 
-    return render(request, 'nick/profile.html',
+    return render(request, 'nick/Account/profile.html',
                   {'profile': profile_data, 'data': forum_data, 'msg_counter': msg_counter,'cc_counter': cc_counter ,'friend_data': friends_data,'cc_data': cc_data, 'user': usernameget})
 
 
 def notification_view(request):
     notification_data = notification.objects.filter(User=request.user.username).order_by('-created_at')
     return render(request, 'nick/notification.html', {'notify': notification_data})
+
+
+def settings_view(request):
+    return render(request, 'nick/Account/settings.html')
+
 
 def fa(request):
     if request.GET.get('fa') == 'true':
@@ -314,7 +319,7 @@ def comment_view(request):
         comment_data_new = comment.objects.filter(main_post_user=userget, main_post_title=titleget).order_by(
             '-created_at')
 
-    return render(request, 'nick/comment.html',
+    return render(request, 'nick/forum/comment.html',
                   {'msg': main_post_data, 'comments_old': comment_data_old, 'comments_new': comment_data_new,
                    'form': form})
 
@@ -348,7 +353,7 @@ def register(request):
                 instance.username = request.user
                 instance.save()
                 return redirect('/team/nick/')
-    return render(request, 'nick/register.html', {'form': form})
+    return render(request, 'nick/Account/register.html', {'form': form})
 
 
 def login_view(request):
@@ -366,9 +371,9 @@ def login_view(request):
                 next = f'{request.GET.get("next")}&title={request.GET.get("title")}'
                 return redirect(next)
             else:
-                return render(request, 'nick/login.html')
+                return render(request, 'nick/Account/login.html')
         else:
-            return render(request, 'nick/login.html', {'reasonError1': reasonlike1, 'reasonError2': reasonlike2})
+            return render(request, 'nick/Account/login.html', {'reasonError1': reasonlike1, 'reasonError2': reasonlike2})
     if request.user.is_authenticated:
         return redirect('/team/nick')
     elif request.POST.get('username'):
@@ -382,9 +387,9 @@ def login_view(request):
             else:
                 return redirect('.')
         else:
-            return render(request, 'nick/login.html')
+            return render(request, 'nick/Account/login.html')
     else:
-        return render(request, 'nick/login.html')
+        return render(request, 'nick/Account/login.html')
 
 
 def logout_view(request):
@@ -393,16 +398,6 @@ def logout_view(request):
     else:
         pass
     return redirect('/team/nick/login')
-
-
-def myaccount(request):
-    if request.method == 'POST':
-        uf = UploadFileForm(request.POST, request.FILES)
-        if uf.is_valid():
-            uf.save()
-    else:
-        uf = UploadFileForm
-    return render(request, 'nick/myaccount.html', {'uf': uf})
 
 
 def problems(request):

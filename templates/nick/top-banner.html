@@ -8,9 +8,10 @@
             <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                 <label onclick="ddMenu()">{{ request.user.username }}</label>
                 <div  id="dropdown-content">
-                    <a href='/team/nick/forum/profile?user={{ request.user.username }}' style="float: left;">Profile</a>
-                    <a href="/team/nick/forum/notification" style="float: left;">Notification</a>
-                    <a href="/team/nick/logout" style="float: left;">Logout</a>
+                    <a href='{% url 'team:profile' %}?user={{ request.user.username }}' style="float: left;">Profile</a>
+                    <a href="{% url 'team:notification' %}" style="float: left;">Notification</a>
+                    <a href="{% url 'team:settings' %}" style="float: left;">Settings</a>
+                    <a href="{% url 'team:logout' %}" style="float: left;">Logout</a>
                 </div>
             </div>
         {% else %}

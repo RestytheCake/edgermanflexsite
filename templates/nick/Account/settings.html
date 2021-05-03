@@ -1,0 +1,34 @@
+{% load static %}
+{% load tokenfinder %}
+<link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
+<script>
+    function getToken() {
+        navigator.clipboard.writeText('{% find request.user %}')
+    }
+</script>
+<div style="text-align: -webkit-center; text-align: -moz-center">
+    <div class="post" style=" width: 400px; margin-top: 4%;">
+        <h2><b>Settings</b></h2><br>
+
+        <div  style="text-align: left; display: inline-block">
+            <label>Account:</label><hr>
+            <label>Change name:</label><br>
+            <input type="text" placeholder="{{ request.user.username }}"><br><br>
+
+            <label>Change password</label><br>
+            <input type="text"  placeholder="new Password"><br><br>
+            <label>Repeat password</label><br>
+            <input type="text" placeholder="Password"><br><br>
+        </div>
+        <div style="text-align: right; display: inline-block">
+            <label>Advanced:</label><hr>
+            <label>Change discord name</label><br>
+            <input type="text" placeholder="Alkashon#1234"><br><br>
+
+            <button onclick="getToken()">Copy token for help</button>
+
+        </div><br>
+        <button type="submit">Save</button>
+
+    </div>
+</div>
