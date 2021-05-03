@@ -20,10 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/global.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/top-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/top-banner.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/top-banner.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark-mobile/top-banner.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/top-banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/create-post.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/searchbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/top-banner.scss" beforeDir="false" />
     </list>
     <list id="522ec712-ebd1-44e5-a619-eae67b112ba0" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +256,7 @@
       <workItem from="1619962374638" duration="7200000" />
       <workItem from="1620030222599" duration="768000" />
       <workItem from="1620031042765" duration="3515000" />
-      <workItem from="1620035233348" duration="9008000" />
+      <workItem from="1620035233348" duration="9329000" />
     </task>
     <servers />
   </component>
