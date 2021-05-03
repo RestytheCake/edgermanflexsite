@@ -12,16 +12,6 @@ span{
     padding: 5px;
 }
 
-#container{
-    margin-top: 10%;
-    background-color:#faebd7;
-    border: 20px solid transparent;
-    border-image: url('../../img/nick/lightthiccborder.png') 90 round;
-    padding: 10px;
-    width: max-content;
-    height: max-content;
-}
-
 #search{
     display: flex;
     justify-content: center;
@@ -85,11 +75,6 @@ span{
 
 .buttonTop:hover{
     background-color: rgb(50, 191, 201);
-}
-
-#switchLang{
-    font-size: 16px; float:right;
-    margin-right: 20px;
 }
 
 #scroll{

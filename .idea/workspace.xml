@@ -19,8 +19,33 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="" />
-    <list id="522ec712-ebd1-44e5-a619-eae67b112ba0" name="Changes by Altyn" comment="" />
+    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/top-banner.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/videos.css" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/videos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/nick.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/nick.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/top-banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/top-banner.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/videos.html" afterDir="false" />
+    </list>
+    <list id="522ec712-ebd1-44e5-a619-eae67b112ba0" name="Changes by Altyn" comment="">
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/advanced-filter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/create-post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/advanced-filter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/create-post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/searchbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/top-banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/holy-cascade.css" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/holy-cascade.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +66,7 @@
         <option value="Python Script" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -56,7 +82,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/../../../Languages/Python 3.6.1/Lib/site-packages/dj_database_url.py" root0="SKIP_INSPECTION" />
@@ -76,9 +110,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="com.google.cloudcode.ide_session_index" value="20210502_0002" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210503_0002" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,7 +121,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
@@ -231,7 +265,10 @@
       <workItem from="1619776488267" duration="3580000" />
       <workItem from="1619940432226" duration="7441000" />
       <workItem from="1619957525575" duration="3406000" />
-      <workItem from="1619962374638" duration="6485000" />
+      <workItem from="1619962374638" duration="7200000" />
+      <workItem from="1620030222599" duration="768000" />
+      <workItem from="1620031042765" duration="3515000" />
+      <workItem from="1620035233348" duration="5975000" />
     </task>
     <servers />
   </component>

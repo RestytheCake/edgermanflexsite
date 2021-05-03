@@ -1,0 +1,32 @@
+$accentColor: rgb(6,150,160);
+$accentDark: rgb(1, 95, 102);
+$textColor: white;
+$accentHover: rgb(0, 231, 236);
+
+a.advButton:link, a:visited {
+  background-color: $accentColor;
+  border: 2px $accentDark solid;
+  color: $textColor;
+  padding: 14px 0px;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none;
+}
+
+  #advancedList{
+    position:sticky;
+    display: none;
+}
+
+#advButton{
+    background-color: $accentColor;
+    border: none;
+    border: 2px $accentDark solid;
+    margin-left: 2px;
+    height: 50px;
+    color: $textColor;
+    cursor: pointer;
+}
+  #advButton:hover{
+    background-color:$accentHover;
+  }

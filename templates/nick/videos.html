@@ -1,3 +1,4 @@
+{% load sass_tags %}
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -5,22 +6,27 @@
         <title>
             EDGermanFlex
         </title>
-        <link rel="stylesheet" href={% static 'css/nick/videos.css' %}>
+        <!-- Global Light & Dark-->
+        <link rel="stylesheet" href={% sass_src 'css/nick/light/global.scss' %}>
+        <link rel="stylesheet" href={% sass_src 'css/nick/dark/global.scss' %}>
+        <!-- Videos Light & Dark-->
+        <link rel="stylesheet" href={% sass_src 'css/nick/light/video.scss' %}>
+        <link rel="stylesheet" href={% sass_src 'css/nick/dark/video.scss' %}>
+        <!-- Top-Banner Light & Dark -->
+        <link rel="stylesheet" href="{% sass_src 'css/nick/light/top-banner.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/dark/top-banner.scss' %}">
+        <!-- Icon -->
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
-        <meta name="viewport" content="width=device-width">
 
+        <meta name="viewport" content="width=device-width">
+        <!-- JS -->
         <script src={%  static 'js/ddMenu.js' %}></script>
     </head>
     <!--Hardcore starts from here-->
     <body>
     {% include 'nick/top-banner.html' %}
+
     <div class="main">
-        <form action="/team/nick/forum/search" method="get">
-            <div id="search">
-                <input type="search" name="User" id="searchBar" placeholder="Quick Search">
-                <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
-            </div>
-        </form>
         <div class="post">
             <label style="font-size: 24px; padding: 3px; color:rgb(23, 140, 148);"><b>Most  Viewed  Video</b></label><br>
             <span>
@@ -30,7 +36,6 @@
                     <iframe class="video" src="https://www.youtube.com/embed/RAL-EUMcDU8" frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </span>
-            <div style="padding-right: 20px;"><a href="/schoolPage.html"></a></div>
         </div>
         <div class="post">
             <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>Character</b></label><br>
@@ -42,7 +47,6 @@
                     <iframe class="video" src="https://www.youtube.com/embed/RAL-EUMcDU8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </span>
-            <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
         </div>
         <div class="post">
             <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Boss Guide</b></label><br>
@@ -55,7 +59,6 @@
                     <iframe class="video" src="https://www.youtube.com/embed/JUvmfMyLGxc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </span>
-            <div style="padding-right: 20px; padding-top: 20px;"><a href="/schoolPage.html"></a></div>
         </div>
         <div class="post">
             <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Tip and Tricks</b></label><br>

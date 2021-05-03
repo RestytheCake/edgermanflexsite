@@ -1,3 +1,4 @@
+{% load sass_tags %}
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -5,41 +6,43 @@
         <title>
             EDGermanFlex
         </title>
-        <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
-		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <!-- Global light -->
+        <link rel="stylesheet" type="text/css" href={% sass_src 'css/nick/light/global.scss' %}>
+        <!-- Global Dark -->
+        <link rel="stylesheet" type="text/css" href={% sass_src 'css/nick/dark/global.scss' %}>
+		<!-- Top-Banner Light -->
+        <link rel="stylesheet" type="text/css" href={% sass_src 'css/nick/light/top-banner.scss' %}>
+        <!-- Top-Banner Dark -->
+        <link rel="stylesheet" type="text/css" href={% sass_src 'css/nick/dark/top-banner.scss' %}>
+        <!-- Icon -->
+        <link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <!-- Viewport / Can't Explain-->
         <meta name="viewport" content="width=device-width">
-
+        <!-- JS -->
         <script src={% static 'js/ddMenu.js' %}></script>
     </head>
     <!--Hardcore starts from here-->
    <body>
-            {% include 'nick/top-banner.html' %}
-            <div id="scroll">
-                <button class="buttonTop" style="background-color:  rgb(235, 97, 33);" onClick="window.location='';">Home</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
-            </div>
-            <form action="/team/nick/forum/search" method="get">
-                <div id="search">
-                    <input type="search" name="User" id="searchBar" placeholder="Quick Search">
-                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
-                </div>
-            </form>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>About Developers</b></label><br>
-                    <span class="thx" >Huge thanks goes to <li>Altyn - for making site and keeping me company always</li>
-                    <li>Resty - for helping with site and coding cool stuff</li>
-                    <li>Myself - for being best and first client of Altyn and motivating her</li></span>
-                </div>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>General topics</b></label><br>
-                    <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
-                </div>
-                <div class="post">
-                    <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Videos timetable</b></label><br>
-                    <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</span>
-                </div>
-    </body>
+   <!-- Top-Banner HTML-->
+   {% include 'nick/top-banner.html' %}
+
+   <!-- Post / Some Information in Main Page -->
+   <div class="post">
+       <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>About Developers</b></label><br>
+       <span class="thx" >Huge thanks goes to <li>Altyn - for making site and keeping me company always</li>
+           <li>Resty - for helping with site and coding cool stuff</li>
+           <li>Myself - for being best and first client of Altyn and motivating her</li></span>
+   </div>
+
+   <div class="post">
+       <label style="font-size: 24px; padding: 10px; color:rgb(23, 140, 148);"><b>General topics</b></label><br>
+       <span>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</span>
+   </div>
+
+   <div class="post">
+       <label style="font-size: 24px; padding: 10px; color: rgb(23, 140, 148);"><b>Videos timetable</b></label><br>
+       <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</span>
+   </div>
+   <!-- Information Ends Here -->
+   </body>
 </html>

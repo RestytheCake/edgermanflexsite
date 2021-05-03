@@ -1,0 +1,43 @@
+@media (prefers-color-scheme: dark) {
+  .hoverable:hover {
+    background-color: #d8cab5; }
+  body {
+    background-image: url("../../../img/nick/patterndark.png");
+    background-size: 2000px;
+    background-repeat: inherit;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; }
+  .post {
+    background-color: #faebd7;
+    border: 30px solid transparent;
+    border-image: url("../../../img/nick/darkthiccborder.png") 20% round;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    width: auto;
+    height: max-content; }
+  .container {
+    margin-right: 10%;
+    margin-left: 10%; }
+  input[type=submit] {
+    background-color: #792712;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer; }
+  input[type=text], [type=date] {
+    border-color: #792712; }
+  input[type=submit]:hover {
+    background-color: #eb6121; }
+  a {
+    float: right;
+    color: #792712; }
+  a:hover {
+    color: #eb6121; }
+  span {
+    display: block;
+    word-wrap: break-word;
+    font-size: 16px;
+    padding: 10px; } }
+
+/*# sourceMappingURL=global.css.map */

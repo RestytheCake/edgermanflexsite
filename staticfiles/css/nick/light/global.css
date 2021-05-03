@@ -1,0 +1,55 @@
+::selection {
+  background-color: #00e7ec; }
+
+.hoverable:hover {
+  background-color: #d0e8ea; }
+
+body {
+  background-image: url("../../../img/nick/patternwhite.jpg");
+  background-size: 200px;
+  background-repeat: inherit;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  outline: none; }
+
+.post {
+  background-color: white;
+  border: 30px solid transparent;
+  border-image: url("../../../img/nick/lightthiccborder.png") 20% round;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 15px;
+  width: auto;
+  height: max-content; }
+
+.container {
+  margin-right: 10%;
+  margin-left: 10%; }
+
+input[type=submit] {
+  background-color: #0696a0;
+  border: none;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer; }
+
+input[type=text], [type=date] {
+  border-color: #0696a0; }
+
+input[type=submit]:hover {
+  background-color: #00e7ec; }
+
+a {
+  float: right;
+  color: #0696a0; }
+
+a:hover {
+  color: #00e7ec; }
+
+span {
+  display: block;
+  word-wrap: break-word;
+  font-size: 16px;
+  padding: 10px; }
+
+/*# sourceMappingURL=global.css.map */

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 'debug_toolbar',
     'admin_interface',
     'colorfield',
+    'sass_processor',
 ]
 
 MIDDLEWARE = [
@@ -108,6 +109,12 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+
 WSGI_APPLICATION = 'Django.wsgi.application'
 
 # Database
@@ -156,6 +163,7 @@ USE_TZ = True
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+SASS_PROCESSOR_ROOT = STATIC_ROOT
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

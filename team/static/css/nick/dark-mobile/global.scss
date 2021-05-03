@@ -1,0 +1,91 @@
+@media(max-width: 600px){
+  .logo{
+    display: none;
+  }
+  body{
+    background-size: 800px;
+  }
+
+  span{
+    font-size: 12px;
+  }
+
+  .container {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+}
+
+/* existing scss */
+
+$postBg: #faebd7;
+$url: '../../../img/nick/darkthiccborder.png';
+$bgimage: '../../../img/nick/patterndark.png';
+$font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$accentColor:rgb(121, 39, 18);
+$accentDark: rgb(77, 22, 8);
+$textColor: white;
+
+@media (prefers-color-scheme: dark) {
+
+  .hoverable:hover{
+     background-color: $accentHoverable;
+}
+
+  body {
+    background-image: url($bgimage);
+    background-size: 2000px;
+    background-repeat: inherit;
+    font-family: $font;
+
+  }
+
+  .post {
+    background-color: $postBg;
+    border: 30px solid transparent;
+    border-image: url($url) 20% round;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    width: auto;
+    height: max-content;
+  }
+ .container {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  input[type = submit]{
+    background-color: $accentColor;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    color: $textColor;
+    cursor: pointer;
+}
+
+input[type = text],[type = date]{
+    border-color: $accentColor;
+}
+
+
+input[type = submit]:hover{
+    background-color: $accentHover;
+}
+
+a{
+    float: right;
+    color: $accentColor;
+}
+
+a:hover{
+    color:$accentHover;
+}
+
+span{
+    display: block;
+    word-wrap: break-word;
+    padding: 10px;
+}
+}
