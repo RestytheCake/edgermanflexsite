@@ -20,32 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/top-banner.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/videos.css" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/videos.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark-mobile/top-banner.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nick/nick.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/nick.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/top-banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/top-banner.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/videos.html" afterDir="false" />
     </list>
-    <list id="522ec712-ebd1-44e5-a619-eae67b112ba0" name="Changes by Altyn" comment="">
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/advanced-filter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/create-post.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/advanced-filter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/create-post.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/dropdown.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/searchbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/top-banner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/holy-cascade.css" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/holy-cascade.css" afterDir="false" />
-    </list>
+    <list id="522ec712-ebd1-44e5-a619-eae67b112ba0" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +83,10 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ACTIVE_CLOUD_PROJECT_ACCOUNT" value="lekkerkuchen@gmail.com" />
+    <property name="ACTIVE_CLOUD_PROJECT_ID" value="kuchen-8c5b1" />
+    <property name="ACTIVE_CLOUD_PROJECT_NAME" value="kuchen-dev" />
+    <property name="ACTIVE_CLOUD_PROJECT_NUMBER" value="120248203948" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -110,7 +94,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="com.google.cloudcode.ide_session_index" value="20210503_0002" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210503_0004" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -268,7 +252,7 @@
       <workItem from="1619962374638" duration="7200000" />
       <workItem from="1620030222599" duration="768000" />
       <workItem from="1620031042765" duration="3515000" />
-      <workItem from="1620035233348" duration="5975000" />
+      <workItem from="1620035233348" duration="8279000" />
     </task>
     <servers />
   </component>
