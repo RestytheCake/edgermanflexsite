@@ -11,7 +11,7 @@ urlpatterns = [
     path('team/nick/forum/create', views.forum_create, name='create'),
     path('team/nick/forum/search/', views.search_post, name='message_search'),
     path('team/nick/forum/filter', views.advfilter, name='advfilter'),
-    path('team/nick/forum/searchworker/', views.searchworker_view),
+    path('team/nick/forum/searchworker/', views.searchworker_view, name='searchworker'),
     # Forum End
     path('team/nick/posts/', views.posts, name='posts'),
     path('team/nick/contact/', views.contacts, name='contact'),

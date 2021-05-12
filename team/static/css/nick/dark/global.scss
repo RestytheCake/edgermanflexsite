@@ -10,6 +10,10 @@ $accentHoverable:rgb(216, 202, 181);
 
 @media (prefers-color-scheme: dark) {
 
+::selection{
+  background-color: $accentHover;
+}
+
   .hoverable:hover{
      background-color: $accentHoverable;
 }
@@ -45,10 +49,13 @@ $accentHoverable:rgb(216, 202, 181);
     text-decoration: none;
     color: $textColor;
     cursor: pointer;
+    outline: none;
 }
+
 
 input[type = text],[type = date]{
     border-color: $accentColor;
+    outline: none;
 }
 
 

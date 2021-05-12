@@ -1,4 +1,6 @@
 @media (prefers-color-scheme: dark) {
+  ::selection {
+    background-color: #eb6121; }
   .hoverable:hover {
     background-color: #d8cab5; }
   body {
@@ -24,9 +26,11 @@
     padding: 5px;
     text-decoration: none;
     color: white;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none; }
   input[type=text], [type=date] {
-    border-color: #792712; }
+    border-color: #792712;
+    outline: none; }
   input[type=submit]:hover {
     background-color: #eb6121; }
   a {

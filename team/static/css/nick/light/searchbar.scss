@@ -3,6 +3,12 @@ $accentDark: rgb(1, 95, 102);
 $textColor: black;
 $accentHover:rgb(0, 231, 236);
 
+  #filter{
+    border-radius: 0 .7em .7em 0;
+    background-color: $accentColor;
+    border: .2em $accentDark solid;
+  }
+
 #search{
   display: flex;
   justify-content: center;
@@ -12,20 +18,20 @@ $accentHover:rgb(0, 231, 236);
 #searchBar{
    border: $accentColor solid;
    border-width: .2em;
-   border-radius: .7em 0 0 .7em;
    padding: .2em .2em .2em .5em;
    width: 300px;
    height: 50px;
-
+   outline: none;
 }
 
 #searchButton{
+
   border: .2em $accentDark solid;
   background-color: $accentColor;
   color: $textColor;
   font-weight:bold;
   padding-bottom: .2em;
-  width: 50px;
+  width: 40px;
 
 }
 

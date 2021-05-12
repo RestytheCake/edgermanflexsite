@@ -2,7 +2,7 @@ let filterClicked = false;
 
 function filterSearch(){
     let filterList = document.getElementById('advancedList')
-    let sortList = document.getElementById('sortList')
+    let sortList = document.getElementById('filter')
 
     if(filterClicked === false){
         filterList.style.display = 'block'

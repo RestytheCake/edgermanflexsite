@@ -1,3 +1,8 @@
+#filter {
+  border-radius: 0 .7em .7em 0;
+  background-color: #0696a0;
+  border: 0.2em #015f66 solid; }
+
 #search {
   display: flex;
   justify-content: center;
@@ -6,10 +11,10 @@
 #searchBar {
   border: #0696a0 solid;
   border-width: .2em;
-  border-radius: .7em 0 0 .7em;
   padding: .2em .2em .2em .5em;
   width: 300px;
-  height: 50px; }
+  height: 50px;
+  outline: none; }
 
 #searchButton {
   border: 0.2em #015f66 solid;
@@ -17,7 +22,7 @@
   color: black;
   font-weight: bold;
   padding-bottom: .2em;
-  width: 50px; }
+  width: 40px; }
 
 #searchButton:hover {
   background-color: #00e7ec; }

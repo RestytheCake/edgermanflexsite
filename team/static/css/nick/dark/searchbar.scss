@@ -5,6 +5,12 @@ $accentHover:rgb(235, 97, 33);
 
 @media (prefers-color-scheme: dark) {
 
+  #filter{
+    border-radius: 0 .7em .7em 0;
+    background-color: $accentColor;
+    border: .2em $accentDark solid;
+  }
+
   #search {
     display: flex;
     justify-content: center;
@@ -14,14 +20,14 @@ $accentHover:rgb(235, 97, 33);
   #searchBar {
     border: $accentColor solid;
     border-width: .2em;
-    border-radius: .7em 0 0 .7em;
     padding: .2em .2em .2em .5em;
     width: 300px;
-    height: 50px;
+    height: 40px;
 
   }
 
   #searchButton {
+
     border: .2em $accentDark solid;
     background-color: $accentColor;
     color: $textColor;

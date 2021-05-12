@@ -208,7 +208,7 @@ def profile_view(request):
 
 def notification_view(request):
     notification_data = notification.objects.filter(User=request.user.username).order_by('-created_at')
-    return render(request, 'nick/notification.html', {'notify': notification_data})
+    return render(request, 'nick/Account/notification.html', {'notify': notification_data})
 
 
 def settings_view(request):
