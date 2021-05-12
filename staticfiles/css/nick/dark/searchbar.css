@@ -2,6 +2,7 @@
   #filter {
     border-radius: 0 .7em .7em 0;
     background-color: #792712;
+    height: 45px;
     border: 0.2em #4d1608 solid; }
   #search {
     display: flex;
@@ -9,24 +10,21 @@
     margin-top: 20px; }
   #searchBar {
     border: #792712 solid;
-    border-width: .2em;
-    padding: .2em .2em .2em .5em;
-    width: 300px;
-    height: 40px; }
+    outline: none; }
   #searchButton {
     border: 0.2em #4d1608 solid;
     background-color: #792712;
     color: white;
     font-weight: bold;
     padding-bottom: .2em;
-    width: 50px; }
+    width: 40px; }
   #searchButton:hover {
     background-color: #eb6121; }
   a.advButton:link, a:visited {
     background-color: #792712;
     border: 2px #4d1608 solid;
     color: white;
-    padding: 14px 0px;
+    padding: 14px 0;
     margin-left: 2px;
     text-align: center;
     text-decoration: none; }

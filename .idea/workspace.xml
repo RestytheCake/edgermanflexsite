@@ -20,33 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.scss.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.scss.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/js/filterSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/js/filterSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/js/filterSearch.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/js/filterSearch.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/light/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/light/searchbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/js/filterSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/js/filterSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/forum.html" afterDir="false" />
     </list>
     <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -282,7 +256,7 @@
       <workItem from="1620135327710" duration="1101000" />
       <workItem from="1620389640153" duration="326000" />
       <workItem from="1620821037377" duration="159000" />
-      <workItem from="1620821238936" duration="3086000" />
+      <workItem from="1620821238936" duration="3416000" />
     </task>
     <servers />
   </component>

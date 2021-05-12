@@ -8,6 +8,7 @@ $accentHover:rgb(235, 97, 33);
   #filter{
     border-radius: 0 .7em .7em 0;
     background-color: $accentColor;
+    height: 45px;
     border: .2em $accentDark solid;
   }
 
@@ -19,11 +20,7 @@ $accentHover:rgb(235, 97, 33);
 
   #searchBar {
     border: $accentColor solid;
-    border-width: .2em;
-    padding: .2em .2em .2em .5em;
-    width: 300px;
-    height: 40px;
-
+    outline: none;
   }
 
   #searchButton {
@@ -33,7 +30,7 @@ $accentHover:rgb(235, 97, 33);
     color: $textColor;
     font-weight: bold;
     padding-bottom: .2em;
-    width: 50px;
+    width: 40px;
 
   }
 
@@ -45,7 +42,7 @@ $accentHover:rgb(235, 97, 33);
   background-color: $accentColor;
   border: 2px $accentDark solid;
   color: white;
-  padding: 14px 0px;
+  padding: 14px 0;
   margin-left: 2px;
   text-align: center;
   text-decoration: none;

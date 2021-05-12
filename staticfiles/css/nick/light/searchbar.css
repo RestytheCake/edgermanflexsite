@@ -31,7 +31,7 @@ a.advButton:link, a:visited {
   background-color: #0696a0;
   border: 2px #015f66 solid;
   color: white;
-  padding: 14px 0px;
+  padding: 14px 0;
   margin-left: 2px;
   text-align: center;
   text-decoration: none; }
