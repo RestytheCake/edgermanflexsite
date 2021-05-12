@@ -1,0 +1,19 @@
+$accentColor: rgb(6,150,160);
+
+    .video-scroll {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .video {
+        width: 300px;
+        height: 200px;
+        display: inline;
+        padding: 3px 10px 0px 0px;
+    }
+
+    #scroll {
+        text-align: center;
+        background-color: $accentColor;
+    }

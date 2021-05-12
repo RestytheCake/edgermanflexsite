@@ -1,0 +1,74 @@
+$postBg: white;
+$url: '../../../img/nick/lightthiccborder.png';
+$bgimage: '../../../img/nick/patternwhite.jpg';
+$font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+$accentColor: rgb(6,150,160);
+$accentHover: rgb(0, 231, 236);
+$textColor: white;
+$accentHoverable:rgb(208, 232, 234);
+
+::selection{
+    background-color: $accentHover;
+}
+
+.hoverable:hover{
+     background-color: $accentHoverable;
+}
+
+body{
+  background-image: url($bgimage);
+  background-size: 200px;
+  background-repeat: inherit;
+  font-family: $font;
+  outline: none;
+}
+
+.post{
+    background-color: $postBg;
+    border: 30px solid transparent;
+    border-image: url($url) 20% round;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    width: auto;
+    height: max-content;
+}
+
+.container{
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+input[type = submit]{
+    background-color: $accentColor;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    color: $textColor;
+    cursor: pointer;
+}
+
+input[type = text],[type = date]{
+    border-color: $accentColor;
+}
+
+
+input[type = submit]:hover{
+    background-color: $accentHover;
+}
+
+a{
+    float: right;
+    color: $accentColor;
+}
+
+a:hover{
+    color:$accentHover;
+}
+
+span{
+    display: block;
+    word-wrap: break-word;
+    font-size: 16px;
+    padding: 10px;
+}

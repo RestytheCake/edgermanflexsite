@@ -1,0 +1,70 @@
+@media(max-width: 600px){
+  #buttonNewPost, #tags{
+    font-size: 12px;
+  }
+
+  #createTopic, #keywords{
+    width: 70%;
+  }
+
+  #createDesc{
+    height: 90px;
+  }
+
+}
+
+
+/* existing */
+$url: '../../../img/nick/darkthiccborder.png';
+$accentColor:rgb(121, 39, 18);
+$accentDark: rgb(77, 22, 8);
+$textColor: white;
+$postBg: #faebd7;
+
+@media (prefers-color-scheme: dark) {
+  #createPost {
+    display: block;
+    background-color: $postBg;
+    border: 30px solid transparent;
+    border-image: url($url) 20% round;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    width: auto;
+    height: max-content;
+  }
+
+  #keywords {
+    border: none;
+    padding: 5px;
+    width: 50%;
+  }
+
+  #createTopic {
+    border: none;
+    padding: 5px;
+    width: 50%;
+  }
+
+  #createDesc {
+    border: none;
+    width: 100%;
+    height: 150px;
+    resize: none;
+  }
+
+  #buttonNewPost {
+    background-color: $accentColor;
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 10%;
+    font-size: 16px;
+    text-decoration: none;
+    color: $textColor;
+  }
+  #tags{
+    margin-top: 10px;
+    font-size: 14px;
+}
+}

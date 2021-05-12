@@ -1,0 +1,23 @@
+@media(max-width: 1200px){
+  .logo{
+    display: none;
+  }
+  body{
+    background-size: 100px;
+  }
+
+  span{
+    font-size: 12px;
+  }
+
+  .container {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .post {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+}

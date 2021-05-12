@@ -21,10 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/nick.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/nick.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/searchbar.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/searchbar.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/forum/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/forum.html" afterDir="false" />
     </list>
-    <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="" />
+    <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="">
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/light/searchbar.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,8 +99,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="com.google.cloudcode.ide_session_index" value="20210504_0000" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210507_0000" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -254,7 +260,9 @@
       <workItem from="1620030222599" duration="768000" />
       <workItem from="1620031042765" duration="3515000" />
       <workItem from="1620035233348" duration="17705000" />
-      <workItem from="1620116410252" duration="386000" />
+      <workItem from="1620116410252" duration="1052000" />
+      <workItem from="1620135327710" duration="1101000" />
+      <workItem from="1620389640153" duration="326000" />
     </task>
     <servers />
   </component>

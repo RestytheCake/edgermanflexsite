@@ -1,0 +1,46 @@
+$accentColor: rgb(6,150,160);
+$accentDark: rgb(1, 95, 102);
+$textColor: black;
+$accentHover:rgb(0, 231, 236);
+
+#filter{
+    background-color: $accentColor;
+    border: none;
+    border:$accentDark solid;
+    border-width: .2em;
+    border-radius: 0 .7em .7em }
+
+#filter:hover{
+    background-color:  $accentHover;
+}
+
+select#sortList:hover{
+    color: $accentHover;
+}
+
+select#sortList{
+    display: none;
+    margin-left: 1px;
+    position: sticky;
+    margin-right: 5%;
+    border: 2px $accentDark solid;
+    background-color: $accentColor;
+    border-radius: 0px;
+    color: $textColor;
+    height: 50px;
+    line-height: 37px;
+    outline: none;
+}
+
+select#selectList {
+    position: sticky;
+    display: none;
+    margin-right: 5%;
+    border: 2px $accentDark solid;
+    background-color: $accentColor;
+    border-radius: 0px;
+    color: $textColor;
+    height: 50px;
+    line-height: 37px;
+    outline: none;
+}
