@@ -21,6 +21,14 @@
   .container {
     margin-right: 10%;
     margin-left: 10%; }
+  button[type=submit] {
+    background-color: #792712;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    outline: none; }
   input[type=submit] {
     background-color: #792712;
     border: none;

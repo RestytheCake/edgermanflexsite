@@ -1,34 +1,60 @@
 {% load static %}
-{% load tokenfinder %}
-<link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
+{% load Token %}
+{% load sass_tags %}
+<!-- Old css -->
+<link rel="stylesheet" href="{% static 'css/nick/holy-cascade.css' %}">
+<!-- Input Light -->
+<link rel="stylesheet" href="{% sass_src 'css/nick/light/input.scss' %}">
+<!--Global light & dark & mobile -->
+<link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+<link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+<link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+<!--End of scss-->
+
 <script>
     function getToken() {
         navigator.clipboard.writeText('{% find request.user %}')
     }
 </script>
+
 <div style="text-align: -webkit-center; text-align: -moz-center">
     <div class="post" style=" width: 400px; margin-top: 4%;">
         <h2><b>Settings</b></h2><br>
 
-        <div  style="text-align: left; display: inline-block">
+        <div style="display: flex">
+        <div  style="text-align: left;">
             <label>Account:</label><hr>
             <label>Change name:</label><br>
-            <input type="text" placeholder="{{ request.user.username }}"><br><br>
+            <label>
+                <input type="text" placeholder="{{ request.user.username }}">
+            </label><br><br>
 
             <label>Change password</label><br>
-            <input type="text"  placeholder="new Password"><br><br>
+            <label>
+                <input type="password"  placeholder="new Password">
+            </label><br><br>
             <label>Repeat password</label><br>
-            <input type="text" placeholder="Password"><br><br>
+            <label>
+                <input type="password" placeholder="Password">
+            </label><br><br>
+            <label>Password</label><br>
+            <label>
+                <input type="password" placeholder="Enter Current Password">
+            </label><br><br>
+            <button type="submit">Update</button>
         </div>
-        <div style="text-align: right; display: inline-block">
-            <label>Advanced:</label><hr>
+        <div id="Help" style="text-align: right; margin-left: 50px">
+            <label>Help:</label><hr>
             <label>Change discord name</label><br>
-            <input type="text" placeholder="Alkashon#1234"><br><br>
 
-            <button onclick="getToken()">Copy token for help</button>
+            <label>
+                <input class="Helpclass" type="text" placeholder="Alkashon#1234">
+            </label><br><br>
+            <button class="Helpclass">Reset Token</button>
+            <br><br>
+            <button onclick="{% reset request.user %}">Copy token for help</button>
 
         </div><br>
-        <button type="submit">Save</button>
-
+</div>
     </div>
 </div>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,7 +23,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark/searchbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/static/css/nick/light/input.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team/templatetags/Token.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/admin/js/actions.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/admin/js/actions.js.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/global.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/light/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/light/top-banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/templatetags/tokenfinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/Account/settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/nick.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/nick.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nick/supporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/supporter.html" afterDir="false" />
     </list>
     <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +75,8 @@
       <list>
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -69,9 +103,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../../../Languages/Python 3.6.1/Lib/site-packages/dj_database_url.py" root0="SKIP_INSPECTION" />
-  </component>
   <component name="ProjectId" id="1okyuR2Ot6BWh10vwBb93dupE4Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -91,7 +122,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="com.google.cloudcode.ide_session_index" value="20210512_0002" />
+    <property name="com.google.cloudcode.ide_session_index" value="20210516_0001" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -102,7 +133,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
   </component>
   <component name="ReaderModeSettings">
     <option name="showLigatures" value="true" />
@@ -256,7 +287,13 @@
       <workItem from="1620135327710" duration="1101000" />
       <workItem from="1620389640153" duration="326000" />
       <workItem from="1620821037377" duration="159000" />
-      <workItem from="1620821238936" duration="3416000" />
+      <workItem from="1620821238936" duration="6180000" />
+      <workItem from="1620918642520" duration="2612000" />
+      <workItem from="1620921392587" duration="1694000" />
+      <workItem from="1620980631194" duration="738000" />
+      <workItem from="1620989869434" duration="3869000" />
+      <workItem from="1621169861117" duration="509000" />
+      <workItem from="1621170498310" duration="1234000" />
     </task>
     <servers />
   </component>

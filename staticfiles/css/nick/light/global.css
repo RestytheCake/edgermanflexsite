@@ -25,16 +25,27 @@ body {
   margin-right: 10%;
   margin-left: 10%; }
 
+button[type=submit] {
+  background-color: #0696a0;
+  border: none;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  outline: none; }
+
 input[type=submit] {
   background-color: #0696a0;
   border: none;
   padding: 5px;
   text-decoration: none;
   color: white;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 input[type=text], [type=date] {
-  border-color: #0696a0; }
+  border-color: #0696a0;
+  outline: none; }
 
 input[type=submit]:hover {
   background-color: #00e7ec; }

@@ -1,5 +1,11 @@
 {% load static %}
 <link rel="stylesheet" href={% static 'css/nick/holy-cascade.css' %}>
+<!--Global light & dark & mobile -->
+<link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+<link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+<link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+<!--End of scss-->
+
 <div style="text-align: -webkit-center; text-align: -moz-center">
     <div class="post" style=" width: 400px; margin-top: 4%">
         <h2><b>System notifications</b></h2>

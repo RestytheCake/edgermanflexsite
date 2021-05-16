@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'admin_interface',
     'colorfield',
     'sass_processor',
+    'import_export',
 ]
 
 MIDDLEWARE = [

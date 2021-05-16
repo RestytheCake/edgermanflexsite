@@ -39,6 +39,16 @@ body{
   margin-left: 10%;
 }
 
+button[type=submit]{
+    background-color: $accentColor;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
+    color: $textColor;
+    cursor: pointer;
+    outline: none;
+}
+
 input[type = submit]{
     background-color: $accentColor;
     border: none;

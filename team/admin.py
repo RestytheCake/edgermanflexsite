@@ -1,4 +1,6 @@
 from django.contrib import admin
+from import_export import resources
+from import_export.admin import ImportExportModelAdmin
 
 from .models import FileUpload, NickUser, forum, profile, comment, notification
 from .forms import UserAdminChangeForm, UserAdminCreationForm
@@ -8,10 +10,24 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 
 admin.site.register(FileUpload)
-admin.site.register(forum)
+
 admin.site.register(comment)
 admin.site.register(profile)
 admin.site.register(notification)
+
+
+class ForumRrecource(resources.ModelResource):
+    class Meta:
+        model = forum
+        fields = ('user', 'title', 'message', 'tags', 'created_at', 'like', 'dislike')
+        skip_unchanged = True
+
+
+class ForumAdmin(ImportExportModelAdmin):
+    resource_class = ForumRrecource
+
+
+admin.site.register(forum, ForumAdmin)
 
 
 class NickAdmin(BaseUserAdmin):

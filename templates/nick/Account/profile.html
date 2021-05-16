@@ -8,6 +8,11 @@
     </title>
     <link rel="stylesheet" href={% static 'css/nick/profile.css' %}>
     <link rel="icon" href={% static 'img/nick/logo.png' %}>
+    <!--Global light & dark & mobile -->
+    <link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+    <link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+    <link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+    <!--End of scss-->
     <script>
         function stf() {
             let switchfriends = document.getElementById('Switchf');
