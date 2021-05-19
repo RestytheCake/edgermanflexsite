@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load sass_tags %}
 <html>
     <head>
         <title>
@@ -7,6 +8,11 @@
         </title>
         <link rel="stylesheet" href={% static 'css/nick/contacts.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <!--Global light & dark & mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+        <!--End of scss-->
 
         <script src={% static 'js/ddMenu.js' %}></script>
     </head>

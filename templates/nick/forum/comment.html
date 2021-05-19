@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +8,11 @@
         </title>
         <link rel="stylesheet" href={%  static 'css/nick/comment.css' %}>
         <link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <!--Global light & dark & mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+        <!--End of scss-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
 

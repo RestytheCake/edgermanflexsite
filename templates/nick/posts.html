@@ -1,3 +1,4 @@
+{% load sass_tags %}
 <!DOCTYPE html>
 {% load static %}
 <html>
@@ -7,6 +8,11 @@
         </title>
         <link rel="stylesheet" href={% static 'css/nick/nick.css' %}>
 		<link rel="icon" href={% static 'img/nick/logo.png' %} />
+        <!--Global light & dark & mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+        <!--End of scss-->
 
         <script src={% static 'js/ddMenu.js' %}></script>
     </head>
@@ -17,7 +23,7 @@
                 <form action="/team/nick/forum/search" method="get">
                 <div id="search">
                     <input type="search" name="User" id="searchBar" placeholder="Quick Search">
-                    <button type="submit" id="searchButton"><img src={% static 'img/nick/search.png' %} style="width: 25px; height: 25px;"</button>
+                    <button type="submit" id="searchButton"><img  style="width: 25px; height: 25px;" src="{% static 'img/nick/search.png' %}"></button>
                 </div>
             </form>
                 <div class="post">

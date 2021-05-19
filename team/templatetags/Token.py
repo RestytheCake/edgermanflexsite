@@ -15,12 +15,3 @@ def find(user):
         token = Token.objects.create(user=user)
         print(token.key)
         return token.key
-
-
-@register.simple_tag()
-def reset(user):
-    try:
-        Token.objects.get(user=user).delete()
-        Token.objects.create(user=user)
-    except:
-        Token.objects.create(user=user)

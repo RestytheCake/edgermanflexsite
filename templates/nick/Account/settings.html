@@ -1,8 +1,8 @@
 {% load static %}
 {% load Token %}
+{% load Tokenr %}
 {% load sass_tags %}
-<!-- Old css -->
-<link rel="stylesheet" href="{% static 'css/nick/holy-cascade.css' %}">
+
 <!-- Input Light -->
 <link rel="stylesheet" href="{% sass_src 'css/nick/light/input.scss' %}">
 <!--Global light & dark & mobile -->
@@ -45,14 +45,11 @@
         </div>
         <div id="Help" style="text-align: right; margin-left: 50px">
             <label>Help:</label><hr>
-            <label>Change discord name</label><br>
-
-            <label>
-                <input class="Helpclass" type="text" placeholder="Alkashon#1234">
-            </label><br><br>
+            <label>Reset your Account Token</label>
             <button class="Helpclass">Reset Token</button>
             <br><br>
-            <button onclick="{% reset request.user %}">Copy token for help</button>
+            <label>Copy your Account Token</label>
+            <button onclick="{% reset request.user %}">Copy token </button>
 
         </div><br>
 </div>

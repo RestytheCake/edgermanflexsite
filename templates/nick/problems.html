@@ -1,4 +1,5 @@
 {% load static %}
+{% load sass_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +8,11 @@
         </title>
         <link rel="stylesheet" href={% static 'css/nick/forum_create.css' %}>
         <link rel="icon" href={% static 'img/nick/logo.png' %}>
+        <!--Global light & dark & mobile -->
+        <link rel="stylesheet" href="{% sass_src 'css/nick/light/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/dark/global.scss' %}">
+        <link rel="stylesheet" href="{% sass_src 'css/nick/mobile/global.scss' %}">
+        <!--End of scss-->
     </head>
     <!--Hardcore starts from here-->
 
