@@ -44,12 +44,12 @@
                     <button id="lb" ><img class="icon" id='dislike' alt="dislike" src={% static 'img/nick/dislike.png' %}  ></button>
                 {% else %}
                     {% if request.user in data.dislike.all %}
-                        <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                        <form action="/team/nick/forum/comment/?user={{ data.user }}&title={{ data.title }}" method="POST">
                         {% csrf_token %}
                         <button id="lb" name="undislike" value="undislike"><img class="icon" id='dislike' alt="dislike" type="submit" src={% static 'img/nick/dislike.png' %}  ></button>
                         </form>
                     {% else %}
-                        <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                        <form action="/team/nick/forum/comment/?user={{ data.user }}&title={{ data.title }}" method="POST">
                         {% csrf_token %}
                         <button id="lb" name="dislike" value="dislike"><img class="icon" id='dislike' alt="dislike" type="submit" src={% static 'img/nick/dislike.png' %}  ></button>
                         </form>
@@ -60,12 +60,12 @@
                     <button id="lb"><img class="icon" id='simplike' alt="like" src={% static 'img/nick/simplike.png' %}></button>
                 {% else %}
                     {% if request.user in data.like.all %}
-                        <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                        <form action="/team/nick/forum/comment/?user={{ data.user }}&title={{ data.title }}" method="POST">
                         {% csrf_token %}
                         <button id="lb" name="unlike" value="unlike"><img class="icon" id='simplike' alt="like" src={% static 'img/nick/simplike.png' %} ></button>
                         </form>
                     {% else %}
-                        <form action="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}" method="POST">
+                        <form action="/team/nick/forum/comment/?user={{ data.user }}&title={{ data.title }}" method="POST">
                         {% csrf_token %}
                         <button id="lb" name="like" value="like"><img class="icon" id='simplike' alt="like" src={% static 'img/nick/simplike.png' %} ></button>
                         </form>
