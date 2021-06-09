@@ -23,20 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/global.scss.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/dark/top-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/dark/top-banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/global.scss.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss.gz" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/css/nick/light/top-banner.scss.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticfiles/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/staticfiles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/dark/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/team/static/css/nick/light/top-banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/team/static/css/nick/light/top-banner.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nick/top-banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/top-banner.html" afterDir="false" />
     </list>
@@ -278,7 +264,7 @@
       <workItem from="1620989869434" duration="3869000" />
       <workItem from="1621169861117" duration="509000" />
       <workItem from="1621170498310" duration="4713000" />
-      <workItem from="1623246027707" duration="1410000" />
+      <workItem from="1623246027707" duration="1747000" />
     </task>
     <servers />
   </component>
