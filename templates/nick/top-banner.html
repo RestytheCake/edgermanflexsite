@@ -15,8 +15,8 @@
             <div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                 <label onclick="ddMenu()">New ?</label>
                 <div  id="dropdown-content">
-                    <a href="/team/nick/register" style="float: left;">Register</a>
-                    <a href="/team/nick/login" style="float: left;">Login</a>
+                    <a href="{% url 'team:register' %}" style="float: left;">Register</a>
+                    <a href="{% url 'team:logout' %}" style="float: left;">Login</a>
                 </div>
             </div>
         {% endif %}
@@ -24,10 +24,10 @@
 </div>
 <!-- Buttons for Top-Banner -->
 <div id="scroll">
-    <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
-    <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
-    <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
-    <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
-    <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
+    <button class="buttonTop" onClick="window.location='{% url 'team:home' %}';">Home</button>
+    <button class="buttonTop" onClick="window.location='{% url 'team:video' %}';">Videos</button>
+    <button class="buttonTop" onClick="window.location='{% url 'team:forum' %}';">Forum</button>
+    <button class="buttonTop" onClick="window.location='{% url 'team:posts' %}';">Post</button>
+    <button class="buttonTop" onClick="window.location='{% url 'team:contact' %}';">Contact</button>
 </div>
 <!-- End for Buttons -->

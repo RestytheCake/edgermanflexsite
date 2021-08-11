@@ -63,17 +63,17 @@
             <div id="dropdown"  style="float: right; margin-right: 50px;">
                 <label onclick="ddMenu()">{{ request.user.username }}</label>
                 <div  id="dropdown-content">
-                    <a href="/team/nick//myaccount" style="float: left;">Profile</a>
-                    <a href="/team/nick//logout" style="float: left;">Logout</a>
+                    <a href="{% url 'team:profile' %}" style="float: left;">Profile</a>
+                    <a href="{% url 'team:logout' %}" style="float: left;">Logout</a>
                 </div>
             </div>
 			{% else %}
 			<div id="dropdown"  style="float: right; margin-right: 70px; margin-top: 20px">
                 <label onclick="ddMenu()">New ?</label>
                 <div  id="dropdown-content">
-                    <a href="/team/nick//myaccount" style="float: left;">Profile</a>
-                    <a href="/team/nick/register" style="float: left;">Register</a>
-                    <a href="/team/nick/login" style="float: left;">Login</a>
+                    <a href="{% url 'team:profile' %}" style="float: left;">Profile</a>
+                    <a href="{% url 'team:register' %}" style="float: left;">Register</a>
+                    <a href="{% url 'team:login_view' %}" style="float: left;">Login</a>
                 </div>
             </div>
 			{% endif %}
@@ -86,13 +86,13 @@
             
 
             <div id="scroll">
-                <button class="buttonTop" onClick="window.location='/team/nick/';">Home</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/videos';">Videos</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/forum';">Forum</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/posts';">Post</button>
-                <button class="buttonTop" onClick="window.location='/team/nick/contact';">Contact</button>
+                <button class="buttonTop" onClick="window.location='{% url 'team:home' %}';">Home</button>
+                <button class="buttonTop" onClick="window.location='{% url 'team:video' %}';">Videos</button>
+                <button class="buttonTop" onClick="window.location='{% url 'team:forum' %}';">Forum</button>
+                <button class="buttonTop" onClick="window.location='{% url 'team:posts' %}';">Post</button>
+                <button class="buttonTop" onClick="window.location='{% url 'team:contact' %}';">Contact</button>
             </div>
-            <form action="/team/nick/forum/search" method="get">
+            <form action="{% url 'team:message_search' %}" method="get">
             <div id="search">
                 <input type="search" name="searching" id="searchBar" placeholder="Quick Search">
                 <button id="searchButton"><img style="width: 25px; height: 25px;" src={% static 'img/nick/search.png' %} > </button>
@@ -104,7 +104,7 @@
                     </select>
                 </div>
                <div id="advancedList">
-                    <a class='advButton' href="/team/nick/forum/filter">Advanced</a>
+                    <a class='advButton' href="{% url 'team:advfilter' %}">Advanced</a>
                 </div>
             </div>
             </form>
@@ -113,16 +113,16 @@
 			{% for data in search %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>{{ data.title }}</b></label><br><br>
-                <a id="notwhite" href='/team/nick/forum/profile?user={{ data.user }}' style="float: none; padding: 10px;">{{ data.user }}</a>
+                <a id="notwhite" href='{% url 'team:profile' %}?user={{ data.user }}' style="float: none; padding: 10px;">{{ data.user }}</a>
                 <span>{{ data.message }}</span>
                 <span id="tags">Keywords : {% check data.tags %}</span>
-                <a id="notwhite" href="/team/nick/forum/message/?user={{ data.user }}&title={{ data.title }}">Comment</a>
+                <a id="notwhite" href="{% url 'team:comment' %}?user={{ data.user }}&title={{ data.title }}">Comment</a>
                 </div>
             {% endfor %}
             {% else %}
                 <div class="post">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>ERROR 404</b></label><br><br>
-                <a id="notwhite" href='/team/nick/forum/profile/?user=-System-' style="float: none; padding: 10px;">-System-</a>
+                <a id="notwhite" href='{% url 'team:profile' %}/?user=-System-' style="float: none; padding: 10px;">-System-</a>
                 <span>We searched and searched but we couldn't find for what you where looking.<br>Search for anything else or go Back</span>
                 <div style="padding-right: 20px; padding: 10px;"><a id="notwhite" >Don't try it</a></div>
                 </div>

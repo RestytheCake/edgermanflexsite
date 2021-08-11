@@ -20,7 +20,7 @@
     <body>
     {% include 'nick/top-banner.html' %}
             <div class="main">
-                <form action="/team/nick/forum/search" method="get">
+                <form action="{% url 'team:searchworker' %}" method="get">
                 <div id="search">
                     <input type="search" name="User" id="searchBar" placeholder="Quick Search">
                     <button type="submit" id="searchButton"><img  style="width: 25px; height: 25px;" src="{% static 'img/nick/search.png' %}"></button>

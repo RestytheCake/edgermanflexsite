@@ -48,7 +48,7 @@
         </div>
     </form>
             <!--end of new things-->
-            <button onclick="location.href='/team/nick/forum/create';" id='buttonNewPost'>Create new post</button>
+            <button onclick="location.href='{% url 'team:create' %}';" id='buttonNewPost'>Create new post</button>
             {% for data in message %}
                 <div class="post" id="{{ data.user }}={{ data.title }}">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0,0,0);"><b>{{ data.title }}</b></label>

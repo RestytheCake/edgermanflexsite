@@ -20,7 +20,7 @@
     <body>
         <center>
          <!--create post for forum-->
-        <form action="/team/nick/forum/create" method="post">
+        <form action="{% url 'team:create' %}" method="post">
          {% if request.user.is_authenticated %}
              {% csrf_token %}
          <div id="createPost">
@@ -37,7 +37,7 @@
         {% else %}
              <div id="createPost">
                 <label>
-                    You need to be logged in &nbsp; &nbsp; <a href="/team/nick/register">Register</a> or <a href="/team/nick/login">Login</a>
+                    You need to be logged in &nbsp; &nbsp; <a href="{% url 'team:register' %}">Register</a> or <a href="{% url 'team:login_view' %}">Login</a>
                 </label>
              </div>
         {% endif %}

@@ -31,7 +31,7 @@
             <br>
             <br>
             <button type="submit" class="registerSubmit">Submit</button>
-            <label style="float: left; font-size: 12px;">Already have account?</label><a href="./login" style="float: left; padding-left: 10px; font-size: 12px;">Login</a>
+            <label style="float: left; font-size: 12px;">Already have account?</label><a href="{% url 'team:login_view' %}" style="float: left; padding-left: 10px; font-size: 12px;">Login</a>
             {{ form.errors }}
         </form>
     </div>

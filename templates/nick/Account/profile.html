@@ -170,7 +170,7 @@
             <div id="messages" >
         {% for msg in data %}
             <hr>
-            <div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ msg.user }}&title={{ msg.title }}';">
+            <div  id="userMessage" onclick="location.href='{% url 'team:comment' %}?user={{ msg.user }}&title={{ msg.title }}';">
             <label id='userTopic' style="font-size: large;"><b>{{ msg.title }}</b></label><br><br>
             <label id='userDescription'> {{ msg.message}}</label><br><br>
             <label id='userKeyword' style="font-size: 13px;">{% check msg.tags %}</label>
@@ -180,7 +180,7 @@
         <div id="comments" style="display:none;">
             {% for comment in cc_data %}
             <hr>
-            <div  id="userMessage" onclick="location.href='/team/nick/forum/message/?user={{ comment.main_post_user }}&title={{ comment.main_post_title }}';">
+            <div  id="userMessage" onclick="location.href={% url 'team:comment' %}?user={{ comment.main_post_user }}&title={{ comment.main_post_title }}';">
             <label id='userTopic' style="font-size: large;"><b>Title : {{ comment.main_post_title }}</b></label><br>
             <label id='userTopic' style="font-size: large;"><b>User : {{ comment.main_post_user }}</b></label><br><br>
             <label id='userDescription'>Comment : {{ comment.comments}}</label><br><br>
@@ -195,14 +195,14 @@
 
         {% else %}
             <hr>
-        <label id="fcheck" onclick="window.location='/team/nick/forum/profile/fa/?user={{ user }}&user_request={{ request.user.username }}&fa=true'">{% fcheck user request.user.username %}</label>
+        <label id="fcheck" onclick="window.location='{% url 'team:fa' %}?user={{ user }}&user_request={{ request.user.username }}&fa=true'">{% fcheck user request.user.username %}</label>
         {% endif %}
             {% for friend in friend_data %}
                 {% if friend.friend_list.count > 0 %}
 
                 {% for list in friend.friend_list.all %}
                     <hr>
-                    <div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                    <div  id="userMessage" onclick="location.href='{% url 'team:profile' %}?user={{ list }}';">
                         <label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label><br><br>
                     </div>
                 {% endfor %}
@@ -220,11 +220,11 @@
         {% for friend in friend_data %}
             {% for list in friend.fa_list.all %}
                 <hr>
-                    <div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                    <div  id="userMessage" onclick="location.href='{% url 'team:profile' %}?user={{ list }}';">
                         <center><label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label></center><br><br>
                         </div>
-                        <label style="float: left; margin-left: 15px" onclick="window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=decline'">Decline</label>
-                        <label style="float: right; margin-right: 15px" onclick=window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=accept'>Accept</label>
+                        <label style="float: left; margin-left: 15px" onclick="window.location='{% url 'team:fa' %}?user={{ list }}&user_request={{ request.user.username }}&fa=decline'">Decline</label>
+                        <label style="float: right; margin-right: 15px" onclick="window.location='{% url 'team:fa' %}?user={{ list }}&user_request={{ request.user.username }}&fa=accept'">Accept</label>
 
             {% endfor %}
         {% endfor %}
@@ -233,10 +233,10 @@
             {% for friend in friend_data %}
             {% for list in friend.fa_send.all %}
                 <hr>
-                    <div  id="userMessage" onclick="location.href='/team/nick/forum/profile/?user={{ list }}';">
+                    <div  id="userMessage" onclick="location.href='{% url 'team:profile' %}?user={{ list }}';">
                         <center><label id='userTopic' style="font-size: large;"><b>{{ list }}</b></label></center><br><br>
                         </div>
-                        <label style="float: right; margin-right: 15px" onclick=window.location='/team/nick/forum/profile/fa/?user={{ list }}&user_request={{ request.user.username }}&fa=accept'>Cancel</label>
+                        <label style="float: right; margin-right: 15px" onclick=window.location='{% url 'team:fa' %}?user={{ list }}&user_request={{ request.user.username }}&fa=accept'>Cancel</label>
 
             {% endfor %}
         {% endfor %}

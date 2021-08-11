@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2+j0!)rhskxqmg$xjb&cnjp6bz5l&748c*jfku2wt!i!xwx)xg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = ['kuchen-dev.herokuapp.com', '127.0.0.1', 'kuchen-dev.loca.lt']
+DEBUG = False
+ALLOWED_HOSTS = ['edgermanflex.herokuapp.com']
 
 # Application definition
 
@@ -78,8 +78,8 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/team/nick'
-LOGOUT_REDIRECT_URL = '/team/nick/login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login'
 
 ROOT_URLCONF = 'Django.urls'
 

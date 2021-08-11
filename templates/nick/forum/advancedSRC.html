@@ -16,7 +16,7 @@
 
         <center>
             <div id="container">
-                <form action="/team/nick/forum/search/">
+                <form action="{% url 'team:message_search' %}">
                 <label style="font-size: 24px; padding: 10px; color: rgb(0, 0, 0);"><b>Search by</b></label><br><br><br>
                 <label style="float: left; ">Username:</label>
                 <input name="user" style="float: right;" type="text" placeholder="username" id="usernameSRC"><br><br>
