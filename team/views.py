@@ -62,7 +62,7 @@ def forum_create(request):
                 instance = form.save(commit=False)
                 instance.user = request.user.username
                 instance.save()
-            return redirect('/team/nick/forum')
+            return redirect('/forum')
     return render(request, 'nick/forum/forum_create.html', {'form': form})
 
 
@@ -187,7 +187,7 @@ def search_post(request):
 def searchworker_view(request):
     user = request.GET.get('user')
     title = request.GET.get('title')
-    url = f'/team/nick/forum/#{user}={title}'
+    url = f'/forum/#{user}={title}'
     return redirect(url)
 
 
@@ -228,7 +228,7 @@ def fa(request):
         userobj.fa_list.add(request.user)
         user_requestobj.fa_send.add(user_id)
 
-        return redirect(f'/team/nick/forum/profile/?user={user}')
+        return redirect(f'/forum/profile/?user={user}')
 
     if request.GET.get('fa') == 'decline':
         user = request.GET.get('user')
@@ -241,7 +241,7 @@ def fa(request):
         userobj.fa_send.remove(request.user)
         user_requestobj.fa_list.remove(user_id)
 
-        return redirect(f'/team/nick/forum/profile/?user={user}')
+        return redirect(f'/forum/profile/?user={user}')
 
     if request.GET.get('fa') == 'accept':
         user = request.GET.get('user') #Resty
@@ -257,16 +257,16 @@ def fa(request):
         userobj.friend_list.add(request.user)
         user_requestobj.friend_list.add(user_id)
 
-        return redirect(f'/team/nick/forum/profile/?user={user}')
+        return redirect(f'/forum/profile/?user={user}')
 
-    return redirect('/team/nick/')
+    return redirect('/')
 
 
 def profile_add(request):
     if request.user.is_authenticated:
         userstuff = SocialAccount.uid.all()
         print(userstuff)
-    return redirect('/team/nick/')
+    return redirect('/')
 
 
 def comment_view(request):
@@ -282,7 +282,7 @@ def comment_view(request):
                 instance.main_post_user = userget
                 instance.main_post_title = titleget
                 instance.save()
-                return redirect(f'/team/nick/forum/message/?user={userget}&title={titleget}')
+                return redirect(f'/forum/message/?user={userget}&title={titleget}')
         else:
             pass
     if request.POST.get('like'):
@@ -291,28 +291,28 @@ def comment_view(request):
             obj.like.add(request.user)
         else:
             return redirect(
-                f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
+                f'/login/?next=/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.POST.get('dislike'):
         if request.user.is_authenticated:
             obj = get_object_or_404(forum, user=userget, title=titleget)
             obj.dislike.add(request.user)
         else:
             return redirect(
-                f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
+                f'/login/?next=/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.POST.get('unlike'):
         if request.user.is_authenticated:
             obj = get_object_or_404(forum, user=userget, title=titleget)
             obj.like.remove(request.user)
         else:
             return redirect(
-                f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
+                f'/login/?next=/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.POST.get('undislike'):
         if request.user.is_authenticated:
             obj = get_object_or_404(forum, user=userget, title=titleget)
             obj.dislike.remove(request.user)
         else:
             return redirect(
-                f'/team/nick/login/?next=/team/nick/forum/message/?user={userget}&title={titleget}&reason=like')
+                f'/login/?next=/forum/message/?user={userget}&title={titleget}&reason=like')
     if request.GET.get('user'):
         main_post_data = forum.objects.filter(user=userget, title=titleget)
         comment_data_old = comment.objects.filter(main_post_user=userget, main_post_title=titleget)
@@ -352,7 +352,7 @@ def register(request):
                 instance = pform.save(commit=False)
                 instance.username = request.user
                 instance.save()
-                return redirect('/team/nick/')
+                return redirect('/')
     return render(request, 'nick/Account/register.html', {'form': form})
 
 
@@ -397,7 +397,7 @@ def logout_view(request):
         logout(request)
     else:
         pass
-    return redirect('/team/nick/login')
+    return redirect('/login')
 
 
 def problems(request):
@@ -415,7 +415,3 @@ def supporter(request):
 
 def rickroll(request):
     return redirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-
-
-def angulartest(request):
-    return render(request, 'nick/test.html')

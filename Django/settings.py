@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '2+j0!)rhskxqmg$xjb&cnjp6bz5l&748c*jfku2wt!i!xwx)xg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['edgermanflex.herokuapp.com']
 
 # Application definition
