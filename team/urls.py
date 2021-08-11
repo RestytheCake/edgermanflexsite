@@ -3,7 +3,7 @@ from django.urls import path
 
 app_name = 'team'
 urlpatterns = [
-    path('/', views.nick, name='home'),
+    path('', views.nick, name='home'),
     path('/videos/', views.videos, name='video'),
     # Forum
     path('/forum/', views.forum_view, name='forum'),

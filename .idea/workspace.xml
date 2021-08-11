@@ -23,24 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Django.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Django.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team/firebase.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/team/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/Account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/Account/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/notification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/Account/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/Account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/Account/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum/advancedSRC.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/advancedSRC.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum/comment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/comment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum/forum.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/forum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum/forum_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/forum_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/forum/message_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/forum/message_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nick/top-banner.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nick/top-banner.html" afterDir="false" />
     </list>
     <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -284,7 +270,7 @@
       <workItem from="1623330731949" duration="18000" />
       <workItem from="1623575478345" duration="1626000" />
       <workItem from="1623599055656" duration="173000" />
-      <workItem from="1628625202921" duration="2087000" />
+      <workItem from="1628625202921" duration="2745000" />
     </task>
     <servers />
   </component>

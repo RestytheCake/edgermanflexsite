@@ -23,7 +23,6 @@ import debug_toolbar
 urlpatterns = [
     path('admin/', include('admin_honeypot.urls'), name='admin_honeypot'),
     path('kuchen/', admin.site.urls),
-    #path('__debug__/', include(debug_toolbar.urls)),
     path('', include('team.urls')),
     path('accounts/', include('allauth.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
