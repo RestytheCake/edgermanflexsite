@@ -282,7 +282,7 @@ def comment_view(request):
                 instance.main_post_user = userget
                 instance.main_post_title = titleget
                 instance.save()
-                return redirect(f'/forum/message/?user={userget}&title={titleget}')
+                return redirect(f'/forum/comment/?user={userget}&title={titleget}')
         else:
             pass
     if request.POST.get('like'):
