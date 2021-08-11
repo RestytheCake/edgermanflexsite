@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Django/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/team/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/team/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b02d12db-4afb-4926-952a-9654492bd236" name="Default Changelist" comment="" />
     <list id="a10d1a31-ec82-4294-89cb-63d9f0f1b963" name="Changes by Altyn" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +266,7 @@
       <workItem from="1623575478345" duration="1626000" />
       <workItem from="1623599055656" duration="173000" />
       <workItem from="1628625202921" duration="3209000" />
-      <workItem from="1628674126808" duration="949000" />
+      <workItem from="1628674126808" duration="1383000" />
     </task>
     <servers />
   </component>
